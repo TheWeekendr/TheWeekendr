@@ -1,0 +1,18 @@
+@import "rsuite/dist/styles/rsuite-default.css";
+
+#panelStyles {
+  padding: 15px 20px;
+  color: #aaa;
+}
+
+#headerStyles {
+  padding: 20px;
+  font-size: 16px;
+  background-color: #34c3ff;
+  color: #fff;
+}
+
+#sideNav {
+  position: sticky;
+}
+
