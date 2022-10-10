@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+<img src="https://members-csforall.imgix.net/members/logos/code-fellows-logo-horizontal-2-color-black.png" width="340" height="66">  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# ||  Intermediate Software Development - Group Project ||
 
-## Available Scripts
+# The Weekendr
 
-In the project directory, you can run:
+*Code 301 Final Project - The Weekendr React App*
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Group Members
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Dustin Apodaca
+- Chris Fanucchi
+- Mathew Torres
 
-### `npm test`
+___
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- The vision is to create an user interface that enables the user, given a date and location, to query multiple external databases and find event information.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Wireframe
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![wireframe](src/assets/img/Weekendr-Wireframe-v1.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## User Stories
 
-### `npm run eject`
+1. Title: The Weekendr
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. User Story Sentences:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    - As a user, I want the ability to search for events happening in a particular area by querying a city and date range.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+    - As a user, I want the ability to search for highly rated restaurants in a particular area by querying a city and date range.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+    - As a user, I want the ability to view a weather forecast in a particular area by querying a city and date range.
 
-## Learn More
+    - As a user, I want the ability to view movie theater showtime information in a particular area by querying a city and date range.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    - As a user, I want the ability to add events to a localized itinerary within the app. (Stretch)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    - As a user, I want the ability to sync events to my google or iCal calendar. (Stretch)
 
-### Code Splitting
+3. Feature Tasks:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+    - User can query results from multiple API's all at once.
 
-### Analyzing the Bundle Size
+    - User can create an account to login.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+4. Acceptance Test:
 
-### Making a Progressive Web App
+    - 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+---
 
-### Advanced Configuration
+## Domain Modeling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+![domain-model-1](src/assets/img/TheWeekendr-Domain_Model.png)
 
-### Deployment
+![domain-model-2](src/assets/img/TheWeekendr-DB_Schema.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
