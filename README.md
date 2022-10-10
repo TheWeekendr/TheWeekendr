@@ -50,7 +50,9 @@ ___
 
 4. Acceptance Test:
 
-    - 
+    - Ensure that zip code entered by user is a valid zip code.
+
+    - Provide an error message if access to backend data is temporarily unavailable.
 
 ---
 
