@@ -48,9 +48,17 @@ ___
 
     - User can create an account to login.
 
+    - Saving user input to a database.
+
+    - Create a UI dashboard to display API information.
+
 4. Acceptance Test:
 
-    - 
+    - Ensure that zip code entered by user is a valid zip code.
+
+    - Provide an error message if access to backend data is temporarily unavailable.
+
+    - Insert placeholder function
 
 ---
 
