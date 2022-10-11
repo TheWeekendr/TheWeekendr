@@ -7,6 +7,7 @@ import { Icon } from '@rsuite/icons';
 import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 import { Button, ButtonToolbar } from 'rsuite';
 import SignUpModal from './SignUpModal';
+import UpdateModal from './UpdateModal';
 
 
 class SidenavBar extends React.Component {
@@ -38,6 +39,7 @@ class SidenavBar extends React.Component {
           <SignUpModal />
           {/* <Toggle onChange={this.handleToggle} checked={expanded} />
           <hr /> */}
+          <UpdateModal />
           <Sidenav
             expanded={expanded}
             defaultOpenKeys={['3', '4']}
