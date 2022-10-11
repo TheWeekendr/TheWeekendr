@@ -164,7 +164,9 @@ class DispLayout extends React.Component {
                     <h5 class="text-3xl text-white font-medium lg:block">
                       Dash
                     </h5>
-                    <SignUpModal setUserDataState={this.setUserDataState} />
+                    <SignUpModal
+                      setUserDataState={this.props.setUserDataState}
+                    />
                   </div>
                 </div>
               </Header>

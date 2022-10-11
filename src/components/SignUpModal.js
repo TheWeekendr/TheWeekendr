@@ -55,7 +55,7 @@ class SignUpModal extends React.Component {
       favFoods: this.state.favFoods,
       favActivities: this.state.favActivities,
     };
-    this.props.setUserDataState(userData);
+
     try {
       // const res = await axios.post(
       //   `${process.env.REACT_APP_SERVER}/user`,
@@ -63,10 +63,11 @@ class SignUpModal extends React.Component {
       // );
       const res = await axios.post(`http://localhost:3001/user`, userData);
 
-      this.close();
+      this.props.setUserDataState(userData);
     } catch (error) {
       alert(`Error: ${error.code} - ${error.message}`);
     }
+    this.close();
   };
 
   render() {
@@ -121,7 +122,7 @@ class SignUpModal extends React.Component {
     ];
 
     return (
-      <div className='sticky mx-auto flex flex-col mx-16'>
+      <div className="sticky mx-auto flex flex-col mx-16">
         <Modal show={this.state.show} onHide={this.close} size="xs">
           <Modal.Header>
             <Modal.Title>Sign Up</Modal.Title>
