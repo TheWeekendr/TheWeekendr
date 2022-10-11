@@ -1,0 +1,943 @@
+{
+  "search_metadata": {
+    "id": "6345b956629a010c146b8a81",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/e90cfca360eae834/6345b956629a010c146b8a81.json",
+    "created_at": "2022-10-11 18:43:34 UTC",
+    "processed_at": "2022-10-11 18:43:34 UTC",
+    "yelp_url": "https://www.yelp.com/search?find_desc=healthy+food&find_loc=Denver%2C+CO",
+    "raw_html_file": "https://serpapi.com/searches/e90cfca360eae834/6345b956629a010c146b8a81.html",
+    "total_time_taken": 4.53
+  },
+  "search_parameters": {
+    "engine": "yelp",
+    "find_desc": "healthy food",
+    "find_loc": "Denver, CO"
+  },
+  "filters": {
+    "neighborhoods": {
+      "value": "p:CO:Denver::",
+      "list": [
+        {
+          "text": "Northeast",
+          "value": "Northeast"
+        },
+        {
+          "text": "Southwest",
+          "value": "Southwest"
+        },
+        {
+          "text": "Baker",
+          "value": "Baker"
+        },
+        {
+          "text": "Five Points",
+          "value": "Five_Points"
+        },
+        {
+          "text": "Northwest",
+          "value": "Northwest"
+        },
+        {
+          "text": "University Park",
+          "value": "University_Park"
+        },
+        {
+          "text": "CBD",
+          "value": "CBD"
+        },
+        {
+          "text": "Curtis Park",
+          "value": "Curtis_Park"
+        },
+        {
+          "text": "Uptown",
+          "value": "Uptown"
+        },
+        {
+          "text": "Highland",
+          "value": "Highland"
+        },
+        {
+          "text": "Alamo Placita",
+          "value": "Alamo_Placita"
+        },
+        {
+          "text": "University",
+          "value": "University"
+        },
+        {
+          "text": "City Park",
+          "value": "City_Park"
+        },
+        {
+          "text": "Speer",
+          "value": "Speer"
+        },
+        {
+          "text": "Washington Park",
+          "value": "Washington_Park"
+        },
+        {
+          "text": "Washington Park West",
+          "value": "Washington_Park_West"
+        },
+        {
+          "text": "Jefferson Park",
+          "value": "Jefferson_Park"
+        },
+        {
+          "text": "Lodo",
+          "value": "Lodo"
+        },
+        {
+          "text": "Country Club",
+          "value": "Country_Club"
+        },
+        {
+          "text": "Park Hill",
+          "value": "Park_Hill"
+        },
+        {
+          "text": "Southeast",
+          "value": "Southeast"
+        },
+        {
+          "text": "Golden Triangle",
+          "value": "Golden_Triangle"
+        },
+        {
+          "text": "Cherry Creek",
+          "value": "Cherry_Creek"
+        },
+        {
+          "text": "Congress Park",
+          "value": "Congress_Park"
+        },
+        {
+          "text": "Lincoln Park",
+          "value": "Lincoln_Park"
+        },
+        {
+          "text": "Stapleton",
+          "value": "Stapleton"
+        },
+        {
+          "text": "Auraria",
+          "value": "Auraria"
+        },
+        {
+          "text": "Capitol Hill",
+          "value": "Capitol_Hill"
+        }
+      ]
+    },
+    "distance": [
+      {
+        "text": "Bird's-eye View",
+        "value": "g:-105.07255554199219,39.65645604812829,-104.86793518066406,39.81486542536203"
+      },
+      {
+        "text": "Driving (5 mi.)",
+        "value": "g:-105.02140045166016,39.6958283529021,-104.9190902709961,39.7750333507536"
+      },
+      {
+        "text": "Biking (2 mi.)",
+        "value": "g:-104.99582290649414,39.71577018092403,-104.94466781616211,39.75537260473348"
+      },
+      {
+        "text": "Walking (1 mi.)",
+        "value": "g:-104.98303413391113,39.72560690647981,-104.95745658874512,39.74540813743768"
+      },
+      {
+        "text": "Within 4 blocks",
+        "value": "g:-104.97344255447388,39.733049536327,-104.96704816818237,39.737999842888485"
+      }
+    ],
+    "price": [
+      {
+        "text": "$",
+        "value": "RestaurantsPriceRange2.1"
+      },
+      {
+        "text": "$$",
+        "value": "RestaurantsPriceRange2.2"
+      },
+      {
+        "text": "$$$",
+        "value": "RestaurantsPriceRange2.3"
+      },
+      {
+        "text": "$$$$",
+        "value": "RestaurantsPriceRange2.4"
+      }
+    ],
+    "category": [
+      {
+        "text": "Italian",
+        "value": "italian"
+      },
+      {
+        "text": "Caterers",
+        "value": "catering"
+      },
+      {
+        "text": "Ice Cream & Frozen Yogurt",
+        "value": "icecream"
+      },
+      {
+        "text": "Pizza",
+        "value": "pizza"
+      },
+      {
+        "text": "Soup",
+        "value": "soup"
+      },
+      {
+        "text": "Barbeque",
+        "value": "bbq"
+      },
+      {
+        "text": "Japanese",
+        "value": "japanese"
+      },
+      {
+        "text": "Sushi Bars",
+        "value": "sushi"
+      },
+      {
+        "text": "Food Trucks",
+        "value": "foodtrucks"
+      },
+      {
+        "text": "Coffee Roasteries",
+        "value": "coffeeroasteries"
+      },
+      {
+        "text": "Restaurants",
+        "value": "restaurants"
+      },
+      {
+        "text": "American (New)",
+        "value": "newamerican"
+      },
+      {
+        "text": "Ramen",
+        "value": "ramen"
+      },
+      {
+        "text": "Hawaiian",
+        "value": "hawaiian"
+      },
+      {
+        "text": "Fast Food",
+        "value": "hotdogs"
+      },
+      {
+        "text": "Event Planning & Services",
+        "value": "eventservices"
+      },
+      {
+        "text": "Desserts",
+        "value": "desserts"
+      },
+      {
+        "text": "Vietnamese",
+        "value": "vietnamese"
+      },
+      {
+        "text": "Food",
+        "value": "food"
+      },
+      {
+        "text": "Chinese",
+        "value": "chinese"
+      },
+      {
+        "text": "Latin American",
+        "value": "latin"
+      },
+      {
+        "text": "Comfort Food",
+        "value": "comfortfood"
+      },
+      {
+        "text": "Tacos",
+        "value": "tacos"
+      },
+      {
+        "text": "Wine Bars",
+        "value": "wine_bars"
+      },
+      {
+        "text": "Hot Dogs",
+        "value": "hotdog"
+      },
+      {
+        "text": "Delis",
+        "value": "delis"
+      },
+      {
+        "text": "Bakeries",
+        "value": "bakeries"
+      },
+      {
+        "text": "Chicken Shop",
+        "value": "chickenshop"
+      },
+      {
+        "text": "Thai",
+        "value": "thai"
+      },
+      {
+        "text": "Bars",
+        "value": "bars"
+      },
+      {
+        "text": "Breakfast & Brunch",
+        "value": "breakfast_brunch"
+      },
+      {
+        "text": "Mediterranean",
+        "value": "mediterranean"
+      },
+      {
+        "text": "Food Stands",
+        "value": "foodstands"
+      },
+      {
+        "text": "Korean",
+        "value": "korean"
+      },
+      {
+        "text": "Vegan",
+        "value": "vegan"
+      },
+      {
+        "text": "Juice Bars & Smoothies",
+        "value": "juicebars"
+      },
+      {
+        "text": "Ethiopian",
+        "value": "ethiopian"
+      },
+      {
+        "text": "Mexican",
+        "value": "mexican"
+      },
+      {
+        "text": "Asian Fusion",
+        "value": "asianfusion"
+      },
+      {
+        "text": "Salad",
+        "value": "salad"
+      },
+      {
+        "text": "Food Delivery Services",
+        "value": "fooddeliveryservices"
+      },
+      {
+        "text": "Indian",
+        "value": "indpak"
+      },
+      {
+        "text": "American (Traditional)",
+        "value": "tradamerican"
+      },
+      {
+        "text": "Sandwiches",
+        "value": "sandwiches"
+      },
+      {
+        "text": "Noodles",
+        "value": "noodles"
+      },
+      {
+        "text": "Burgers",
+        "value": "burgers"
+      },
+      {
+        "text": "Cafes",
+        "value": "cafes"
+      },
+      {
+        "text": "Coffee & Tea",
+        "value": "coffee"
+      },
+      {
+        "text": "Steakhouses",
+        "value": "steak"
+      },
+      {
+        "text": "Nightlife",
+        "value": "nightlife"
+      },
+      {
+        "text": "Wraps",
+        "value": "wraps"
+      },
+      {
+        "text": "Vegetarian",
+        "value": "vegetarian"
+      },
+      {
+        "text": "Acai Bowls",
+        "value": "acaibowls"
+      },
+      {
+        "text": "Cocktail Bars",
+        "value": "cocktailbars"
+      },
+      {
+        "text": "Beer Bar",
+        "value": "beerbar"
+      },
+      {
+        "text": "Specialty Food",
+        "value": "gourmet"
+      },
+      {
+        "text": "Pasta Shops",
+        "value": "pastashops"
+      },
+      {
+        "text": "Cupcakes",
+        "value": "cupcakes"
+      },
+      {
+        "text": "Chicken Wings",
+        "value": "chicken_wings"
+      },
+      {
+        "text": "Seafood",
+        "value": "seafood"
+      },
+      {
+        "text": "Gluten-Free",
+        "value": "gluten_free"
+      }
+    ],
+    "features": [
+      {
+        "text": "Dogs Allowed",
+        "value": "DogsAllowed"
+      },
+      {
+        "text": "Good for Dessert",
+        "value": "GoodForMeal.dessert"
+      },
+      {
+        "text": "Gender-neutral restrooms",
+        "value": "GenderNeutralRestrooms"
+      },
+      {
+        "text": "Offers Delivery",
+        "value": "RestaurantsDelivery"
+      },
+      {
+        "text": "Full Bar",
+        "value": "Alcohol.full_bar"
+      },
+      {
+        "text": "Good for Groups",
+        "value": "RestaurantsGoodForGroups"
+      },
+      {
+        "text": "Has TV",
+        "value": "HasTV"
+      },
+      {
+        "text": "Paid Wi-Fi",
+        "value": "WiFi.paid"
+      },
+      {
+        "text": "Outdoor Seating",
+        "value": "OutdoorSeating"
+      },
+      {
+        "text": "Waiter Service",
+        "value": "RestaurantsTableService"
+      },
+      {
+        "text": "Reservations",
+        "value": "OnlineReservations"
+      },
+      {
+        "text": "Wheelchair Accessible",
+        "value": "WheelchairAccessible"
+      },
+      {
+        "text": "Good for Breakfast",
+        "value": "GoodForMeal.breakfast"
+      },
+      {
+        "text": "Takes Reservations",
+        "value": "RestaurantsReservations"
+      },
+      {
+        "text": "Validated Parking",
+        "value": "BusinessParking.validated"
+      },
+      {
+        "text": "Good for Dinner",
+        "value": "GoodForMeal.dinner"
+      },
+      {
+        "text": "Valet Parking",
+        "value": "BusinessParking.valet"
+      },
+      {
+        "text": "Good For Happy Hour",
+        "value": "HappyHour"
+      },
+      {
+        "text": "Good for Lunch",
+        "value": "GoodForMeal.lunch"
+      },
+      {
+        "text": "Good for Late Night",
+        "value": "GoodForMeal.latenight"
+      },
+      {
+        "text": "Good for Kids",
+        "value": "GoodForKids"
+      },
+      {
+        "text": "Open Now",
+        "value": "open_now"
+      },
+      {
+        "text": "Proof of vaccination required",
+        "value": "proof_of_vaccination_required"
+      },
+      {
+        "text": "Street Parking",
+        "value": "BusinessParking.street"
+      },
+      {
+        "text": "Open At:",
+        "value": "open_time"
+      },
+      {
+        "text": "All staff fully vaccinated",
+        "value": "staff_fully_vaccinated"
+      },
+      {
+        "text": "Garage Parking",
+        "value": "BusinessParking.garage"
+      },
+      {
+        "text": "Free Wi-Fi",
+        "value": "WiFi.free"
+      },
+      {
+        "text": "Offers Military Discount",
+        "value": "OffersMilitaryDiscount"
+      },
+      {
+        "text": "Beer &amp; Wine Only",
+        "value": "Alcohol.beer_and_wine"
+      },
+      {
+        "text": "Offers Takeout",
+        "value": "RestaurantsTakeOut"
+      },
+      {
+        "text": "Accepts Apple Pay",
+        "value": "BusinessAcceptsApplePay"
+      },
+      {
+        "text": "Good for Brunch",
+        "value": "GoodForMeal.brunch"
+      },
+      {
+        "text": "Private Lot Parking",
+        "value": "BusinessParking.lot"
+      },
+      {
+        "text": "Accepts Credit Cards",
+        "value": "BusinessAcceptsCreditCards"
+      },
+      {
+        "text": "Hot and New",
+        "value": "NewBusiness"
+      },
+      {
+        "text": "Open to All",
+        "value": "BusinessOpenToAll"
+      },
+      {
+        "text": "Liked by Vegetarians",
+        "value": "LikedByVegetarians"
+      }
+    ]
+  },
+  "organic_results": [
+    {
+      "position": 1,
+      "place_ids": [
+        "qhLYdszSeiix49xAYs4Q9A",
+        "flower-child-denver-2"
+      ],
+      "title": "Flower Child",
+      "link": "https://www.yelp.com/biz/flower-child-denver-2?osq=healthy+food",
+      "reviews_link": "https://serpapi.com/search.json?engine=yelp_reviews&place_id=qhLYdszSeiix49xAYs4Q9A",
+      "categories": [
+        {
+          "title": "Vegetarian",
+          "link": "https://www.yelp.com/search?cflt=vegetarian&amp;find_loc=Denver%2C+CO"
+        },
+        {
+          "title": "Salad",
+          "link": "https://www.yelp.com/search?cflt=salad&amp;find_loc=Denver%2C+CO"
+        },
+        {
+          "title": "American (New)",
+          "link": "https://www.yelp.com/search?cflt=newamerican&amp;find_loc=Denver%2C+CO"
+        }
+      ],
+      "price": "$$",
+      "rating": 4.5,
+      "reviews": 168,
+      "neighborhoods": "Cherry Creek",
+      "phone": "(303) 388-1878",
+      "snippet": "and you can tell the employees enjoy their job here. Regarding the food, I could not say enough good",
+      "service_options": {
+        "outdoor_seating": true,
+        "delivery": true,
+        "takeout": true
+      },
+      "thumbnail": "https://s3-media0.fl.yelpcdn.com/bphoto/eDq9XxN4P3GlBPl2H3KTEQ/348s.jpg"
+    },
+    {
+      "position": 2,
+      "place_ids": [
+        "7We0YUNskYsDd1f49fW64g",
+        "scratch-kitchen-denver-no-title"
+      ],
+      "title": "Scratch Kitchen - Denver",
+      "link": "https://www.yelp.com/biz/scratch-kitchen-denver-no-title?osq=healthy+food",
+      "reviews_link": "https://serpapi.com/search.json?engine=yelp_reviews&place_id=7We0YUNskYsDd1f49fW64g",
+      "categories": [
+        {
+          "title": "Salad",
+          "link": "https://www.yelp.com/search?cflt=salad&amp;find_loc=Denver%2C+CO"
+        },
+        {
+          "title": "Sandwiches",
+          "link": "https://www.yelp.com/search?cflt=sandwiches&amp;find_loc=Denver%2C+CO"
+        },
+        {
+          "title": "Burgers",
+          "link": "https://www.yelp.com/search?cflt=burgers&amp;find_loc=Denver%2C+CO"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 29,
+      "neighborhoods": "Northeast",
+      "phone": "(720) 790-4222",
+      "snippet": "was looking for a healthy option and the photos looks good, with a 4 star rating, we decided to check it",
+      "service_options": {
+        "outdoor_seating": false,
+        "delivery": true,
+        "takeout": true
+      },
+      "button": {
+        "text": "Start Order",
+        "link": "https://www.yelp.com/biz/7We0YUNskYsDd1f49fW64g?show_platform_modal=True"
+      },
+      "thumbnail": "https://s3-media0.fl.yelpcdn.com/bphoto/7JYZ7dd_vx1sFdriVZPrtw/348s.jpg"
+    },
+    {
+      "position": 3,
+      "place_ids": [
+        "Fqf--AJolIeNRixHvsO7UA",
+        "green-collective-eatery-denver"
+      ],
+      "title": "Green Collective Eatery",
+      "link": "https://www.yelp.com/biz/green-collective-eatery-denver?osq=healthy+food",
+      "reviews_link": "https://serpapi.com/search.json?engine=yelp_reviews&place_id=Fqf--AJolIeNRixHvsO7UA",
+      "categories": [
+        {
+          "title": "Breakfast & Brunch",
+          "link": "https://www.yelp.com/search?cflt=breakfast_brunch&amp;find_loc=Denver%2C+CO"
+        },
+        {
+          "title": "Juice Bars & Smoothies",
+          "link": "https://www.yelp.com/search?cflt=juicebars&amp;find_loc=Denver%2C+CO"
+        },
+        {
+          "title": "Salad",
+          "link": "https://www.yelp.com/search?cflt=salad&amp;find_loc=Denver%2C+CO"
+        }
+      ],
+      "price": "$$",
+      "rating": 5,
+      "reviews": 41,
+      "neighborhoods": "Northwest",
+      "phone": "(720) 708-6865",
+      "snippet": "The most clean and healthy place in Denver! I could not be more impressed with the presentation",
+      "service_options": {
+        "outdoor_seating": true,
+        "delivery": true,
+        "takeout": true
+      },
+      "button": {
+        "text": "Start Order",
+        "link": "https://www.yelp.com/biz/Fqf--AJolIeNRixHvsO7UA?show_platform_modal=True"
+      },
+      "thumbnail": "https://s3-media0.fl.yelpcdn.com/bphoto/jOgBvdjTv_3QZZC8nhIJ9w/348s.jpg"
+    },
+    {
+      "position": 4,
+      "place_ids": [
+        "WKSQhHxyIVJ6kLZx0cNX4g",
+        "clean-eatz-denver-park-hill-denver-2"
+      ],
+      "title": "Clean Eatz - Denver Park Hill",
+      "link": "https://www.yelp.com/biz/clean-eatz-denver-park-hill-denver-2?osq=healthy+food",
+      "reviews_link": "https://serpapi.com/search.json?engine=yelp_reviews&place_id=WKSQhHxyIVJ6kLZx0cNX4g",
+      "categories": [
+        {
+          "title": "Health Markets",
+          "link": "https://www.yelp.com/search?cflt=healthmarkets&amp;find_loc=Denver%2C+CO"
+        },
+        {
+          "title": "Cafes",
+          "link": "https://www.yelp.com/search?cflt=cafes&amp;find_loc=Denver%2C+CO"
+        },
+        {
+          "title": "Salad",
+          "link": "https://www.yelp.com/search?cflt=salad&amp;find_loc=Denver%2C+CO"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 29,
+      "neighborhoods": "Park Hill",
+      "phone": "(303) 322-3348",
+      "snippet": "the Country! The local locations have great bowls too. It's a great option for when you don't want to cook but you want a healthy option.",
+      "service_options": {
+        "outdoor_seating": false,
+        "delivery": true,
+        "takeout": true
+      },
+      "button": {
+        "text": "Start Order",
+        "link": "https://www.yelp.com/biz/WKSQhHxyIVJ6kLZx0cNX4g?show_platform_modal=True"
+      },
+      "thumbnail": "https://s3-media0.fl.yelpcdn.com/bphoto/DZUMgPQEVzbCsMJ2YWxJ-Q/348s.jpg"
+    },
+    {
+      "position": 5,
+      "place_ids": [
+        "1UB2LwAXq__Qydzz72sKNA",
+        "moonbowls-denver"
+      ],
+      "title": "moonbowls",
+      "link": "https://www.yelp.com/biz/moonbowls-denver?osq=healthy+food",
+      "reviews_link": "https://serpapi.com/search.json?engine=yelp_reviews&place_id=1UB2LwAXq__Qydzz72sKNA",
+      "categories": [
+        {
+          "title": "Gluten-Free",
+          "link": "https://www.yelp.com/search?cflt=gluten_free&amp;find_loc=Denver%2C+CO"
+        },
+        {
+          "title": "Korean",
+          "link": "https://www.yelp.com/search?cflt=korean&amp;find_loc=Denver%2C+CO"
+        },
+        {
+          "title": "Vegetarian",
+          "link": "https://www.yelp.com/search?cflt=vegetarian&amp;find_loc=Denver%2C+CO"
+        }
+      ],
+      "rating": 4,
+      "reviews": 15,
+      "neighborhoods": "Lincoln Park",
+      "phone": "(323) 987-4617",
+      "snippet": "As someone who is gluten free dairy free red meat and pork free it's hard to find good food. I have",
+      "service_options": {
+        "delivery": true,
+        "takeout": true
+      },
+      "thumbnail": "https://s3-media0.fl.yelpcdn.com/bphoto/reLq6p-fEvsouKFzkUCKxA/348s.jpg"
+    },
+    {
+      "position": 6,
+      "place_ids": [
+        "3TWWt2PrMmU6A5IAhpFONw",
+        "the-corner-beet-denver"
+      ],
+      "title": "The Corner Beet",
+      "link": "https://www.yelp.com/biz/the-corner-beet-denver?osq=healthy+food",
+      "reviews_link": "https://serpapi.com/search.json?engine=yelp_reviews&place_id=3TWWt2PrMmU6A5IAhpFONw",
+      "categories": [
+        {
+          "title": "Juice Bars & Smoothies",
+          "link": "https://www.yelp.com/search?cflt=juicebars&amp;find_loc=Denver%2C+CO"
+        },
+        {
+          "title": "Vegetarian",
+          "link": "https://www.yelp.com/search?cflt=vegetarian&amp;find_loc=Denver%2C+CO"
+        },
+        {
+          "title": "Vegan",
+          "link": "https://www.yelp.com/search?cflt=vegan&amp;find_loc=Denver%2C+CO"
+        }
+      ],
+      "price": "$$",
+      "rating": 4.5,
+      "reviews": 362,
+      "neighborhoods": "Capitol Hill",
+      "phone": "(720) 295-4447",
+      "snippet": "this cafe has delicious food options, it is not affordable. The beet toast and small matcha cost me",
+      "service_options": {
+        "outdoor_seating": true,
+        "delivery": true,
+        "takeout": true
+      },
+      "thumbnail": "https://s3-media0.fl.yelpcdn.com/bphoto/ehIm-Y5bK6wjAe9NSQfqqQ/348s.jpg"
+    },
+    {
+      "position": 7,
+      "place_ids": [
+        "VfLiGicXAtkgJWXdTr8fLg",
+        "cava-denver-5"
+      ],
+      "title": "Cava",
+      "link": "https://www.yelp.com/biz/cava-denver-5?osq=healthy+food",
+      "reviews_link": "https://serpapi.com/search.json?engine=yelp_reviews&place_id=VfLiGicXAtkgJWXdTr8fLg",
+      "categories": [
+        {
+          "title": "Mediterranean",
+          "link": "https://www.yelp.com/search?cflt=mediterranean&amp;find_loc=Denver%2C+CO"
+        },
+        {
+          "title": "Salad",
+          "link": "https://www.yelp.com/search?cflt=salad&amp;find_loc=Denver%2C+CO"
+        }
+      ],
+      "rating": 4,
+      "reviews": 134,
+      "neighborhoods": "Southeast",
+      "phone": "(303) 539-6937",
+      "snippet": "My favorite "fast food" (that is not unhealthy!) I happened to try CAVA while in San Antonio and I",
+      "service_options": {
+        "outdoor_seating": true,
+        "delivery": true,
+        "takeout": true
+      },
+      "thumbnail": "https://s3-media0.fl.yelpcdn.com/bphoto/Pse98YfTzXR1Rvavvzs6Eg/348s.jpg"
+    },
+    {
+      "position": 8,
+      "place_ids": [
+        "UVT5_hKUuMngmn0WEK-HSQ",
+        "crisp-and-green-denver"
+      ],
+      "title": "Crisp & Green",
+      "link": "https://www.yelp.com/biz/crisp-and-green-denver?osq=healthy+food",
+      "reviews_link": "https://serpapi.com/search.json?engine=yelp_reviews&place_id=UVT5_hKUuMngmn0WEK-HSQ",
+      "categories": [
+        {
+          "title": "Salad",
+          "link": "https://www.yelp.com/search?cflt=salad&amp;find_loc=Denver%2C+CO"
+        },
+        {
+          "title": "Vegetarian",
+          "link": "https://www.yelp.com/search?cflt=vegetarian&amp;find_loc=Denver%2C+CO"
+        },
+        {
+          "title": "Juice Bars & Smoothies",
+          "link": "https://www.yelp.com/search?cflt=juicebars&amp;find_loc=Denver%2C+CO"
+        }
+      ],
+      "price": "$$",
+      "rating": 4.5,
+      "reviews": 34,
+      "neighborhoods": "Southeast",
+      "phone": "(303) 835-2128",
+      "snippet": "This is the perfect addition to lowry! I have been dying to see a salad place open up as a healthy",
+      "service_options": {
+        "outdoor_seating": true
+      },
+      "thumbnail": "https://s3-media0.fl.yelpcdn.com/bphoto/TrVk9_fmXwjTZpQAtiy_VQ/348s.jpg"
+    },
+    {
+      "position": 9,
+      "place_ids": [
+        "3MJTONd1CCkMFweizbv7Kg",
+        "sweetgreen-denver-3"
+      ],
+      "title": "sweetgreen",
+      "link": "https://www.yelp.com/biz/sweetgreen-denver-3?osq=healthy+food",
+      "reviews_link": "https://serpapi.com/search.json?engine=yelp_reviews&place_id=3MJTONd1CCkMFweizbv7Kg",
+      "categories": [
+        {
+          "title": "Salad",
+          "link": "https://www.yelp.com/search?cflt=salad&amp;find_loc=Denver%2C+CO"
+        },
+        {
+          "title": "Vegetarian",
+          "link": "https://www.yelp.com/search?cflt=vegetarian&amp;find_loc=Denver%2C+CO"
+        }
+      ],
+      "rating": 4.5,
+      "reviews": 58,
+      "neighborhoods": "Cherry Creek",
+      "phone": "(720) 730-7750",
+      "snippet": "This meal was so delicious! Not to mention they delivered very prompt- such a healthy spot and good value as well. Than",
+      "service_options": {
+        "delivery": true,
+        "takeout": true
+      },
+      "button": {
+        "text": "Start Order",
+        "link": "https://www.yelp.com/biz/3MJTONd1CCkMFweizbv7Kg?show_platform_modal=True"
+      },
+      "thumbnail": "https://s3-media0.fl.yelpcdn.com/bphoto/3hxurDpOKItinxF4Zb5tjg/348s.jpg"
+    },
+    {
+      "position": 10,
+      "place_ids": [
+        "jtqj4-vdevAuyMG6V2d2cA",
+        "native-foods-glendale"
+      ],
+      "title": "Native Foods",
+      "link": "https://www.yelp.com/biz/native-foods-glendale?osq=healthy+food",
+      "reviews_link": "https://serpapi.com/search.json?engine=yelp_reviews&place_id=jtqj4-vdevAuyMG6V2d2cA",
+      "categories": [
+        {
+          "title": "Vegan",
+          "link": "https://www.yelp.com/search?cflt=vegan&amp;find_loc=Denver%2C+CO"
+        },
+        {
+          "title": "Vegetarian",
+          "link": "https://www.yelp.com/search?cflt=vegetarian&amp;find_loc=Denver%2C+CO"
+        },
+        {
+          "title": "Burgers",
+          "link": "https://www.yelp.com/search?cflt=burgers&amp;find_loc=Denver%2C+CO"
+        }
+      ],
+      "price": "$$",
+      "rating": 4.5,
+      "reviews": 623,
+      "neighborhoods": "Southeast",
+      "phone": "(303) 758-3440",
+      "snippet": "was looking for something not too heavy/nauseating, and Native Foods answered the call! The food was healthy",
+      "service_options": {
+        "outdoor_seating": true,
+        "delivery": true,
+        "takeout": true
+      },
+      "button": {
+        "text": "Start Order"
+      },
+      "thumbnail": "https://s3-media0.fl.yelpcdn.com/bphoto/pA0OvkuO6tI39jSK9sVuiA/348s.jpg"
+    }
+  ],
+  "serpapi_pagination": {
+    "next": "https://serpapi.com/search.json?engine=yelp&find_desc=healthy+food&find_loc=Denver%2C+CO&start=10"
+  }
+}
