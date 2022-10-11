@@ -121,10 +121,14 @@ class SignUpModal extends React.Component {
 
     return (
 <<<<<<< HEAD
+<<<<<<< HEAD
       <div className='sticky mx-auto flex flex-col mx-16'>
 =======
       <div className="mt-4 mx-auto flex flex-col mx-16">
 >>>>>>> 36c4d72 (BAsic add user functionworking)
+=======
+      <div className='sticky mx-auto flex flex-col mx-16'>
+>>>>>>> 6f6481a (updated layout)
         <Modal show={this.state.show} onHide={this.close} size="xs">
           <Modal.Header>
             <Modal.Title>Sign Up</Modal.Title>
