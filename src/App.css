@@ -11,3 +11,14 @@
   color: #fff;
 }
 
+#headerText {
+  color: rgb(247, 29, 145);
+  text-shadow: 1px 1px 1px rgb(70, 16, 28);
+  font-family: 'Aladin', cursive;
+  line-height: 35px;
+  text-align: center;
+}
+
+#sideNav {
+
+}
