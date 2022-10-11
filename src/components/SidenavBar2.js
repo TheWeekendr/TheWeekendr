@@ -1,6 +1,6 @@
 import React from 'react';
 import '../App.css';
-import 'rsuite/dist/styles/rsuite-default-rtl.css'
+import '../rsuite.css';
 import { Sidenav, Nav, Dropdown } from 'rsuite';
 // import { Toggle } from 'rsuite';
 import { Icon } from '@rsuite/icons';
@@ -34,7 +34,8 @@ class SidenavBar extends React.Component {
 
     return (
       <>
-        <div id="sideNav" className='mt-3'>
+        <div id="sideNav" className='mt-5'>
+          <SignUpModal />
           {/* <Toggle onChange={this.handleToggle} checked={expanded} />
           <hr /> */}
           <Sidenav
@@ -43,6 +44,7 @@ class SidenavBar extends React.Component {
             activeKey={this.state.activeKey}
             onSelect={this.handleSelect}
             appearance="subtle"
+            className='mt-5'
           >
             <Sidenav.Body>
               <Nav>
@@ -61,7 +63,7 @@ class SidenavBar extends React.Component {
 
                 <Dropdown
                   placement="rightStart"
-                  eventKey="4"
+                  eventKey="4-5"
                   title="Login"
                   icon={<Icon icon="gear-circle" />}
                 >
@@ -86,7 +88,6 @@ class SidenavBar extends React.Component {
                     </Form>
                   </Dropdown.Item>
                 </Dropdown>
-                <SignUpModal />
               </Nav>
             </Sidenav.Body>
           </Sidenav>

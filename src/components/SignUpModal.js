@@ -35,7 +35,7 @@ class SignUpModal extends React.Component {
   }
   render() {
     return (
-      <div className='mt-4'>
+      <div className='mt-4 mx-auto flex flex-col mx-16'>
         <Modal show={this.state.show} onHide={this.close} size="xs">
           <Modal.Header>
             <Modal.Title>Sign Up</Modal.Title>
@@ -81,7 +81,7 @@ class SignUpModal extends React.Component {
             </Button>
           </Modal.Footer>
         </Modal>
-        <Button onClick={this.open}>Sign Up</Button>
+        <Button appearance="ghost" onClick={this.open}>Sign Up</Button>
       </div>
     );
   }
