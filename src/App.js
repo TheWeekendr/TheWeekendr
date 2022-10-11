@@ -1,7 +1,6 @@
 import React from 'react';
-// import SidenavBar from './components/SidenavBar';
-// import Home from './components/Home';
 import Layout from './components/Layout';
+import DispLayout from './components/DispLayout';
 import './App.css';
 
 class App extends React.Component {
@@ -25,7 +24,8 @@ class App extends React.Component {
           <SidenavBar />
           <Home />
         </div> */}
-        <Layout
+
+        <DispLayout
           userData={this.state.userData}
           setUserDataState={this.setUserDataState}
         />

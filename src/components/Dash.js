@@ -1,13 +1,21 @@
 import React from 'react';
+import axios from 'axios';
 
 class Dash extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: [],
+      formValue: {
+        name: '',
+        password: '',
+        zipCode: '',
+      },
+      favFoods: [],
+      favActivities: [],
     };
   }
 
+  
 
   render() {
     return (

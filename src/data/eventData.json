@@ -1,0 +1,527 @@
+{
+  "search_metadata": {
+    "id": "6345b89d94fb039b3a5aa128",
+    "status": "Success",
+    "json_endpoint": "https://serpapi.com/searches/daa0b71dcc647941/6345b89d94fb039b3a5aa128.json",
+    "created_at": "2022-10-11 18:40:29 UTC",
+    "processed_at": "2022-10-11 18:40:29 UTC",
+    "google_events_url": "https://www.google.com/search?q=Events+in+Denver&ibp=htl;events&uule=w+CAIQICIgRGVudmVyLENPLENvbG9yYWRvLFVuaXRlZCBTdGF0ZXM&hl=en",
+    "raw_html_file": "https://serpapi.com/searches/daa0b71dcc647941/6345b89d94fb039b3a5aa128.html",
+    "total_time_taken": 5.01
+  },
+  "search_parameters": {
+    "q": "Events in Denver",
+    "engine": "google_events",
+    "location_requested": "Denver, CO, Colorado, United States",
+    "location_used": "Denver,CO,Colorado,United States"
+  },
+  "search_information": {
+    "events_results_state": "Results for exact spelling"
+  },
+  "events_results": [
+    {
+      "title": "Collect-A-Con",
+      "date": {
+        "start_date": "Oct 15",
+        "when": "Sat, Oct 15, 10 AM – 1 PM"
+      },
+      "address": [
+        "Colorado Convention Center, 700 14th St",
+        "Denver, CO"
+      ],
+      "link": "https://www.denver.org/event/collect-a-con/89834/",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=Us2lE4jejDfIEPB6w2CSgLLLyq9cJOfRxHgFixJHF2yfQwOcnIQeTcujwmnOXXQzk--r_J1Lw2Zi83P5tFau7bcWTlA_CBAyVHXEfllUrCysR2kebfs",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x876c78d17bd9d871:0x580ecf50af57c3cf?sa=X&hl=en",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x876c78d17bd9d871%3A0x580ecf50af57c3cf&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Denver&type=place"
+      },
+      "description": "Vanilla Ice and Collect at Colorado Convention Center at 2022-10-15T10:00:00-0600",
+      "ticket_info": [
+        {
+          "source": "Axs.com",
+          "link": "https://www.axs.com/events/442387/collect-a-con-tickets",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Universe.com",
+          "link": "https://www.universe.com/events/collect-a-con-denver-co-tickets-HR7LGV?ref=ticketmaster",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Visit Denver",
+          "link": "https://www.denver.org/event/collect-a-con/89834/",
+          "link_type": "more info"
+        },
+        {
+          "source": "Ticketmaster",
+          "link": "https://www.ticketmaster.com/colorado-convention-center-tickets-denver/venue/341669",
+          "link_type": "more info"
+        },
+        {
+          "source": "Songkick",
+          "link": "https://www.songkick.com/concerts/40234875-vanilla-ice-at-colorado-convention-center",
+          "link_type": "more info"
+        }
+      ],
+      "venue": {
+        "name": "Colorado Convention Center",
+        "rating": 4.5,
+        "reviews": 9136,
+        "link": "https://www.google.com/search?hl=en&q=Colorado+Convention+Center&ludocid=6345236870457705423&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhPV3nXyH4UYyt2V8833ZhiQlENoXX8RefItMDjNL5znKGolTZX4-Tfaw&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRUELwt8d03bWUXsJ2ZV8F2LYBBLq77znkfY88Ceo53Nw&s"
+    },
+    {
+      "title": "Accept",
+      "date": {
+        "start_date": "Oct 11",
+        "when": "Tue, Oct 11, 5:00 – 11:59 PM"
+      },
+      "address": [
+        "The Venue, 1451 Cortez St",
+        "Denver, CO"
+      ],
+      "link": "https://thevenuedenver.com/events/2022/10/11/accept",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=vH_D6DVjRxFfmxB-Zh727mlJ9guFtEp9y8SwKPeRcz1gfcsQiXuqzjfh1i2TvTHaX8vw4qibo0eCvoVE9zOQwj2zUP-9nXaujU6vCGSAkAG1q_9WuTk",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x876c7793ee3e3145:0xb48d3d4bf00257d?sa=X&hl=en",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x876c7793ee3e3145%3A0xb48d3d4bf00257d&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Denver&type=place"
+      },
+      "description": "ACCEPT NARCOTIC WASTELAND GRIND CAT GRIND IMMORTAL SŸNN Pre-sale tickets - $40",
+      "ticket_info": [
+        {
+          "source": "Songkick.com",
+          "link": "https://www.songkick.com/concerts/40469604-accept-at-venue-denver?utm_medium=organic&utm_source=microformat",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Allevents.in",
+          "link": "https://allevents.in/welby/accept/200023051818739",
+          "link_type": "tickets"
+        },
+        {
+          "source": "The Venue",
+          "link": "https://thevenuedenver.com/events/2022/10/11/accept",
+          "link_type": "more info"
+        },
+        {
+          "source": "Colorado Hometown Weekly",
+          "link": "https://www.coloradohometownweekly.com/events-calendar/?_escaped_fragment_=/show/?start=2020-03-01#!/details/Accept-Too-Mean-to-Die-Tour-w-Narcotic-Wasteland/10470665/2022-10-11T19",
+          "link_type": "more info"
+        },
+        {
+          "source": "Community Calendar | FOX31 Denver",
+          "link": "https://kdvr.com/community-calendar/?_escaped_fragment_=/show/?ser=Newman%2520Center%2520for%2520the%2520Performing%2520Arts#!/details/Accept-Too-Mean-to-Die-Tour-w-Narcotic-Wasteland/10470665/2022-10-11T19",
+          "link_type": "more info"
+        }
+      ],
+      "venue": {
+        "name": "The Venue",
+        "rating": 4.4,
+        "reviews": 576,
+        "link": "https://www.google.com/search?hl=en&q=The+Venue&ludocid=813132643431359869&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDY-8dCJA8s9Z090GqJbuvzEwUcvJFZSzq7x1izRsckfeO10bsZj5-lcg&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUG2vGRt1MJspvR6g2xwflWogcsvOSzLUOa8JHenvQ2iLr9WcHTsulk497dQ&s"
+    },
+    {
+      "title": "FKJ, OHMA",
+      "date": {
+        "start_date": "Oct 14",
+        "when": "Fri, Oct 14, 8 PM – Sat, Oct 15, 8 PM"
+      },
+      "address": [
+        "The Mission Ballroom, 4242 Wynkoop St",
+        "Denver, CO"
+      ],
+      "link": "https://www.denver.org/event/fkj/90260/",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=TzvD5TbYcRmbZ_L4cqPmV6eaj0JSOwa7PbN6Nbbmts0ux4Dq139-BHHQkDSYf9qdAUJdtfLzx0KqxoQhAajopmja4Ev3aHBwQ_Hc2m54l9BqQVurGSY",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x876c797fdd5f3937:0xb7d629fe1b3fe515?sa=X&hl=en",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x876c797fdd5f3937%3A0xb7d629fe1b3fe515&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Denver&type=place"
+      },
+      "description": "FKJ - 2022 Tour live at the Mission Ballroom Ages: 16 & Over",
+      "ticket_info": [
+        {
+          "source": "Axs.com",
+          "link": "https://www.axs.com/events/436417/fkj-tickets",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Visit Denver",
+          "link": "https://www.denver.org/event/fkj/90260/",
+          "link_type": "more info"
+        },
+        {
+          "source": "Colorado Public Radio",
+          "link": "https://www.cpr.org/event/fkj-ohma/",
+          "link_type": "more info"
+        },
+        {
+          "source": "Community Calendar | FOX31 Denver",
+          "link": "https://kdvr.com/community-calendar/?_escaped_fragment_=/show/?start=2022-05-25#!/details/Ohma-FKJ/10848707/2022-10-14T20",
+          "link_type": "more info"
+        },
+        {
+          "source": "Songkick",
+          "link": "https://www.songkick.com/concerts/40449865-fkj-at-mission-ballroom",
+          "link_type": "more info"
+        }
+      ],
+      "venue": {
+        "name": "The Mission Ballroom",
+        "rating": 4.7,
+        "reviews": 3683,
+        "link": "https://www.google.com/search?hl=en&q=The+Mission+Ballroom&ludocid=13246821525312496917&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_K6Chidqgk0ORjw1MlujgJ80_M--S17M0Q-4yA2G7akYXppXocSqGIo4&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvXdGJz8jsoU12tLhX0az5KQgnoFTi07iN5JOV4V6TEg&s=10"
+    },
+    {
+      "title": "Sleeping With Sirens Live In Concert",
+      "date": {
+        "start_date": "Oct 15",
+        "when": "Sat, Oct 15, 1 AM – 10 PM"
+      },
+      "address": [
+        "Marquis Theater, 2009 Larimer St",
+        "Denver, CO"
+      ],
+      "link": "https://www.denver.org/event/sleeping-with-sirens-live-in-concert/93670/",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=3qaMhx0xD2DvaGNxfJ1fy_aUFvonXV6Hkt6dglm4acWTnhkHxMRpiMdfpQ5A8wyy3CXNs0C_SkWWFUPeRq1dasYLsDN1y4KbzQopiqLkqfO8JL7T72I",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x876c78dc118300f5:0x1dcb6636bf7e77b2?sa=X&hl=en",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x876c78dc118300f5%3A0x1dcb6636bf7e77b2&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Denver&type=place"
+      },
+      "description": "Post-hardcore group Sleeping With Sirens will be embarking on a brief U.S. tour later in 2022 behind their next album 'Complete Collapse'. The 10-date outing takes place in October invading...",
+      "ticket_info": [
+        {
+          "source": "Wun.io",
+          "link": "https://sleepingwithsirensvip.wun.io/events/463916",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Captainticket.com",
+          "link": "https://www.captainticket.com/CO/Denver-Events/Cheap-Sleeping-With-Sirens-Tickets-Marquis-Theater-CO-2022-10-15-20-00-00-2152855",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Allevents.in",
+          "link": "https://allevents.in/denver/sleeping-with-sirens/210001231993691",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Visit Denver",
+          "link": "https://www.denver.org/event/sleeping-with-sirens-live-in-concert/93670/",
+          "link_type": "more info"
+        },
+        {
+          "source": "Live Nation",
+          "link": "https://www.livenation.com/event/G5vzZ93BJCwGy/sleeping-with-sirens",
+          "link_type": "more info"
+        }
+      ],
+      "venue": {
+        "name": "Marquis Theater",
+        "rating": 4.5,
+        "reviews": 1214,
+        "link": "https://www.google.com/search?hl=en&q=Marquis+Theater&ludocid=2146922032699176882&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3Kv_32MbMX4xt24mlvnCs2B2cF1ivhKFQy6omLthRRXydIcJvH0Y61_A&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKDQ0pzOF9hW5F1viodkSNxotXAFWUv1L3mG9D2973nA&s"
+    },
+    {
+      "title": "Just Between Friends Denver",
+      "date": {
+        "start_date": "Oct 14",
+        "when": "Fri, Oct 14, 7 AM – Sun, Oct 16, 3 PM"
+      },
+      "address": [
+        "National Western Complex, 4655 Humboldt St",
+        "Denver, CO"
+      ],
+      "link": "https://patch.com/colorado/littleton/calendar/event/20221014/1886234/just-between-friends-denver",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=KnZWzWU2Ejxh-mEssf5uJBsJlcKzAxAMe9OlifTvlGmvjz4YcKOtja5r7nWzuEMhwnkOrKmt8Cx-wqS62MaxCOdMVv3YzzmuR8sjQQSo0PHa9p8xsKE",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x876c79a7845950b5:0x499a3a4c40d38512?sa=X&hl=en",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x876c79a7845950b5%3A0x499a3a4c40d38512&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Denver&type=place"
+      },
+      "description": "JBF has all things BABY: Clothing | Strollers | Bottles | Toys | Maternity & more! Get all your infant essentials at up to 90% off retail! Expecting parents & grandparents are invited to shop...",
+      "ticket_info": [
+        {
+          "source": "Eventbrite.com",
+          "link": "https://www.eventbrite.com/e/general-admission-denver-fall-winter-2022-tickets-359779007697",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Patch",
+          "link": "https://patch.com/colorado/littleton/calendar/event/20221014/1886234/just-between-friends-denver",
+          "link_type": "more info"
+        },
+        {
+          "source": "Parkbench",
+          "link": "https://parkbench.com/event/general-admission-denver-fall-winter-2022",
+          "link_type": "more info"
+        },
+        {
+          "source": "AllEvents.in",
+          "link": "https://allevents.in/denver/seasons%20change?ref=ep_tags_v4",
+          "link_type": "more info"
+        }
+      ],
+      "venue": {
+        "name": "National Western Complex",
+        "rating": 4.3,
+        "reviews": 972,
+        "link": "https://www.google.com/search?hl=en&q=National+Western+Complex&ludocid=5303615610361709842&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThWWIXrKAWpAGwVQszmbN2_uT2W-5R-0x_KBRDP54Wb3pH6mQAuyOMONs&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThG3qSWzxFs_oJcsfvgN_2HKQRpWm15bPW6DMiZg2N4lYm1JbA_Mbp0UhuBA&s"
+    },
+    {
+      "title": "Mannheim Steamroller",
+      "date": {
+        "start_date": "Dec 10",
+        "when": "Sat, Dec 10, 4 – 7 PM"
+      },
+      "address": [
+        "Temple Hoyne Buell Theatre, 1350 Curtis Street",
+        "Denver, CO"
+      ],
+      "link": "https://www.denver.org/event/mannheim-steamroller/91569/",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=6co-efNg9YWSHWnC8YV0F0d5HOE502RBTSA-qYGv23k8HSNx9PsRv5pCXYjsDGPIX9nf-qNPRpXX-f0n1xWRyqNpB2i2GuslB_BMPJE5VNkngkFoSL0",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x876c78ce2beaa7bf:0xdec1a7f6d0913f13?sa=X&hl=en",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x876c78ce2beaa7bf%3A0xdec1a7f6d0913f13&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Denver&type=place"
+      },
+      "description": "Get your ticket for Mannheim Steamroller ✔ Classical, Classical/Vocal ..",
+      "ticket_info": [
+        {
+          "source": "Vividseats.com",
+          "link": "https://www.vividseats.com/mannheim-steamroller-tickets-denver-buell-theatre-12-10-2022--concerts-classical/production/4029390?utm_medium=organic&utm_source=google_eventsearch",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Festivaly.eu",
+          "link": "https://festivaly.eu/en/mannheim-steamroller-buell-theatre-denver-2022-1",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Gametime.co",
+          "link": "https://gametime.co/concert/mannheim-steamroller-tickets/12-10-2022-denver-co-buell-theatre/events/62e0717d6fd8ab0001fcde10?utm_medium=organic&utm_source=microformat",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Captainticket.com",
+          "link": "https://www.captainticket.com/CO/Denver-Events/Cheap-Mannheim-Steamroller-Tickets-Buell-Theatre-at-DCPA-2022-12-10-20-00-00-2118945",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Visit Denver",
+          "link": "https://www.denver.org/event/mannheim-steamroller/91569/",
+          "link_type": "more info"
+        }
+      ],
+      "venue": {
+        "name": "Temple Hoyne Buell Theatre",
+        "rating": 4.8,
+        "reviews": 2563,
+        "link": "https://www.google.com/search?hl=en&q=Temple+Hoyne+Buell+Theatre&ludocid=16051295225428131603&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcBAXy5mpXcI1XpBcFgCT073t-64-bV7vbZIDLardK3RSmapofiAkdhb0&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuKETQG6_h2LBuilzzwTSiAAAVJOmMGFYOFmAyRxsjsg&s"
+    },
+    {
+      "title": "Denver Coin Expo",
+      "date": {
+        "start_date": "Oct 13",
+        "when": "Thu, Oct 13, 10 AM – 6 PM"
+      },
+      "address": [
+        "National Western Complex, 4655 Humboldt St",
+        "Denver, CO"
+      ],
+      "link": "https://10times.com/denver-coin-expo",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=KnZWzWU2Ejxh-mEssf5uJBsJlcKzAxAMe9OlifTvlGmvjz4YcKOtja5r7nWzuEMhwnkOrKmt8Cx-wqS62MaxCOdMVv3YzzmuR8sjQQSo0PHa9p8xsKE",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x876c79a7845950b5:0x499a3a4c40d38512?sa=X&hl=en",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x876c79a7845950b5%3A0x499a3a4c40d38512&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Denver&type=place"
+      },
+      "description": "112 people interested. Rated 4.5 by 11 people. Check out who is attending ✭ exhibiting ✭ speaking ✭ schedule & agenda ✭ reviews ✭ timing ✭ entry ticket fees. 2022 edition of Denver Coin Expo will...",
+      "ticket_info": [
+        {
+          "source": "10Times",
+          "link": "https://10times.com/denver-coin-expo",
+          "link_type": "more info"
+        },
+        {
+          "source": "The Castle Pines Connection",
+          "link": "https://www.castlepinesconnection.com/event/denver-coin-expo/2022-10-13/",
+          "link_type": "more info"
+        },
+        {
+          "source": "AllEvents.in",
+          "link": "https://allevents.in/denver/denver-coin-expo-fall-2022/200023392387101",
+          "link_type": "more info"
+        }
+      ],
+      "venue": {
+        "name": "National Western Complex",
+        "rating": 4.3,
+        "reviews": 972,
+        "link": "https://www.google.com/search?hl=en&q=National+Western+Complex&ludocid=5303615610361709842&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU6pmvRwbmFMuMgXc-z8i0SE4DswVeEoJdKd5iRxCj-Htx77smBYjXYaA&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTom1WmOPgobBCdWon6rTLokqlqRf5U5P6id9nzAFelqi0RiE16b1zGlIMWzQ&s=10"
+    },
+    {
+      "title": "LEAKYCON BOSTON",
+      "date": {
+        "start_date": "Oct 14",
+        "when": "Fri, Oct 14 – Sun, Oct 16"
+      },
+      "address": [
+        "Denver",
+        "Denver, CO"
+      ],
+      "link": "http://www.leakycon.com/orlando-2020/",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=dly5SUK67YPDGCs43-pd2g3ieMJX-YuaZ0pCafeQ42zKXN2AC3WKlNf-Zn2VUbwUcsMalnn-UA",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x876b80aa231f17cf:0x118ef4f8278a36d6?sa=X&hl=en",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x876b80aa231f17cf%3A0x118ef4f8278a36d6&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Denver&type=place"
+      },
+      "description": ""To our new students, welcome, to our old students, welcome back!" Stop by the LeakyCon MainStage first thing and kick off the festivities with some of our favorite people!",
+      "ticket_info": [
+        {
+          "source": "LeakyCon",
+          "link": "http://www.leakycon.com/orlando-2020/",
+          "link_type": "more info"
+        },
+        {
+          "source": "grenadine",
+          "link": "https://sites.grenadine.co/sites/mischief/en/leakycon-denver/schedule/25748",
+          "link_type": "more info"
+        },
+        {
+          "source": "GAAM",
+          "link": "https://ilovegaam.com/events/leakycon-2022-denver/",
+          "link_type": "more info"
+        },
+        {
+          "source": "Tmorra.com",
+          "link": "https://tmorra.com/next/Leaky+Con+-+LeakyCon+Denver",
+          "link_type": "more info"
+        }
+      ],
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7hPgG5AU9nLfqtd-7Yd2I5IyD3eEJcluy_m8kZUaZWfHWGBc1BcdsNPY8LQ&s=10",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQybqZX1CbL72nyTTja628xQFAinfUE79DwcJhVIsdnO5Se3dPh0MHTTTmSmA&s"
+    },
+    {
+      "title": "Lorde",
+      "date": {
+        "start_date": "Oct 11",
+        "when": "Tue, Oct 11, 9 PM – Wed, Oct 12, 10 PM"
+      },
+      "address": [
+        "Ball Arena, 1000 Chopper Cir",
+        "Denver, CO"
+      ],
+      "link": "https://open.spotify.com/concert/3Rq3nCENKeMlIt6lxU9CxN",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=VfrQkNv8yBbOmA_pq1Q3KeYsVIMliUM-DCzMNjPYy_xxfzFXmDSiDkMr5Wd6oBo3En7CkKuhHMZ8gOsYLOY8XG56M7iamFS3lVVrmeNTzQb0cBAoqSo",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x876c78b866687b77:0x7bec273737d47786?sa=X&hl=en",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x876c78b866687b77%3A0x7bec273737d47786&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Denver&type=place"
+      },
+      "description": "Signed to Universal at just 13-years-old, New Zealander Ella Marija Lani Yelich-O'Connor (November 7, 1996) has been acclaimed for redefining pop music with her soulful, icy, electronic ballads...",
+      "ticket_info": [
+        {
+          "source": "Festivaly.eu",
+          "link": "https://festivaly.eu/en/lorde-pepsi-center-wtc-mexico-city-2022",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Spotify",
+          "link": "https://open.spotify.com/concert/3Rq3nCENKeMlIt6lxU9CxN",
+          "link_type": "more info"
+        },
+        {
+          "source": "Deezer",
+          "link": "https://www.deezer.com/da/artist/4448485",
+          "link_type": "more info"
+        },
+        {
+          "source": "Songkick",
+          "link": "https://www.songkick.com/concerts/40434093-lorde-at-pepsi-center-wtc",
+          "link_type": "more info"
+        },
+        {
+          "source": "Viberate",
+          "link": "https://www.viberate.com/event/lorde-at-pepsi-center-wtc",
+          "link_type": "more info"
+        }
+      ],
+      "venue": {
+        "name": "Ball Arena",
+        "rating": 4.6,
+        "reviews": 13586,
+        "link": "https://www.google.com/search?hl=en&q=Ball+Arena&ludocid=8929555279282206598&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjv0hvWte9dFGzxKm0cgmQmrp91qabnIWtXHhajo0&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7hPgG5AU9nLfqtd-7Yd2I5IyD3eEJcluy_m8kZUaZWfHWGBc1BcdsNPY8LQ&s=10"
+    },
+    {
+      "title": "Popup Denver",
+      "date": {
+        "start_date": "Oct 16",
+        "when": "Sun, Oct 16, 10 AM – 5 PM"
+      },
+      "address": [
+        "McNichols Civic Center Building, 144 W Colfax Ave",
+        "Denver, CO"
+      ],
+      "link": "https://www.axs.com/events/447993/popup-denver-tickets",
+      "event_location_map": {
+        "image": "https://www.google.com/maps/vt/data=Q4Oaz7C04cClasfkUWygWWzjmnPLlthabulqXycIwapF8JVhvDspRF5tUq_ohVVhg0ULzsbwuFuI8nviWqKOKxFgqPV2YW5XBUGTa9rct1d1N4E2W3o",
+        "link": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x876c78d4ee394ee7:0xec032406b0753f3c?sa=X&hl=en",
+        "serpapi_link": "https://serpapi.com/search.json?data=%214m2%213m1%211s0x876c78d4ee394ee7%3A0xec032406b0753f3c&engine=google_maps&google_domain=google.com&hl=en&q=Events+in+Denver&type=place"
+      },
+      "description": "This event is supported in part by Denver Arts & Venues through the Cultural Partner Program. Kids (ages 5+) and their families will have the chance to participate in over 40 hours of fun...",
+      "ticket_info": [
+        {
+          "source": "Axs.com",
+          "link": "https://www.axs.com/events/447993/popup-denver-tickets",
+          "link_type": "tickets"
+        },
+        {
+          "source": "Pop Culture Classroom",
+          "link": "https://popcultureclassroom.org/popup-denver/",
+          "link_type": "more info"
+        },
+        {
+          "source": "Community Calendar | FOX31 Denver",
+          "link": "https://kdvr.com/community-calendar/?_escaped_fragment_=/show/?start=2020-07-22#!/details/PopUP-Denver-2022-Presented-by-Pop-Culture-Classroom/10857472/2022-10-16T10",
+          "link_type": "more info"
+        },
+        {
+          "source": "The Denver Post",
+          "link": "https://extras.denverpost.com/calendar/index.html#!/details/PopUP-Denver-2022-Presented-by-Pop-Culture-Classroom/10857472/2022-10-16T10",
+          "link_type": "more info"
+        },
+        {
+          "source": "Concerts 50",
+          "link": "https://concerts50.com/artists/popup-tour-dates-usa",
+          "link_type": "more info"
+        }
+      ],
+      "venue": {
+        "name": "McNichols Civic Center Building",
+        "rating": 4.5,
+        "reviews": 416,
+        "link": "https://www.google.com/search?hl=en&q=McNichols+Civic+Center+Building&ludocid=17006476229030002492&ibp=gwp%3B0,7"
+      },
+      "thumbnail": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb_Jta0DZkjHUtvk7-K8vvPsPjUkrQ4rTU00xVIZs&s",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAH01_xbn_NPt6LLxarNtoZzWoH889rZ7eR3Q_j-OmUA&s"
+    }
+  ]
+}
