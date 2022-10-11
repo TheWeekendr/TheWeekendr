@@ -11,11 +11,11 @@ class App extends React.Component {
     };
   }
 
-  setUserDataState(data) {
+  setUserDataState = data => {
     this.setState({
       userData: data,
     });
-  }
+  };
 
   render() {
     return (
