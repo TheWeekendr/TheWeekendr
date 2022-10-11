@@ -4,6 +4,19 @@ import DispLayout from './components/DispLayout';
 import './App.css';
 
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      userData: {},
+    };
+  }
+
+  setUserDataState(data) {
+    this.setState({
+      userData: data,
+    });
+  }
+
   render() {
     return (
       <>
@@ -11,11 +24,14 @@ class App extends React.Component {
           <SidenavBar />
           <Home />
         </div> */}
-        <DispLayout />
+
+        <DispLayout
+          userData={this.state.userData}
+          setUserDataState={this.setUserDataState}
+        />
       </>
-    )
+    );
   }
 }
-
 
 export default App;

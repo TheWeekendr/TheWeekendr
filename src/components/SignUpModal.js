@@ -55,6 +55,7 @@ class SignUpModal extends React.Component {
       favFoods: this.state.favFoods,
       favActivities: this.state.favActivities,
     };
+    this.props.setUserDataState(userData);
     try {
       // const res = await axios.post(
       //   `${process.env.REACT_APP_SERVER}/user`,
