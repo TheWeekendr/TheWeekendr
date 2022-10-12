@@ -131,7 +131,7 @@ class UpdateModal extends React.Component {
     ];
 
     return (
-      <div className="mt-4 mx-auto flex flex-col mx-16">
+      <div className="mx-auto flex flex-col mx-16">
         <Modal show={this.state.show} onHide={this.close} size="xs">
           <Modal.Header>
             <Modal.Title>Update Profile</Modal.Title>

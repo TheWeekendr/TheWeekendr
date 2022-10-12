@@ -2,6 +2,10 @@ html {
   min-height: 100vh;
 }
 
+#heroBlock {
+  background: hsla(0, 0%, 100%, 0.55); 
+  backdrop-filter: blur(30px);
+}
 
 #panelStyles {
   padding: 15px 20px;
@@ -19,8 +23,15 @@ html {
   color: rgb(247, 29, 145);
   text-shadow: 1px 1px 1px rgb(70, 16, 28);
   font-family: 'Aladin', cursive;
-  line-height: 35px;
-  text-align: center;
+  line-height: 40px;
+  text-align: right;
+}
+
+#weekend {
+  color: rgb(247, 29, 145);
+  text-shadow: 1px 1px 1px rgb(70, 16, 28);
+  font-family: 'Aladin', cursive;
+  font-size: 72px;
 }
 
 ::-webkit-scrollbar {
@@ -34,6 +45,10 @@ html {
   padding: 7px;
 }
 
+#scrollContainer::-webkit-scrollbar {
+  display: none;
+}
+
 #eventCard {
   flex-shrink: 0;
   border-radius: 10px;
@@ -41,6 +56,14 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  overflow: auto;
+}
+
+#innerEventCard {
+  padding: 10px;
+  background: hsla(0, 0%, 100%, 0.55); 
+  backdrop-filter: blur(30px);
+  height: 100%;
 }
 
 #dashContainer {

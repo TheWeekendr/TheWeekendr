@@ -1,6 +1,6 @@
 import React from 'react';
 import Home from './components/Home';
-import PanelDisplay from './components/PanelDisplay';
+import Dash from './components/Dash';
 import About from './components/About';
 import './App.css';
 import {
@@ -15,12 +15,17 @@ class NavRoutes extends React.Component {
         <Routes>
           <Route
             exact path="/"
-            element={<Home
-          />}>
+            element={
+            <Home
+              setUserDataState={this.props.setUserDataState}
+              getUser={this.props.getUser}
+              userData={this.props.userData}
+            />}
+          >
           </Route>
           <Route
             exact path="/dash"
-            element={<PanelDisplay
+            element={<Dash
             />}>
           </Route>
           <Route
