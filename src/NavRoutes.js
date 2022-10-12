@@ -15,28 +15,20 @@ class NavRoutes extends React.Component {
             exact
             path="/"
             element={
-            <Home
-              setUserDataState={this.props.setUserDataState}
-              getUser={this.props.getUser}
-              userData={this.props.userData}
-            />}
-          >
-          </Route>
+              <Home
+                setUserDataState={this.props.setUserDataState}
+                getUser={this.props.getUser}
+                userData={this.props.userData}
+              />
+            }
+          ></Route>
           <Route
-            exact path="/dash"
-            element={<Dash
-            />}>
-          </Route>
-          <Route
-            exact path="/map"
-            element={<Map
-            />}>
-          </Route>
-          <Route
-            exact path="/about"
-            element={<About
-          />}>
-          </Route>
+            exact
+            path="/dash"
+            element={<Dash userData={this.props.userData} />}
+          ></Route>
+          <Route exact path="/map" element={<Map />}></Route>
+          <Route exact path="/about" element={<About />}></Route>
         </Routes>
       </>
     );
