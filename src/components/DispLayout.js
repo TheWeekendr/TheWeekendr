@@ -5,11 +5,8 @@ import { Nav, Icon, Sidenav, Dropdown, Navbar, Footer } from 'rsuite';
 import { Container, Header, Content, Sidebar, Button, ButtonToolbar } from 'rsuite';
 import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 import SignUpModal from './SignUpModal';
-import PanelDisplay from './PanelDisplay';
-import {
-  Routes,
-  Route,
-} from "react-router-dom";
+import NavRoutes from '../NavRoutes';
+import { LinkContainer } from "react-router-bootstrap";
 
 const headerStyles = {
   padding: 18,
@@ -95,19 +92,26 @@ class DispLayout extends React.Component {
                 
                 <Sidenav.Body>
                   <Nav>
-                    <Nav.Item eventKey="1" icon={<Icon icon="home" />}>
-                      Home
-                    </Nav.Item>
-                    <Nav.Item eventKey="2" icon={<Icon icon="dashboard" />}>
-                      Dash
-                    </Nav.Item>
-                    <Nav.Item eventKey="3" icon={<Icon icon="map" />}>
-                      Map
-                    </Nav.Item>
-                    <Nav.Item eventKey="4" icon={<Icon icon="group" />}>
-                      About
-                    </Nav.Item>
-
+                    <LinkContainer to="/">
+                      <Nav.Item href="/" eventKey="1" icon={<Icon icon="home" />}>
+                        Home
+                      </Nav.Item>
+                    </LinkContainer>
+                    <LinkContainer to="/dash">
+                      <Nav.Item href="/dash" eventKey="2" icon={<Icon icon="dashboard" />}>
+                        Dash
+                      </Nav.Item>
+                    </LinkContainer>
+                    <LinkContainer to="/map">
+                      <Nav.Item href="/map" eventKey="3" icon={<Icon icon="map" />}>
+                        Map
+                      </Nav.Item>
+                    </LinkContainer>
+                    <LinkContainer to="/about">
+                      <Nav.Item href="/about" eventKey="4" icon={<Icon icon="group" />}>
+                        About
+                      </Nav.Item>
+                    </LinkContainer>
                     <Dropdown
                       placement="rightStart"
                       eventKey="4-5"
@@ -151,7 +155,7 @@ class DispLayout extends React.Component {
                 </div>
               </Header>
               <Content id="dashContainer" className="p-6">
-                <PanelDisplay />
+                <NavRoutes />
               </Content>
               <Footer id="footer" className='bg-slate-700'></Footer>
             </Container>
