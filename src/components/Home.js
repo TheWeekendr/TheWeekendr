@@ -1,22 +1,38 @@
 import React from 'react';
+import SignUpModal from './SignUpModal';
+import UpdateModal from './UpdateModal';
 
 class Home extends React.Component {
   render() {
     return (
       <>
-        <section className="text-gray-600 body-font bg-white">
-          <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-            <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-              <img className="object-cover object-center rounded" alt="hero" src="https://dummyimage.com/720x600"/>
-            </div>
-            <div className="lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-              <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Before they sold out
-                <br className="hidden lg:inline-block"/>readymade gluten
-              </h1>
-              <p className="mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p>
-              <div className="flex justify-center">
-                <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-                <button className="ml-4 inline-flex text-gray-700 bg-gray-100 border-0 py-2 px-6 focus:outline-none hover:bg-gray-200 rounded text-lg">Button</button>
+        <section>
+          <div class="px-6 py-12 md:px-12 text-slate-700 text-center lg:text-left">
+            <div class="container mx-auto xl:px-32">
+              <div class="grid lg:grid-cols-2 flex items-center">
+                <div class="md:mt-12 lg:mt-0 mb-12 lg:mb-0">
+                  <div id="heroBlock" class="block rounded-lg shadow-lg px-6 py-14 md:px-12 lg:-mr-14">
+                    <h1 class="text-4xl md:text-5xl xl:text-6xl font-bold tracking-tight mb-6">Welcome <br /><span class="text-slate-700">to your </span><span id="weekend">weekend.</span></h1>
+                    <div className="w-3/5">
+                      <SignUpModal 
+                        setUserDataState={this.props.setUserDataState}
+                        getUser={this.props.getUser}
+                      />
+                      <UpdateModal
+                        setUserDataState={this.props.setUserDataState}
+                        userData={this.props.userData}
+                      />
+                    </div>
+                  </div>
+                  
+                </div>
+                <div class="md:mb-12 lg:mb-0">
+                  <img
+                    src="https://wallpaperaccess.com/full/4611212.jpg"
+                    class="w-5/6 rounded-lg shadow-lg"
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
           </div>

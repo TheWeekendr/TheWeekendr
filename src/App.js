@@ -1,6 +1,5 @@
 import React from 'react';
-// import Layout from './components/Layout';
-import DispLayout from './components/DispLayout';
+import Layout from './components/Layout';
 import './App.css';
 import { BrowserRouter } from "react-router-dom";
 import axios from 'axios';
@@ -43,7 +42,7 @@ class App extends React.Component {
     return (
       <>
         <BrowserRouter>
-          <DispLayout
+          <Layout
             userData={this.state.userData}
             setUserDataState={this.setUserDataState}
             getUser={this.getUser}
