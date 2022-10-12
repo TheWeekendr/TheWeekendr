@@ -73,14 +73,14 @@ class UpdateModal extends React.Component {
     };
 
     try {
-      await axios.put(
-        `${process.env.REACT_APP_SERVER}/user/${userUpdateData._id}`,
-        userUpdateData
-      );
       // await axios.put(
-      //   `http://localhost:3001/user/${userUpdateData._id}`,
+      //   `${process.env.REACT_APP_SERVER}/user/${userUpdateData._id}`,
       //   userUpdateData
       // );
+      await axios.put(
+        `http://localhost:3001/user/${userUpdateData._id}`,
+        userUpdateData
+      );
 
       this.props.setUserDataState(userUpdateData);
     } catch (error) {
