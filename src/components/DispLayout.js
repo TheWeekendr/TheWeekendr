@@ -12,6 +12,7 @@ import {
 } from 'rsuite';
 import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 import SignUpModal from './SignUpModal';
+import UpdateModal from './UpdateModal';
 import Events from './Events';
 
 const headerStyles = {
@@ -166,6 +167,11 @@ class DispLayout extends React.Component {
                     </h5>
                     <SignUpModal
                       setUserDataState={this.props.setUserDataState}
+                      getUser={this.props.getUser}
+                    />
+                    <UpdateModal
+                      setUserDataState={this.props.setUserDataState}
+                      userData={this.props.userData}
                     />
                   </div>
                 </div>

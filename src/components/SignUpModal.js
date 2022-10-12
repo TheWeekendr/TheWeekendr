@@ -8,13 +8,13 @@ class SignUpModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      formValue: {
-        name: '',
-        password: '',
-        zipCode: '',
-      },
-      favFoods: [],
-      favActivities: [],
+      // formValue: {
+      //   name: this.props.userData.name || '',
+      //   password: this.props.userData.password || '',
+      //   zipCode: this.props.userData.zipCode || '',
+      // },
+      // favFoods: this.props.userData.favFoods || [],
+      // favActivities: this.props.userData.favActivities || [],
       show: false,
     };
     this.close = this.close.bind(this);
@@ -64,6 +64,7 @@ class SignUpModal extends React.Component {
       const res = await axios.post(`http://localhost:3001/user`, userData);
 
       this.props.setUserDataState(userData);
+      this.props.getUser(userData);
     } catch (error) {
       alert(`Error: ${error.code} - ${error.message}`);
     }

@@ -2,25 +2,26 @@ import React from 'react';
 import { Modal, Button } from 'rsuite';
 import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 import { CheckPicker } from 'rsuite';
-
+import axios from 'axios';
 
 class UpdateModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       formValue: {
-        name: '',
-        email: '',
-        password: '',
-        zipCode: '',
-        favFoods: [],
-        favActivities: [],
+        name: this.props.userData.name,
+        password: this.props.userData.password,
+        zipCode: this.props.userData.zipCode,
       },
-      show: false
+      favFoods: this.props.userData.favFoods,
+      favActivities: this.props.userData.favActivities,
+      show: false,
     };
     this.close = this.close.bind(this);
     this.open = this.open.bind(this);
     this.handleChange = this.handleChange.bind(this);
+    this.handleFoods = this.handleFoods.bind(this);
+    this.handleActivities = this.handleActivities.bind(this);
   }
   close() {
     this.setState({ show: false });
@@ -30,15 +31,107 @@ class UpdateModal extends React.Component {
   }
   handleChange(value) {
     this.setState({
-      formValue: value
+      formValue: value,
     });
   }
 
+  handleFoods(value) {
+    this.setState({
+      favFoods: value,
+    });
+  }
 
+  handleActivities(value) {
+    this.setState({
+      favActivities: value,
+    });
+  }
+
+  handleUpdateAccount = async () => {
+    let userUpdateData = {
+      name: this.state.formValue.name,
+      // password: this.state.formValue.password,
+      zipCode: this.state.formValue.zipCode,
+      favFoods: this.state.favFoods,
+      favActivities: this.state.favActivities,
+      priorSearches: this.props.userData.priorSearches,
+      savedActivities: this.props.userData.savedActivities,
+      _id: this.props.userData._id,
+      __v: this.props.userData.__v,
+    };
+
+    try {
+      // const res = await axios.put(
+      //   `${process.env.REACT_APP_SERVER}/user`,
+      //   userData
+      // );
+      console.log(userUpdateData);
+      const res = await axios.put(
+        `http://localhost:3001/user/${userUpdateData._id}`,
+        userUpdateData
+      );
+      // res.status(200).send('User account updated');
+
+      this.props.setUserDataState(userUpdateData);
+    } catch (error) {
+      alert(`Error: ${error.code} - ${error.message}`);
+    }
+    this.close();
+  };
 
   render() {
+    const foodData = [
+      {
+        value: 'chinese',
+        label: 'Chinese',
+      },
+      {
+        value: 'thai',
+        label: 'Thai',
+      },
+      {
+        value: 'italian',
+        label: 'Italian',
+      },
+      {
+        value: 'mexican',
+        label: 'Mexican',
+      },
+      {
+        value: 'mongolian',
+        label: 'Mongolian',
+      },
+    ];
+
+    const activitiesData = [
+      {
+        value: 'golf',
+        label: 'Golf',
+      },
+      {
+        value: 'comedy',
+        label: 'Comedy',
+      },
+      {
+        value: 'wine',
+        label: 'Wine',
+      },
+      {
+        value: 'beer',
+        label: 'Beer',
+      },
+      {
+        value: 'art',
+        label: 'Art',
+      },
+      {
+        value: 'music',
+        label: 'Music',
+      },
+    ];
+
     return (
-      <div className='mt-4 mx-auto flex flex-col mx-16'>
+      <div className="mt-4 mx-auto flex flex-col mx-16">
         <Modal show={this.state.show} onHide={this.close} size="xs">
           <Modal.Header>
             <Modal.Title>Update Profile</Modal.Title>
@@ -51,12 +144,10 @@ class UpdateModal extends React.Component {
             >
               <FormGroup>
                 <ControlLabel>Username</ControlLabel>
-                <FormControl name="name" />
-                <HelpBlock>Required</HelpBlock>
-              </FormGroup>
-              <FormGroup>
-                <ControlLabel>Email</ControlLabel>
-                <FormControl name="email" type="email" />
+                <FormControl
+                  name="name"
+                  placeholder={this.props.userData.name}
+                />
                 <HelpBlock>Required</HelpBlock>
               </FormGroup>
               <FormGroup>
@@ -65,30 +156,48 @@ class UpdateModal extends React.Component {
               </FormGroup>
               <FormGroup>
                 <ControlLabel>Zip Code</ControlLabel>
-                <FormControl name="zip-code" type="zip-code" />
+                <FormControl
+                  name="zipCode"
+                  type="zip-code"
+                  placeholder={this.props.userData.zipCode || ''}
+                />
+                <HelpBlock>Required</HelpBlock>
               </FormGroup>
               <FormGroup>
-                <CheckPicker placeholder="Favorite Foods" style={{ width: 400 }} />
+                <CheckPicker
+                  onChange={this.handleFoods}
+                  data={foodData}
+                  defaultValue={this.props.userData.favFoods}
+                  placeholder="Favorite Foods"
+                  style={{ width: 400 }}
+                />
               </FormGroup>
               <FormGroup>
-                <CheckPicker placeholder="Favorite Activities" style={{ width: 400 }} />
+                <CheckPicker
+                  onChange={this.handleActivities}
+                  data={activitiesData}
+                  defaultValue={this.props.userData.favActivities}
+                  placeholder="Favorite Activities"
+                  style={{ width: 400 }}
+                />
               </FormGroup>
             </Form>
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.close} appearance="primary">
-              Update
+            <Button onClick={this.handleUpdateAccount} appearance="primary">
+              Save Changes
             </Button>
             <Button onClick={this.close} appearance="subtle">
               Cancel
             </Button>
           </Modal.Footer>
         </Modal>
-        <Button appearance="ghost" onClick={this.open}>Update Profile</Button>
+        <Button appearance="ghost" onClick={this.open}>
+          Update Profile
+        </Button>
       </div>
     );
   }
 }
-
 
 export default UpdateModal;
