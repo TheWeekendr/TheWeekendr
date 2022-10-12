@@ -2,9 +2,16 @@ import React from 'react';
 import '../App.css';
 import '../rsuite.css';
 import { Nav, Icon, Sidenav, Dropdown, Navbar, Footer } from 'rsuite';
-import { Container, Header, Content, Sidebar, Button, ButtonToolbar } from 'rsuite';
+import {
+  Container,
+  Header,
+  Content,
+  Sidebar,
+  Button,
+  ButtonToolbar,
+} from 'rsuite';
 import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
-import { LinkContainer } from "react-router-bootstrap";
+import { LinkContainer } from 'react-router-bootstrap';
 import NavRoutes from '../NavRoutes';
 // import SignUpModal from './SignUpModal';
 // import UpdateModal from './UpdateModal';
@@ -38,7 +45,7 @@ const NavToggle = ({ expand, onChange }) => {
               return <Icon style={iconStyles} icon="cog" />;
             }}
           >
-            <Dropdown.Item onSelect={() => this.setState({ showUpdateModal: true })}>Update Profile</Dropdown.Item>
+            <Dropdown.Item>Update Profile</Dropdown.Item>
             <Dropdown.Item>Sign Out</Dropdown.Item>
           </Dropdown>
         </Nav>
@@ -61,7 +68,6 @@ class Layout extends React.Component {
     super(props);
     this.state = {
       expand: true,
-      showUpdateModal: false,
     };
     this.handleToggle = this.handleToggle.bind(this);
   }
@@ -98,7 +104,8 @@ class Layout extends React.Component {
                           class="w-10 h-10 m-auto rounded-full object-cover drop-shadow-lg lg:w-32 lg:h-32"
                         />
                         <h1 id="headerText" class="mt-3 pr-8 lg:block mx-auto">
-                          <span className="">The</span> <br />Weekendr
+                          <span className="">The</span> <br />
+                          Weekendr
                         </h1>
                       </div>
                     </span>
@@ -108,22 +115,38 @@ class Layout extends React.Component {
                 <Sidenav.Body>
                   <Nav>
                     <LinkContainer to="/">
-                      <Nav.Item href="/" eventKey="1" icon={<Icon icon="home" />}>
+                      <Nav.Item
+                        href="/"
+                        eventKey="1"
+                        icon={<Icon icon="home" />}
+                      >
                         Home
                       </Nav.Item>
                     </LinkContainer>
                     <LinkContainer to="/dash">
-                      <Nav.Item href="/dash" eventKey="2" icon={<Icon icon="dashboard" />}>
+                      <Nav.Item
+                        href="/dash"
+                        eventKey="2"
+                        icon={<Icon icon="dashboard" />}
+                      >
                         Dash
                       </Nav.Item>
                     </LinkContainer>
                     <LinkContainer to="/map">
-                      <Nav.Item href="/map" eventKey="3" icon={<Icon icon="map" />}>
+                      <Nav.Item
+                        href="/map"
+                        eventKey="3"
+                        icon={<Icon icon="map" />}
+                      >
                         Map
                       </Nav.Item>
                     </LinkContainer>
                     <LinkContainer to="/about">
-                      <Nav.Item href="/about" eventKey="4" icon={<Icon icon="group" />}>
+                      <Nav.Item
+                        href="/about"
+                        eventKey="4"
+                        icon={<Icon icon="group" />}
+                      >
                         About
                       </Nav.Item>
                     </LinkContainer>
@@ -164,8 +187,7 @@ class Layout extends React.Component {
               <Header>
                 <div class="sticky top-0 h-14 border-b bg-slate-700 lg:py-2.5">
                   <div class="px-6 flex items-center justify-between space-x-4 2xl:container">
-                    <h5 class="text-3xl text-white font-medium lg:block">
-                    </h5>
+                    <h5 class="text-3xl text-white font-medium lg:block"></h5>
                     {/* <SignUpModal
                       setUserDataState={this.props.setUserDataState}
                       getUser={this.props.getUser}
@@ -178,14 +200,13 @@ class Layout extends React.Component {
                 </div>
               </Header>
               <Content id="dashContainer" className="p-6 bg-slate-300">
-                <NavRoutes 
+                <NavRoutes
                   setUserDataState={this.props.setUserDataState}
                   getUser={this.props.getUser}
                   userData={this.props.userData}
-                  showUpdateModal={this.state.showUpdateModal}
                 />
               </Content>
-              <Footer id="footer" className='bg-slate-700'></Footer>
+              <Footer id="footer" className="bg-slate-700"></Footer>
             </Container>
           </Container>
         </div>
