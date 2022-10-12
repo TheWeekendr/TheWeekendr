@@ -16,6 +16,10 @@ import NavRoutes from '../NavRoutes';
 import SearchForm from './SearchForm';
 // import SignUpModal from './SignUpModal';
 // import UpdateModal from './UpdateModal';
+import { withAuth0 } from '@auth0/auth0-react';
+import Login from './Login';
+import Logout from './Logout';
+import axios from 'axios';
 
 const headerStyles = {
   padding: 18,
@@ -78,6 +82,32 @@ class Layout extends React.Component {
     });
   }
 
+  async componentDidMount () {
+    // auth0 stuff goes here
+    if(this.props.auth0.isAuthenticated){
+      const res = await this.props.auth0.getIdTokenClaims();
+      const jwt = res.__raw;
+
+      console.log('token: ', jwt);
+
+      // const config = {
+      //   headers: { Authorization: `Bearer ${jwt}` },
+      //   method: 'get',
+      //   baseURL: process.env.REACT_APP_SERVER,
+      //   url: '/user',
+      // };
+
+      // const userResponse = await axios(config);
+
+      // console.log('userResponse: ', userResponse);
+
+      // this.props.setUserDataState({
+      //   userData: userResponse.data
+      // });
+
+
+    }
+  }
   render() {
     const { expand } = this.state;
     return (
@@ -158,6 +188,14 @@ class Layout extends React.Component {
                       icon={<Icon icon="gear-circle" />}
                     >
                       <Dropdown.Item eventKey="4-5">
+                        {this.props.auth0.isAuthenticated ?
+                          <>
+                            <Logout />
+                          </>
+                          :
+                          <Login />
+
+                        }
                         <Form fluid>
                           <FormGroup>
                             <ControlLabel>Username</ControlLabel>
@@ -218,4 +256,4 @@ class Layout extends React.Component {
   }
 }
 
-export default Layout;
+export default withAuth0(Layout);
