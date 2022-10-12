@@ -4,10 +4,7 @@ import Dash from './components/Dash';
 import Map from './components/Map';
 import About from './components/About';
 import './App.css';
-import {
-  Routes,
-  Route,
-} from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';
 
 class NavRoutes extends React.Component {
   render() {
@@ -15,7 +12,8 @@ class NavRoutes extends React.Component {
       <>
         <Routes>
           <Route
-            exact path="/"
+            exact
+            path="/"
             element={
             <Home
               setUserDataState={this.props.setUserDataState}
@@ -41,8 +39,8 @@ class NavRoutes extends React.Component {
           </Route>
         </Routes>
       </>
-    )
+    );
   }
-};
+}
 
 export default NavRoutes;
