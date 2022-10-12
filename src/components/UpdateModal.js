@@ -29,9 +29,7 @@ class UpdateModal extends React.Component {
   }
   open() {
     this.setState({ show: true });
-  }
-
-  componentDidMount() {
+    console.log('userData - open', this.props.userData);
     this.setState({
       formValue: {
         name: this.props.userData.name,
