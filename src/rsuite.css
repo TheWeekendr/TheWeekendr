@@ -1892,8 +1892,8 @@ a.rs-btn {
   border-top-color: #fff;
 }
 .rs-btn-default {
-  color: #575757;
-  background: #f7f7fa;
+  color: #fff;
+  background: #475569;
 }
 .rs-btn-default.rs-btn-loading:hover,
 .rs-btn-default.rs-btn-loading:not(.rs-btn-disabled):hover,
@@ -15831,7 +15831,7 @@ textarea.rs-picker-search-input {
   background-color: #1675e0;
 }
 .rs-navbar.rs-navbar-subtle {
-  background-color: #94a3b8;
+  background-color: #475569;
 }
 .rs-navbar.rs-navbar-subtle,
 .rs-navbar.rs-navbar-subtle .rs-navbar-header a {
