@@ -38,7 +38,7 @@ const NavToggle = ({ expand, onChange }) => {
               return <Icon style={iconStyles} icon="cog" />;
             }}
           >
-            <Dropdown.Item>Account Settings</Dropdown.Item>
+            <Dropdown.Item onSelect={() => this.setState({ showUpdateModal: true })}>Update Profile</Dropdown.Item>
             <Dropdown.Item>Sign Out</Dropdown.Item>
           </Dropdown>
         </Nav>
@@ -61,6 +61,7 @@ class Layout extends React.Component {
     super(props);
     this.state = {
       expand: true,
+      showUpdateModal: false,
     };
     this.handleToggle = this.handleToggle.bind(this);
   }
@@ -69,6 +70,7 @@ class Layout extends React.Component {
       expand: !this.state.expand,
     });
   }
+
   render() {
     const { expand } = this.state;
     return (
@@ -180,6 +182,7 @@ class Layout extends React.Component {
                   setUserDataState={this.props.setUserDataState}
                   getUser={this.props.getUser}
                   userData={this.props.userData}
+                  showUpdateModal={this.state.showUpdateModal}
                 />
               </Content>
               <Footer id="footer" className='bg-slate-700'></Footer>

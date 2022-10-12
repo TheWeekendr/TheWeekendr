@@ -34,6 +34,15 @@ html {
   font-size: 72px;
 }
 
+#team {
+  color: rgb(247, 29, 145);
+  text-shadow: 1px 1px 1px rgb(70, 16, 28);
+  font-family: 'Aladin', cursive;
+  font-size: 38px;
+  letter-spacing: 1px;
+  font-stretch: extra-expanded;
+}
+
 ::-webkit-scrollbar {
   width: 0px;
 }

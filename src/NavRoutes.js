@@ -1,6 +1,7 @@
 import React from 'react';
 import Home from './components/Home';
 import Dash from './components/Dash';
+import Map from './components/Map';
 import About from './components/About';
 import './App.css';
 import {
@@ -20,6 +21,7 @@ class NavRoutes extends React.Component {
               setUserDataState={this.props.setUserDataState}
               getUser={this.props.getUser}
               userData={this.props.userData}
+              showUpdateModal={this.props.showUpdateModal}
             />}
           >
           </Route>
@@ -30,7 +32,7 @@ class NavRoutes extends React.Component {
           </Route>
           <Route
             exact path="/map"
-            element={<About
+            element={<Map
             />}>
           </Route>
           <Route
