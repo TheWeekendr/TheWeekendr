@@ -11,14 +11,14 @@ class About extends React.Component {
             <div class="mb-6 lg:mb-0">
               <div class="bg-white block rounded-lg shadow-lg">
                 <div class="relative overflow-hidden bg-no-repeat bg-cover">
-                  <img src="https://www.aressecurity.co/wp-content/uploads/2022/10/IMG_5163-2.jpg" class="w-full rounded-t-lg" />
+                  <img src="https://www.aressecurity.co/wp-content/uploads/2022/10/IMG_5152-headshot-copy-2.jpg" class="w-full rounded-t-lg" />
                   <a href="#!">
                     <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"></div>
                   </a>
                   <svg class="absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
                     style={{ left: 0, bottom: 0 }}>
                     <path fill="#fff"
-                      d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                      d="M0,288L48,256C96,224,192,160,288,160C384,160,480,224,576,213.3C672,203,768,117,864,85.3C960,53,1056,75,1152,69.3C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
                     </path>
                   </svg>
                 </div>
@@ -46,7 +46,7 @@ class About extends React.Component {
             <div class="mb-6 lg:mb-0">
               <div class="bg-white block rounded-lg shadow-lg">
                 <div class="relative overflow-hidden bg-no-repeat bg-cover">
-                  <img src="https://mdbootstrap.com/img/new/avatars/8.jpg" class="w-full rounded-t-lg" />
+                  <img src="https://avatars.githubusercontent.com/u/108370798?v=4" class="w-full rounded-t-lg" />
                   <a href="#!">
                     <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"></div>
                   </a>
@@ -81,14 +81,14 @@ class About extends React.Component {
             <div class="">
               <div class="bg-white block rounded-lg shadow-lg">
                 <div class="relative overflow-hidden bg-no-repeat bg-cover">
-                  <img src="https://mdbootstrap.com/img/new/avatars/15.jpg" class="w-full rounded-t-lg" />
+                  <img src="https://avatars.githubusercontent.com/u/104056426?v=4" class="w-full rounded-t-lg" />
                   <a href="#!">
                     <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"></div>
                   </a>
                   <svg class="absolute" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"
                     style={{ left: 0, bottom: 0 }}>
                     <path fill="#fff"
-                      d="M0,288L48,256C96,224,192,160,288,160C384,160,480,224,576,213.3C672,203,768,117,864,85.3C960,53,1056,75,1152,69.3C1248,64,1344,32,1392,16L1440,0L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                      d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
                     </path>
                   </svg>
                 </div>
