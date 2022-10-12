@@ -1,7 +1,7 @@
 import React from 'react';
 import Layout from './components/Layout';
-import DispLayout from './components/DispLayout';
 import './App.css';
+import { BrowserRouter } from "react-router-dom";
 import axios from 'axios';
 
 class App extends React.Component {
@@ -41,16 +41,13 @@ class App extends React.Component {
   render() {
     return (
       <>
-        {/* <div className="flex h-screen overflow-hidden">
-          <SidenavBar />
-          <Home />
-        </div> */}
-
-        <DispLayout
-          userData={this.state.userData}
-          setUserDataState={this.setUserDataState}
-          getUser={this.getUser}
-        />
+        <BrowserRouter>
+          <Layout
+            userData={this.state.userData}
+            setUserDataState={this.setUserDataState}
+            getUser={this.getUser}
+          />
+        </BrowserRouter>
       </>
     );
   }
