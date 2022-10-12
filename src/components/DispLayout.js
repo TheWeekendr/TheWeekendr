@@ -1,12 +1,15 @@
 import React from 'react';
 import '../App.css';
 import '../rsuite.css';
-import { Nav, Icon, Sidenav, Dropdown, Navbar } from 'rsuite';
+import { Nav, Icon, Sidenav, Dropdown, Navbar, Footer } from 'rsuite';
 import { Container, Header, Content, Sidebar, Button, ButtonToolbar } from 'rsuite';
 import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 import SignUpModal from './SignUpModal';
-import Events from './Events';
-
+import PanelDisplay from './PanelDisplay';
+import {
+  Routes,
+  Route,
+} from "react-router-dom";
 
 const headerStyles = {
   padding: 18,
@@ -92,13 +95,13 @@ class DispLayout extends React.Component {
                 
                 <Sidenav.Body>
                   <Nav>
-                    <Nav.Item eventKey="1" icon={<Icon icon="dashboard" />}>
+                    <Nav.Item eventKey="1" icon={<Icon icon="home" />}>
                       Home
                     </Nav.Item>
-                    <Nav.Item eventKey="2" icon={<Icon icon="group" />}>
+                    <Nav.Item eventKey="2" icon={<Icon icon="dashboard" />}>
                       Dash
                     </Nav.Item>
-                    <Nav.Item eventKey="3" icon={<Icon icon="group" />}>
+                    <Nav.Item eventKey="3" icon={<Icon icon="map" />}>
                       Map
                     </Nav.Item>
                     <Nav.Item eventKey="4" icon={<Icon icon="group" />}>
@@ -147,10 +150,10 @@ class DispLayout extends React.Component {
                   </div>
                 </div>
               </Header>
-              <Content className="overflow-auto">
-                Content
-                <Events />
+              <Content id="dashContainer" className="p-6">
+                <PanelDisplay />
               </Content>
+              <Footer id="footer" className='bg-slate-700'></Footer>
             </Container>
           </Container>
         </div>

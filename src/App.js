@@ -1,7 +1,8 @@
 import React from 'react';
-import Layout from './components/Layout';
+// import Layout from './components/Layout';
 import DispLayout from './components/DispLayout';
 import './App.css';
+import { BrowserRouter } from "react-router-dom";
 
 class App extends React.Component {
   constructor(props) {
@@ -20,15 +21,12 @@ class App extends React.Component {
   render() {
     return (
       <>
-        {/* <div className="flex h-screen overflow-hidden">
-          <SidenavBar />
-          <Home />
-        </div> */}
-
-        <DispLayout
-          userData={this.state.userData}
-          setUserDataState={this.setUserDataState}
-        />
+        <BrowserRouter>
+          <DispLayout
+            userData={this.state.userData}
+            setUserDataState={this.setUserDataState}
+          />
+        </BrowserRouter>
       </>
     );
   }
