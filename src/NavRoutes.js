@@ -21,7 +21,6 @@ class NavRoutes extends React.Component {
               setUserDataState={this.props.setUserDataState}
               getUser={this.props.getUser}
               userData={this.props.userData}
-              showUpdateModal={this.props.showUpdateModal}
             />}
           >
           </Route>

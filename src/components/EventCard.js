@@ -9,28 +9,28 @@ class EventCard extends React.Component {
   render() {
     return (
       <>
-        <div id="scrollContainer" className='flex flex-nowrap'>
+        <div id="scrollContainer" className='flex flex-nowrap mx-auto'>
           {eventData.map((event, i) => {
             return (
               <Panel id="eventCard" className="bg-slate-300" key={i} style={{ display: 'inline-block', width: 350 }}>
                 <div id="innerEventCard" class="block rounded-lg shadow-lg bg-white max-w-sm text-center h-100">
-                  <div class="py-3 px-6 border-b border-gray-300">
+                  <div class="py-3 px-6 border-b border-slate-400">
                     {event.date.when}
                   </div>
                   <div class="w-full">
-                    <img class="d-block object-cover h-44 mx-auto" src={event.image} alt="" />
+                    <img class="d-block object-cover h-44 mx-auto p-2 rounded-xl mt-3" src={event.image} alt="eventImg" />
                   </div>
-                  <div class="p-6">
-                    <h5 class="text-gray-900 text-xl font-medium mb-2">{event.title}</h5>
-                    <p class="text-gray-700 text-base mb-4">
+                  <div class="p-6 h-72">
+                    <h5 class="text-gray-900 text-xl font-medium mb-2 border-t border-b border-slate-400 py-2">{event.title}</h5>
+                    <p class="text-gray-700 text-base">
                       {event.address[0]}
                     </p>
-                    <p class="text-gray-700 text-base mb-4">
+                    <p class="text-gray-700 text-base mb-3">
                       {event.address[1]}
                     </p>
                     <small>{event.description}</small>
                   </div>
-                  <div class="sticky bottom py-3 px-6 border-t border-gray-300">
+                  <div class="sticky bottom py-3 px-6 border-t border-slate-400">
                     <Button block appearance="default" size="md" href={event.ticket_info[0].link} type="link" target="_blank" rel="noreferrer noopener">Tickets</Button>
                   </div>
                 </div>    

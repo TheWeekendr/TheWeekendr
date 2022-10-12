@@ -6,6 +6,7 @@ import { Container, Header, Content, Sidebar, Button, ButtonToolbar } from 'rsui
 import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 import { LinkContainer } from "react-router-bootstrap";
 import NavRoutes from '../NavRoutes';
+import SearchForm from './SearchForm';
 // import SignUpModal from './SignUpModal';
 // import UpdateModal from './UpdateModal';
 
@@ -38,7 +39,7 @@ const NavToggle = ({ expand, onChange }) => {
               return <Icon style={iconStyles} icon="cog" />;
             }}
           >
-            <Dropdown.Item onSelect={() => this.setState({ showUpdateModal: true })}>Update Profile</Dropdown.Item>
+            <Dropdown.Item>Update Profile</Dropdown.Item>
             <Dropdown.Item>Sign Out</Dropdown.Item>
           </Dropdown>
         </Nav>
@@ -61,7 +62,6 @@ class Layout extends React.Component {
     super(props);
     this.state = {
       expand: true,
-      showUpdateModal: false,
     };
     this.handleToggle = this.handleToggle.bind(this);
   }
@@ -166,6 +166,7 @@ class Layout extends React.Component {
                   <div class="px-6 flex items-center justify-between space-x-4 2xl:container">
                     <h5 class="text-3xl text-white font-medium lg:block">
                     </h5>
+                    <SearchForm />
                     {/* <SignUpModal
                       setUserDataState={this.props.setUserDataState}
                       getUser={this.props.getUser}
@@ -182,7 +183,6 @@ class Layout extends React.Component {
                   setUserDataState={this.props.setUserDataState}
                   getUser={this.props.getUser}
                   userData={this.props.userData}
-                  showUpdateModal={this.state.showUpdateModal}
                 />
               </Content>
               <Footer id="footer" className='bg-slate-700'></Footer>

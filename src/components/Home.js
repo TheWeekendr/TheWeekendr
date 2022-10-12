@@ -21,7 +21,6 @@ class Home extends React.Component {
                       <UpdateModal
                         setUserDataState={this.props.setUserDataState}
                         userData={this.props.userData}
-                        showUpdateModal={this.props.showUpdateModal}
                       />
                     </div>
                   </div>

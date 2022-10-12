@@ -2,6 +2,10 @@ html {
   min-height: 100vh;
 }
 
+body {
+  overflow: scroll;
+}
+
 #heroBlock {
   background: hsla(0, 0%, 100%, 0.55); 
   backdrop-filter: blur(30px);
@@ -39,12 +43,16 @@ html {
   text-shadow: 1px 1px 1px rgb(70, 16, 28);
   font-family: 'Aladin', cursive;
   font-size: 38px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   font-stretch: extra-expanded;
 }
 
-::-webkit-scrollbar {
-  width: 0px;
+#teamT {
+  color: rgb(247, 29, 145);
+  text-shadow: 1px 1px 1px rgb(70, 16, 28);
+  font-family: 'Aladin', cursive;
+  font-size: 33px;
+  font-stretch: extra-expanded;
 }
 
 #scrollContainer {
@@ -54,9 +62,6 @@ html {
   padding: 7px;
 }
 
-#scrollContainer::-webkit-scrollbar {
-  display: none;
-}
 
 #eventCard {
   flex-shrink: 0;
@@ -69,7 +74,6 @@ html {
 }
 
 #innerEventCard {
-  padding: 10px;
   background: hsla(0, 0%, 100%, 0.55); 
   backdrop-filter: blur(30px);
   height: 100%;
