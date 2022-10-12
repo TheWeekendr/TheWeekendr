@@ -22,6 +22,7 @@ class UpdateModal extends React.Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleFoods = this.handleFoods.bind(this);
     this.handleActivities = this.handleActivities.bind(this);
+    this.handleUpdateAccount = this.handleUpdateAccount.bind(this);
   }
   close() {
     this.setState({ show: false });
@@ -29,6 +30,17 @@ class UpdateModal extends React.Component {
   open() {
     this.setState({ show: true });
   }
+
+  componentDidMount() {
+    this.setState({
+      formValue: {
+        name: this.props.userData.name,
+        password: this.props.userData.password,
+        zipCode: this.props.userData.zipCode,
+      },
+    });
+  }
+
   handleChange(value) {
     this.setState({
       formValue: value,
@@ -61,16 +73,14 @@ class UpdateModal extends React.Component {
     };
 
     try {
-      // const res = await axios.put(
-      //   `${process.env.REACT_APP_SERVER}/user`,
-      //   userData
-      // );
-      console.log(userUpdateData);
-      const res = await axios.put(
-        `http://localhost:3001/user/${userUpdateData._id}`,
+      await axios.put(
+        `${process.env.REACT_APP_SERVER}/user/${userUpdateData._id}`,
         userUpdateData
       );
-      // res.status(200).send('User account updated');
+      // await axios.put(
+      //   `http://localhost:3001/user/${userUpdateData._id}`,
+      //   userUpdateData
+      // );
 
       this.props.setUserDataState(userUpdateData);
     } catch (error) {
@@ -159,7 +169,7 @@ class UpdateModal extends React.Component {
                 <FormControl
                   name="zipCode"
                   type="zip-code"
-                  placeholder={this.props.userData.zipCode || ''}
+                  placeholder={this.props.userData.zipCode}
                 />
                 <HelpBlock>Required</HelpBlock>
               </FormGroup>
