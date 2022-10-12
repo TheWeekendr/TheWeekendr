@@ -4,17 +4,17 @@ import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 import { CheckPicker } from 'rsuite';
 import axios from 'axios';
 
-class SignUpModal extends React.Component {
+class UpdateModal extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // formValue: {
-      //   name: this.props.userData.name || '',
-      //   password: this.props.userData.password || '',
-      //   zipCode: this.props.userData.zipCode || '',
-      // },
-      // favFoods: this.props.userData.favFoods || [],
-      // favActivities: this.props.userData.favActivities || [],
+      formValue: {
+        name: this.props.userData.name,
+        password: this.props.userData.password,
+        zipCode: this.props.userData.zipCode,
+      },
+      favFoods: this.props.userData.favFoods,
+      favActivities: this.props.userData.favActivities,
       show: false,
     };
     this.close = this.close.bind(this);
@@ -47,24 +47,32 @@ class SignUpModal extends React.Component {
     });
   }
 
-  handleCreateAccount = async () => {
-    let userData = {
+  handleUpdateAccount = async () => {
+    let userUpdateData = {
       name: this.state.formValue.name,
       // password: this.state.formValue.password,
       zipCode: this.state.formValue.zipCode,
       favFoods: this.state.favFoods,
       favActivities: this.state.favActivities,
+      priorSearches: this.props.userData.priorSearches,
+      savedActivities: this.props.userData.savedActivities,
+      _id: this.props.userData._id,
+      __v: this.props.userData.__v,
     };
 
     try {
-      // const res = await axios.post(
+      // const res = await axios.put(
       //   `${process.env.REACT_APP_SERVER}/user`,
       //   userData
       // );
-      const res = await axios.post(`http://localhost:3001/user`, userData);
+      console.log(userUpdateData);
+      const res = await axios.put(
+        `http://localhost:3001/user/${userUpdateData._id}`,
+        userUpdateData
+      );
+      // res.status(200).send('User account updated');
 
-      this.props.setUserDataState(userData);
-      this.props.getUser(userData);
+      this.props.setUserDataState(userUpdateData);
     } catch (error) {
       alert(`Error: ${error.code} - ${error.message}`);
     }
@@ -123,10 +131,10 @@ class SignUpModal extends React.Component {
     ];
 
     return (
-      <div className="sticky mx-auto flex flex-col mx-16">
+      <div className="mt-4 mx-auto flex flex-col mx-16">
         <Modal show={this.state.show} onHide={this.close} size="xs">
           <Modal.Header>
-            <Modal.Title>Sign Up</Modal.Title>
+            <Modal.Title>Update Profile</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Form
@@ -136,42 +144,48 @@ class SignUpModal extends React.Component {
             >
               <FormGroup>
                 <ControlLabel>Username</ControlLabel>
-                <FormControl name="name" />
+                <FormControl
+                  name="name"
+                  placeholder={this.props.userData.name}
+                />
                 <HelpBlock>Required</HelpBlock>
               </FormGroup>
               <FormGroup>
                 <ControlLabel>Password</ControlLabel>
                 <FormControl name="password" type="password" />
-                <HelpBlock>Required</HelpBlock>
               </FormGroup>
               <FormGroup>
                 <ControlLabel>Zip Code</ControlLabel>
-                <FormControl name="zipCode" type="zip-code" />
+                <FormControl
+                  name="zipCode"
+                  type="zip-code"
+                  placeholder={this.props.userData.zipCode || ''}
+                />
                 <HelpBlock>Required</HelpBlock>
               </FormGroup>
               <FormGroup>
                 <CheckPicker
                   onChange={this.handleFoods}
                   data={foodData}
+                  defaultValue={this.props.userData.favFoods}
                   placeholder="Favorite Foods"
                   style={{ width: 400 }}
-                  preventOverflow
                 />
               </FormGroup>
               <FormGroup>
                 <CheckPicker
                   onChange={this.handleActivities}
                   data={activitiesData}
+                  defaultValue={this.props.userData.favActivities}
                   placeholder="Favorite Activities"
                   style={{ width: 400 }}
-                  preventOverflow
                 />
               </FormGroup>
             </Form>
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.handleCreateAccount} appearance="primary">
-              Create Account
+            <Button onClick={this.handleUpdateAccount} appearance="primary">
+              Save Changes
             </Button>
             <Button onClick={this.close} appearance="subtle">
               Cancel
@@ -179,11 +193,11 @@ class SignUpModal extends React.Component {
           </Modal.Footer>
         </Modal>
         <Button appearance="ghost" onClick={this.open}>
-          Sign Up
+          Update Profile
         </Button>
       </div>
     );
   }
 }
 
-export default SignUpModal;
+export default UpdateModal;
