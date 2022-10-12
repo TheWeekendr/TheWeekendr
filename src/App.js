@@ -14,7 +14,9 @@ class App extends React.Component {
         zipCode: '',
         favFoods: [],
         favActivities: [],
+        authData: null
       },
+
     };
   }
 
