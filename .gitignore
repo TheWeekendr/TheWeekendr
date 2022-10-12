@@ -23,4 +23,9 @@ yarn-debug.log*
 yarn-error.log*
 
 .env
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 48f16c4 (added package)
 
