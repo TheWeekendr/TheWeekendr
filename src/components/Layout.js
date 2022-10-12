@@ -13,6 +13,7 @@ import {
 import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 import { LinkContainer } from 'react-router-bootstrap';
 import NavRoutes from '../NavRoutes';
+import SearchForm from './SearchForm';
 // import SignUpModal from './SignUpModal';
 // import UpdateModal from './UpdateModal';
 
@@ -187,7 +188,9 @@ class Layout extends React.Component {
               <Header>
                 <div class="sticky top-0 h-14 border-b bg-slate-700 lg:py-2.5">
                   <div class="px-6 flex items-center justify-between space-x-4 2xl:container">
-                    <h5 class="text-3xl text-white font-medium lg:block"></h5>
+                    <h5 class="text-3xl text-white font-medium lg:block">
+                    </h5>
+                    <SearchForm />
                     {/* <SignUpModal
                       setUserDataState={this.props.setUserDataState}
                       getUser={this.props.getUser}

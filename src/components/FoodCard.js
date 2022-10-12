@@ -9,7 +9,7 @@ class FoodCard extends React.Component {
   render() {
     return (
       <>
-        <div id="scrollContainer">
+        <div id="scrollContainer" className='flex flex-nowrap mx-auto'>
           {foodData.map((event, i) => {
             return (
               <Panel id="eventCard" key={i} shaded bordered bodyFill style={{ display: 'inline-block', width: 320 }}>
