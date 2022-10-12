@@ -1,3 +1,7 @@
+html {
+  min-height: 100vh;
+}
+
 
 #panelStyles {
   padding: 15px 20px;
@@ -19,6 +23,40 @@
   text-align: center;
 }
 
-#sideNav {
-
+::-webkit-scrollbar {
+  width: 0px;
 }
+
+#scrollContainer {
+  display: flex;
+  overflow-x: scroll;
+  max-width: 79vw;
+  padding: 7px;
+}
+
+#eventCard {
+  flex-shrink: 0;
+  border-radius: 10px;
+  margin-left: 10px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#dashContainer {
+  overflow-y: scroll;
+  max-height: 93vh;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 12px;
+  background-color: #334155;
+  color: #fff;
+  text-align: center;
+  line-height: 50px;
+}
+
+
