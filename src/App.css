@@ -36,6 +36,25 @@ body {
   text-shadow: 1px 1px 1px rgb(70, 16, 28);
   font-family: 'Aladin', cursive;
   font-size: 72px;
+  animation: fadeIn1 3s;
+  -webkit-animation: fadeIn1 3s;
+  -moz-animation: fadeIn1 3s;
+  -o-animation: fadeIn1 3s;
+  -ms-animation: fadeIn1 3s;
+}
+
+@keyframes fadeIn1 {
+  0% {
+    opacity: 0;
+  }
+
+  33% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 #team {

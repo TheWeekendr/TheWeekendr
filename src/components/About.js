@@ -16,7 +16,7 @@ class About extends React.Component {
             <div class="mb-6 lg:mb-0">
               <div class="bg-white block rounded-lg shadow-xl">
                 <div class="relative overflow-hidden bg-no-repeat bg-cover">
-                  <img src="https://www.aressecurity.co/wp-content/uploads/2022/10/IMG_5152-headshot-copy-2.jpg" class="w-full rounded-t-lg" />
+                  <img src="https://www.aressecurity.co/wp-content/uploads/2022/10/IMG_5152-headshot-copy-2.jpg" class="w-full rounded-t-lg" alt='dustin'/>
                   <a href="#!">
                     <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"></div>
                   </a>
@@ -51,7 +51,7 @@ class About extends React.Component {
             <div class="mb-6 lg:mb-0">
               <div class="bg-white block rounded-lg shadow-xl">
                 <div class="relative overflow-hidden bg-no-repeat bg-cover">
-                  <img src="https://avatars.githubusercontent.com/u/108370798?v=4" class="w-full rounded-t-lg" />
+                  <img src="https://avatars.githubusercontent.com/u/108370798?v=4" class="w-full rounded-t-lg" alt="chris"/>
                   <a href="#!">
                     <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"></div>
                   </a>
@@ -86,7 +86,7 @@ class About extends React.Component {
             <div class="">
               <div class="bg-white block rounded-lg shadow-xl">
                 <div class="relative overflow-hidden bg-no-repeat bg-cover">
-                  <img src="https://avatars.githubusercontent.com/u/104056426?v=4" class="w-full rounded-t-lg" />
+                  <img src="https://avatars.githubusercontent.com/u/104056426?v=4" class="w-full rounded-t-lg" alt="mathew" />
                   <a href="#!">
                     <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed"></div>
                   </a>
