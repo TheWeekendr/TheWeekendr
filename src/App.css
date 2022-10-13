@@ -11,6 +11,48 @@ body {
   backdrop-filter: blur(30px);
 }
 
+#heroBlock2 {
+  background: hsla(0, 0%, 100%, 0.62);
+  backdrop-filter: blur(30px);
+}
+
+#dashText {
+  color: rgb(247, 29, 145);
+  text-shadow: 1px 1px 1px rgb(70, 16, 28);
+  animation: fadeIn1 3500ms;
+  -webkit-animation: fadeIn1 3500ms;
+  -moz-animation: fadeIn1 3500ms;
+  -o-animation: fadeIn1 3500ms;
+  -ms-animation: fadeIn1 3500ms;
+}
+
+#dashLoginText {
+  animation: fadeIn3 3500ms;
+  -webkit-animation: fadeIn3 3500ms;
+  -moz-animation: fadeIn3 3500ms;
+  -o-animation: fadeIn3 3500ms;
+  -ms-animation: fadeIn3 3500ms;
+}
+
+#dashImgFade {
+  animation: fadeIn1 2000ms;
+  -webkit-animation: fadeIn1 2000ms;
+  -moz-animation: fadeIn1 2000ms;
+  -o-animation: fadeIn1 2000ms;
+  -ms-animation: fadeIn1 2000ms;
+}
+
+#teamText {
+  color: white;
+  text-shadow: 1px 1px 1px rgb(28, 28, 28);
+  font-size: 36px;
+}
+
+#teamDash {
+  background-color: rgb(247, 29, 145);
+  text-shadow: 1px 1px 1px rgb(70, 16, 28);
+}
+
 #panelStyles {
   padding: 15px 20px;
   color: #aaa;
@@ -31,11 +73,7 @@ body {
   text-align: right;
 }
 
-#weekend {
-  color: rgb(247, 29, 145);
-  text-shadow: 1px 1px 1px rgb(70, 16, 28);
-  font-family: 'Aladin', cursive;
-  font-size: 72px;
+#to {
   animation: fadeIn1 3s;
   -webkit-animation: fadeIn1 3s;
   -moz-animation: fadeIn1 3s;
@@ -55,6 +93,78 @@ body {
   100% {
     opacity: 1;
   }
+}
+
+#your {
+  animation: fadeIn2 5s;
+  -webkit-animation: fadeIn2 5s;
+  -moz-animation: fadeIn2 5s;
+  -o-animation: fadeIn2 5s;
+  -ms-animation: fadeIn2 5s;
+}
+
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+  }
+
+  45% {
+    opacity: 0;
+  }
+
+  66% {
+    opacity: 1;
+  }
+}
+
+#weekend {
+  color: rgb(247, 29, 145);
+  text-shadow: 1px 1px 1px rgb(70, 16, 28);
+  font-family: 'Aladin', cursive;
+  font-size: 72px;
+  animation: fadeIn3 5s;
+  -webkit-animation: fadeIn3 5s;
+  -moz-animation: fadeIn3 5s;
+  -o-animation: fadeIn3 5s;
+  -ms-animation: fadeIn3 5s;
+}
+
+@keyframes fadeIn3 {
+  0% {
+    opacity: 0;
+  }
+
+  66% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+#aboutCardOne {
+  animation: fadeIn1 1500ms;
+  -webkit-animation: fadeIn1 1500ms;
+  -moz-animation: fadeIn1 1500ms;
+  -o-animation: fadeIn1 1500ms;
+  -ms-animation: fadeIn1 1500ms;
+}
+
+#aboutCardTwo {
+  animation: fadeIn2 2500ms;
+  -webkit-animation: fadeIn2 2500ms;
+  -moz-animation: fadeIn2 2500ms;
+  -o-animation: fadeIn2 2500ms;
+  -ms-animation: fadeIn2 2500ms;
+}
+
+#aboutCardThree {
+  animation: fadeIn3 2500ms;
+  -webkit-animation: fadeIn3 2500ms;
+  -moz-animation: fadeIn3 2500ms;
+  -o-animation: fadeIn3 2500ms;
+  -ms-animation: fadeIn3 2500ms;
 }
 
 #team {
@@ -100,7 +210,7 @@ body {
 
 #dashContainer {
   overflow-y: scroll;
-  max-height: 93vh;
+  max-height: 94vh;
 }
 
 #footer {
