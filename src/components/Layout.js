@@ -113,13 +113,13 @@ class Layout extends React.Component {
                 <Sidenav.Header>
                   <div style={headerStyles}>
                     <span>
-                      <div class="mt-8 text-center">
+                      <div className="mt-8 text-center">
                         <img
                           src="https://wallpapercave.com/uwp/uwp2022668.png"
                           alt="logo"
-                          class="w-10 h-10 m-auto rounded-full object-cover drop-shadow-lg lg:w-32 lg:h-32"
+                          className="w-10 h-10 m-auto rounded-full object-cover drop-shadow-lg lg:w-32 lg:h-32"
                         />
-                        <h1 id="headerText" class="mt-3 pr-8 lg:block mx-auto">
+                        <h1 id="headerText" className="mt-3 pr-8 lg:block mx-auto">
                           <span className="">The</span> <br />
                           Weekendr
                         </h1>
@@ -186,9 +186,9 @@ class Layout extends React.Component {
 
             <Container>
               <Header>
-                <div class="sticky top-0 h-14 border-b bg-slate-700 lg:py-2.5">
-                  <div class="px-6 flex items-center justify-between space-x-4 2xl:container">
-                    <h5 class="text-3xl text-white font-medium lg:block"></h5>
+                <div className="sticky top-0 h-14 border-b bg-slate-700 lg:py-2.5">
+                  <div className="px-6 flex items-center justify-between space-x-4 2xl:container">
+                    <span className="text-3xl text-white font-medium lg:block"></span>
                     <SearchForm
                       userData={this.props.userData}
                       googleEventsData={this.state.googleEventsData}
