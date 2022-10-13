@@ -56,12 +56,14 @@ class Layout extends React.Component {
     super(props);
     this.state = {
       expand: true,
-      googleEventsData: data.events_results,
-      foodData: null,
-      weatherData: null,
+      googleEventsData: [],
+      foodData: [],
+      weatherData: [],
     };
     this.handleToggle = this.handleToggle.bind(this);
     this.setGoogleEventsData = this.setGoogleEventsData.bind(this);
+    this.setYelpRestaurantsData = this.setYelpRestaurantsData.bind(this);
+    this.setWeatherData = this.setWeatherData.bind(this);
   }
   handleToggle() {
     this.setState({
@@ -71,6 +73,14 @@ class Layout extends React.Component {
 
   setGoogleEventsData(data) {
     this.setState({ googleEventsData: data });
+  }
+
+  setYelpRestaurantsData(data) {
+    this.setState({ foodData: data });
+  }
+
+  setWeatherData(data) {
+    this.setState({ weatherData: data });
   }
 
   // async componentDidMount() {
@@ -125,7 +135,10 @@ class Layout extends React.Component {
                           alt="logo"
                           className="w-10 h-10 m-auto rounded-full object-cover drop-shadow-lg lg:w-32 lg:h-32"
                         />
-                        <h1 id="headerText" className="mt-3 pr-8 lg:block mx-auto">
+                        <h1
+                          id="headerText"
+                          className="mt-3 pr-8 lg:block mx-auto"
+                        >
                           <span className="">The</span> <br />
                           Weekendr
                         </h1>
@@ -204,6 +217,8 @@ class Layout extends React.Component {
                       userData={this.props.userData}
                       googleEventsData={this.state.googleEventsData}
                       setGoogleEventsData={this.setGoogleEventsData}
+                      setYelpRestaurantsData={this.setYelpRestaurantsData}
+                      setWeatherData={this.setWeatherData}
                       foodData={this.state.foodData}
                       weatherData={this.state.weatherData}
                     />
@@ -227,6 +242,8 @@ class Layout extends React.Component {
                   getUser={this.props.getUser}
                   userData={this.props.userData}
                   googleEventsData={this.state.googleEventsData}
+                  foodData={this.state.foodData}
+                  weatherData={this.state.weatherData}
                   setShowSignupModal={this.props.setShowSignupModal}
                   showSignupModal={this.props.showSignupModal}
                 />
