@@ -1,8 +1,9 @@
 import React from 'react';
 import Layout from './components/Layout';
 import './App.css';
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter } from 'react-router-dom';
 import axios from 'axios';
+import { thisExpression } from '@babel/types';
 
 class App extends React.Component {
   constructor(props) {
@@ -10,13 +11,13 @@ class App extends React.Component {
     this.state = {
       userData: {
         name: '',
-        password: '',
+        userSub: '',
         zipCode: '',
         favFoods: [],
         favActivities: [],
-        authData: null
+        authData: null,
       },
-
+      showSignupModal: false,
     };
   }
 
@@ -25,18 +26,33 @@ class App extends React.Component {
       userData: data,
     });
   };
+  setUserSubState = data => {
+    this.setState({
+      userData: { subUser: data },
+    });
+  };
 
-  getUser = async data => {
-    try {
-      // let userData = await axios.get(`${process.env.REACT_APP_SERVER}/user-name/Alice`);
-      // let userData = await axios.get(`http://localhost:3001/user-name/Alice`);
-      let userData = await axios.get(
-        `http://localhost:3001/user-name/${data.name}`
-      );
+  setShowSignupModal = show => {
+    this.setState({ showSignupModal: show });
+  };
 
-      this.setState({ userData: userData.data[0] });
-    } catch (error) {
-      alert(`Error: ${error.code} - ${error.message}`);
+  getUser = async userSub => {
+    if (this.state.userData.userSub === '') {
+      try {
+        let userData = await axios.get(
+          `http://localhost:3001/user-sub/${userSub}`
+        );
+        if (userData.data.length > 0) {
+          console.log('Got data!');
+          this.setState({ userData: userData.data[0] });
+        } else {
+          this.setState({ userData: { userSub: userSub } });
+          console.log('No data! Go fish!');
+          this.setShowSignupModal(true);
+        }
+      } catch (error) {
+        alert(`Error: ${error.code} - ${error.message}`);
+      }
     }
   };
 
@@ -48,6 +64,9 @@ class App extends React.Component {
             userData={this.state.userData}
             setUserDataState={this.setUserDataState}
             getUser={this.getUser}
+            setUserSubState={this.setUserSubState}
+            setShowSignupModal={this.setShowSignupModal}
+            showSignupModal={this.state.showSignupModal}
           />
         </BrowserRouter>
       </>

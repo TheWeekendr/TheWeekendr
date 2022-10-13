@@ -19,6 +19,8 @@ class NavRoutes extends React.Component {
                 setUserDataState={this.props.setUserDataState}
                 getUser={this.props.getUser}
                 userData={this.props.userData}
+                setShowSignupModal={this.props.setShowSignupModal}
+                showSignupModal={this.props.showSignupModal}
               />
             }
           ></Route>

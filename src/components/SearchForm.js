@@ -34,7 +34,6 @@ class SearchForm extends React.Component {
       const apiUrl = `http://localhost:3001/google-events?location=${location}&searchQuery=${searchQuery}`;
 
       const apiResponse = await axios.get(apiUrl);
-      console.log(apiResponse);
       this.props.setGoogleEventsData(apiResponse.data.events_results);
     } catch (error) {
       alert(`Error: ${error.code} - ${error.message}`);

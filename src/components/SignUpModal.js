@@ -24,10 +24,10 @@ class SignUpModal extends React.Component {
     this.handleActivities = this.handleActivities.bind(this);
   }
   close() {
-    this.setState({ show: false });
+    this.props.setShowSignupModal(false);
   }
   open() {
-    this.setState({ show: true });
+    this.props.setShowSignupModal(true);
   }
   handleChange(value) {
     this.setState({
@@ -50,10 +50,10 @@ class SignUpModal extends React.Component {
   handleCreateAccount = async () => {
     let userData = {
       name: this.state.formValue.name,
-      // password: this.state.formValue.password,
       zipCode: this.state.formValue.zipCode,
       favFoods: this.state.favFoods,
       favActivities: this.state.favActivities,
+      userSub: this.props.userData.userSub,
     };
 
     try {
@@ -61,7 +61,7 @@ class SignUpModal extends React.Component {
       await axios.post(`http://localhost:3001/user`, userData);
 
       this.props.setUserDataState(userData);
-      this.props.getUser(userData);
+      // this.props.getUser(userData);
     } catch (error) {
       alert(`Error: ${error.code} - ${error.message}`);
     }
@@ -121,7 +121,7 @@ class SignUpModal extends React.Component {
 
     return (
       <div className="sticky mx-auto flex flex-col mx-16">
-        <Modal show={this.state.show} onHide={this.close} size="xs">
+        <Modal show={this.props.showSignupModal} onHide={this.close} size="xs">
           <Modal.Header>
             <Modal.Title>Sign Up</Modal.Title>
           </Modal.Header>
@@ -137,12 +137,7 @@ class SignUpModal extends React.Component {
                 <HelpBlock>Required</HelpBlock>
               </FormGroup>
               <FormGroup>
-                <ControlLabel>Password</ControlLabel>
-                <FormControl name="password" type="password" />
-                <HelpBlock>Required</HelpBlock>
-              </FormGroup>
-              <FormGroup>
-                <ControlLabel>Zip Code</ControlLabel>
+                <ControlLabel>Home Zip Code</ControlLabel>
                 <FormControl name="zipCode" type="zip-code" />
                 <HelpBlock>Required</HelpBlock>
               </FormGroup>
@@ -175,9 +170,9 @@ class SignUpModal extends React.Component {
             </Button>
           </Modal.Footer>
         </Modal>
-        <Button block appearance="default" size="lg" onClick={this.open}>
+        {/* <Button block appearance="default" size="lg" onClick={this.open}>
           Sign Up
-        </Button>
+        </Button> */}
       </div>
     );
   }
