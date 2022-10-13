@@ -37,7 +37,9 @@ class EventCard extends React.Component {
                     <h5 className="text-gray-900 text-xl font-medium mb-2 border-t border-b border-slate-400 py-2">
                       {event.title}
                     </h5>
-                    <p className="text-gray-700 text-base">{event.address[0]}</p>
+                    <p className="text-gray-700 text-base">
+                      {event.address[0]}
+                    </p>
                     <p className="text-gray-700 text-base mb-3">
                       {event.address[1]}
                     </p>
@@ -68,8 +70,7 @@ class EventCard extends React.Component {
 
 export default EventCard;
 
-
-  /* <img src={event.image} alt="thumbnail" height="240" className="mx-auto mt-5 rounded-lg shadow-md text-slate-100" />
+/* <img src={event.image} alt="thumbnail" height="240" className="mx-auto mt-5 rounded-lg shadow-md text-slate-100" />
                 <Panel id="cardHeader" header={event.title} className="text-slate-100">
                   <div>
                     <p>{event.date.when}</p>
@@ -78,4 +79,3 @@ export default EventCard;
                     <small>{event.description}</small>
                     <p><a href={event.ticket_info[0].link}>Click Here for Ticket</a></p>
                   </div> */
-

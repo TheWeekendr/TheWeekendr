@@ -31,6 +31,8 @@ class NavRoutes extends React.Component {
               <Dash
                 userData={this.props.userData}
                 googleEventsData={this.props.googleEventsData}
+                foodData={this.props.foodData}
+                weatherData={this.props.weatherData}
                 setUserDataState={this.props.setUserDataState}
                 getUser={this.props.getUser}
               />
