@@ -25,7 +25,12 @@ class NavRoutes extends React.Component {
           <Route
             exact
             path="/dash"
-            element={<Dash userData={this.props.userData} />}
+            element={
+              <Dash
+                userData={this.props.userData}
+                googleEventsData={this.props.googleEventsData}
+              />
+            }
           ></Route>
           <Route exact path="/map" element={<Map />}></Route>
           <Route exact path="/about" element={<About />}></Route>
