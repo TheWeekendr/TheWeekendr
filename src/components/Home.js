@@ -3,7 +3,6 @@ import SignUpModal from './SignUpModal';
 import UpdateModal from './UpdateModal';
 import { withAuth0 } from '@auth0/auth0-react';
 
-
 class Home extends React.Component {
   render() {
     return (
@@ -23,19 +22,22 @@ class Home extends React.Component {
                       <span id="weekend">weekend.</span>
                     </h1>
                     <div className="w-3/5">
-                      {this.props.auth0.isAuthenticated ?
+                      {this.props.auth0.isAuthenticated ? (
                         <>
                           <UpdateModal
                             setUserDataState={this.props.setUserDataState}
                             userData={this.props.userData}
                           />
                         </>
-                        :
+                      ) : (
                         <SignUpModal
+                          setShowSignupModal={this.props.setShowSignupModal}
+                          showSignupModal={this.props.showSignupModal}
                           setUserDataState={this.props.setUserDataState}
                           getUser={this.props.getUser}
+                          userData={this.props.userData}
                         />
-                      }
+                      )}
                     </div>
                   </div>
                 </div>

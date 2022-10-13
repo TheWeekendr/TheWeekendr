@@ -23,13 +23,14 @@ class UpdateModal extends React.Component {
     this.handleFoods = this.handleFoods.bind(this);
     this.handleActivities = this.handleActivities.bind(this);
     this.handleUpdateAccount = this.handleUpdateAccount.bind(this);
+    this.handleDelete = this.handleDelete.bind(this);
   }
   close() {
     this.setState({ show: false });
   }
   open() {
     this.setState({ show: true });
-    console.log('userData - open', this.props.userData);
+
     this.setState({
       formValue: {
         name: this.props.userData.name,
@@ -37,6 +38,9 @@ class UpdateModal extends React.Component {
         zipCode: this.props.userData.zipCode,
       },
     });
+
+    this.setState({ favFoods: this.props.userData.favFoods });
+    this.setState({ favActivities: this.props.userData.favActivities });
   }
 
   handleChange(value) {
@@ -44,6 +48,26 @@ class UpdateModal extends React.Component {
       formValue: value,
     });
   }
+
+  handleDelete = async () => {
+    let verify = window.confirm(
+      'Are you sure you want to delete this account?'
+    );
+    if (verify) {
+      try {
+        // await axios.put(
+        //   `${process.env.REACT_APP_SERVER}/user/${userUpdateData._id}`,
+        //   userUpdateData
+        // );
+        await axios.delete(
+          `http://localhost:3001/user/${this.props.userData.userSub}`
+        );
+        this.close();
+      } catch (error) {
+        alert(`Error: ${error.code} - ${error.message}`);
+      }
+    }
+  };
 
   handleFoods(value) {
     this.setState({
@@ -60,7 +84,7 @@ class UpdateModal extends React.Component {
   handleUpdateAccount = async () => {
     let userUpdateData = {
       name: this.state.formValue.name,
-      // password: this.state.formValue.password,
+      userSub: this.props.userData.userSub,
       zipCode: this.state.formValue.zipCode,
       favFoods: this.state.favFoods,
       favActivities: this.state.favActivities,
@@ -159,10 +183,6 @@ class UpdateModal extends React.Component {
                 <HelpBlock>Required</HelpBlock>
               </FormGroup>
               <FormGroup>
-                <ControlLabel>Password</ControlLabel>
-                <FormControl name="password" type="password" />
-              </FormGroup>
-              <FormGroup>
                 <ControlLabel>Zip Code</ControlLabel>
                 <FormControl
                   name="zipCode"
@@ -197,6 +217,9 @@ class UpdateModal extends React.Component {
             </Button>
             <Button onClick={this.close} appearance="subtle">
               Cancel
+            </Button>
+            <Button onClick={this.handleDelete} appearance="subtle">
+              Delete Account
             </Button>
           </Modal.Footer>
         </Modal>

@@ -2,21 +2,18 @@ import React from 'react';
 import '../App.css';
 import '../rsuite.css';
 import { Nav, Icon, Sidenav, Navbar, Footer } from 'rsuite';
-import {
-  Container,
-  Header,
-  Content,
-  Sidebar,
-} from 'rsuite';
+import { Container, Header, Content, Sidebar } from 'rsuite';
 import { LinkContainer } from 'react-router-bootstrap';
 import NavRoutes from '../NavRoutes';
 import SearchForm from './SearchForm';
 // import SignUpModal from './SignUpModal';
 // import UpdateModal from './UpdateModal';
 import { withAuth0 } from '@auth0/auth0-react';
+import { useAuth0 } from '@auth0/auth0-react';
 import Login from './Login';
 import Logout from './Logout';
 import data from '../data/eventData.json';
+import SignUpModal from './SignUpModal';
 import axios from 'axios';
 
 const headerStyles = {
@@ -29,7 +26,15 @@ const headerStyles = {
   overflow: 'hidden',
 };
 
-const NavToggle = ({ expand, onChange }) => {
+const NavToggle = (props, { expand, onChange }) => {
+  // If logged in, check to see if user is in DB. If so, get profile. If not, launch signup
+  const { user, isAuthenticated } = useAuth0();
+  if (isAuthenticated) {
+    props.getUser(user.sub);
+  } else {
+    // Not logged in
+  }
+
   return (
     <Navbar appearance="subtle" className="nav-toggle">
       <Navbar.Body>
@@ -68,31 +73,32 @@ class Layout extends React.Component {
     this.setState({ googleEventsData: data });
   }
 
-  async componentDidMount() {
-    // auth0 stuff goes here
-    if (this.props.auth0.isAuthenticated) {
-      const res = await this.props.auth0.getIdTokenClaims();
-      const jwt = res.__raw;
+  // async componentDidMount() {
+  //   // auth0 stuff goes here
+  //   // if (this.props.auth0.isAuthenticated) {
+  //   //   console.log('Layout -- Logged in!');
+  //   //   const res = await this.props.auth0.getIdTokenClaims();
+  //   //   const jwt = res.__raw;
 
-      console.log('token: ', jwt);
+  //   //   console.log('token:  ', jwt);
 
-      // const config = {
-      //   headers: { Authorization: `Bearer ${jwt}` },
-      //   method: 'get',
-      //   baseURL: process.env.REACT_APP_SERVER,
-      //   url: '/user',
-      // };
+  //     // const config = {
+  //     //   headers: { Authorization: `Bearer ${jwt}` },
+  //     //   method: 'get',
+  //     //   baseURL: process.env.REACT_APP_SERVER,
+  //     //   url: '/user',
+  //     // };
 
-      // const userResponse = await axios(config);
+  //     // const userResponse = await axios(config);
 
-      // console.log('userResponse: ', userResponse);
+  //     // console.log('userResponse: ', userResponse);
 
-      // this.props.setUserDataState({
-      //   userData: userResponse.data
-      // });
-    }
-  }
-  
+  //     // this.props.setUserDataState({
+  //     //   userData: userResponse.data
+  //     // });
+  //   }
+  // }
+
   render() {
     const { expand } = this.state;
     return (
@@ -168,20 +174,25 @@ class Layout extends React.Component {
                     </LinkContainer>
                     <Nav.Item
                       eventKey="5"
-                      icon={<Icon icon="gear-circle" className='py-2' />}
+                      icon={<Icon icon="gear-circle" className="py-2" />}
                     >
-                      {this.props.auth0.isAuthenticated ?
+                      {this.props.auth0.isAuthenticated ? (
                         <>
                           <Logout />
                         </>
-                        :
+                      ) : (
                         <Login />
-                      }
+                      )}
                     </Nav.Item>
                   </Nav>
                 </Sidenav.Body>
               </Sidenav>
-              <NavToggle expand={expand} onChange={this.handleToggle} />
+              <NavToggle
+                expand={expand}
+                onChange={this.handleToggle}
+                getUser={this.props.getUser}
+                userData={this.props.userData}
+              />
             </Sidebar>
 
             <Container>
@@ -196,11 +207,14 @@ class Layout extends React.Component {
                       foodData={this.state.foodData}
                       weatherData={this.state.weatherData}
                     />
-                    {/* <SignUpModal
+                    <SignUpModal
+                      setShowSignupModal={this.props.setShowSignupModal}
+                      showSignupModal={this.props.showSignupModal}
                       setUserDataState={this.props.setUserDataState}
                       getUser={this.props.getUser}
+                      userData={this.props.userData}
                     />
-                    <UpdateModal
+                    {/* <UpdateModal
                       setUserDataState={this.props.setUserDataState}
                       userData={this.props.userData}
                     /> */}
@@ -213,6 +227,8 @@ class Layout extends React.Component {
                   getUser={this.props.getUser}
                   userData={this.props.userData}
                   googleEventsData={this.state.googleEventsData}
+                  setShowSignupModal={this.props.setShowSignupModal}
+                  showSignupModal={this.props.showSignupModal}
                 />
               </Content>
               <Footer id="footer" className="bg-slate-700"></Footer>
