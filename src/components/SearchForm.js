@@ -5,7 +5,6 @@ import axios from 'axios';
 import { CLASS_TYPES } from '@babel/types';
 import { LinkContainer } from 'react-router-bootstrap';
 // import { DateRangePicker } from 'rsuite';
-import { LinkContainer } from 'react-router-bootstrap';
 
 class SearchForm extends React.Component {
   constructor(props) {
