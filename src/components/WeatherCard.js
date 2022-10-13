@@ -24,6 +24,7 @@ class WeatherCard extends React.Component {
                 {/* <img src={event.thumbnail} alt="thumbnail" height="240" className="mx-auto mt-5" /> */}
                 <Panel header={event.city_name}>
                   <div>
+                    {/* <img src="https://www.weatherbit.io/static/img/icons/{weatherData.weatherForecast[0].Weather.Icon}.png" alt="thumbnail"/> */}
                     <p>
                       The weather forecast on {event.datetime} is for{' '}
                       {event.weather.description.toLowerCase()}.

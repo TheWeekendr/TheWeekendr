@@ -23,7 +23,7 @@ class Home extends React.Component {
                       <span id="weekend">weekend.</span>
                     </h1>
                     <div className="w-3/5">
-                      {this.props.auth0.isAuthenticated ? (
+                      {/* {this.props.auth0.isAuthenticated ? (
                         <>
                           <UpdateModal
                             setUserDataState={this.props.setUserDataState}
@@ -38,7 +38,7 @@ class Home extends React.Component {
                           getUser={this.props.getUser}
                           userData={this.props.userData}
                         />
-                      )}
+                      )} */}
                     </div>
                   </div>
                 </div>

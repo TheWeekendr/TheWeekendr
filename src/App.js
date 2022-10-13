@@ -18,6 +18,7 @@ class App extends React.Component {
         authData: null,
       },
       showSignupModal: false,
+      showUpdateModal: false,
     };
   }
 
@@ -34,6 +35,10 @@ class App extends React.Component {
 
   setShowSignupModal = show => {
     this.setState({ showSignupModal: show });
+  };
+
+  setShowUpdateModal = show => {
+    this.setState({ showUpdateSignupModal: show });
   };
 
   getUser = async userSub => {
@@ -66,6 +71,8 @@ class App extends React.Component {
             setUserSubState={this.setUserSubState}
             setShowSignupModal={this.setShowSignupModal}
             showSignupModal={this.state.showSignupModal}
+            setShowUpdateModal={this.setShowUpdateModal}
+            showUpdateModal={this.state.showUpdateModal}
           />
         </BrowserRouter>
       </>
