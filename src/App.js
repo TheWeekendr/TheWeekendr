@@ -48,11 +48,10 @@ class App extends React.Component {
           `http://localhost:3001/user-sub/${userSub}`
         );
         if (userData.data.length > 0) {
-          console.log('Got data!');
           this.setState({ userData: userData.data[0] });
         } else {
           this.setState({ userData: { userSub: userSub } });
-          console.log('No data! Go fish!');
+
           this.setShowSignupModal(true);
         }
       } catch (error) {

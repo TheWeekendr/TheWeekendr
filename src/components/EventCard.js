@@ -40,6 +40,7 @@ class EventCard extends React.Component {
                       <p>{event.address[1]}</p>
                     </div> 
                   </div>
+
                   <div>
                     <p className='px-5 mb-3 mt-2'>{event.description}</p>
                   </div>
@@ -68,9 +69,12 @@ class EventCard extends React.Component {
 
 export default EventCard;
 
-{/* <img src={event.image} alt="thumbnail" height="240" className="mx-auto mt-5 rounded-lg shadow-md text-slate-700" /> */}
-
-
-
-
-
+/* <img src={event.image} alt="thumbnail" height="240" className="mx-auto mt-5 rounded-lg shadow-md text-slate-100" />
+                <Panel id="cardHeader" header={event.title} className="text-slate-100">
+                  <div>
+                    <p>{event.date.when}</p>
+                    <p>{event.address[0]}</p>
+                    <p>{event.address[1]}</p>
+                    <small>{event.description}</small>
+                    <p><a href={event.ticket_info[0].link}>Click Here for Ticket</a></p>
+                  </div> */
