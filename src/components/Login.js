@@ -9,8 +9,8 @@ const Login = props => {
   };
 
   return (
-    <button className="pr-32 py-2" onClick={() => handleLogin()}>
-      Log In
+    <button className="pr-14 py-2" onClick={() => handleLogin()}>
+      Log In or Sign Up
     </button>
   );
 };

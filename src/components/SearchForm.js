@@ -4,6 +4,7 @@ import { Form, ControlLabel, FormGroup, FormControl, Button } from 'rsuite';
 import axios from 'axios';
 import { CLASS_TYPES } from '@babel/types';
 // import { DateRangePicker } from 'rsuite';
+import { LinkContainer } from 'react-router-bootstrap';
 
 class SearchForm extends React.Component {
   constructor(props) {
@@ -75,8 +76,9 @@ class SearchForm extends React.Component {
               </InputGroup.Addon>
             </InputGroup>
           </FormGroup>
-
-          <Button onClick={this.handleSearch}>Search</Button>
+          <LinkContainer to="/dash">
+            <Button href="/dash" onClick={this.handleSearch}>Search</Button>
+          </LinkContainer>
         </Form>
       </>
     );

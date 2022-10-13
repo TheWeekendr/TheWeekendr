@@ -6,14 +6,13 @@ import { Container, Header, Content, Sidebar } from 'rsuite';
 import { LinkContainer } from 'react-router-bootstrap';
 import NavRoutes from '../NavRoutes';
 import SearchForm from './SearchForm';
-// import SignUpModal from './SignUpModal';
-// import UpdateModal from './UpdateModal';
+import SignUpModal from './SignUpModal';
+import UpdateModal from './UpdateModal';
 import { withAuth0 } from '@auth0/auth0-react';
 import { useAuth0 } from '@auth0/auth0-react';
 import Login from './Login';
 import Logout from './Logout';
 import data from '../data/eventData.json';
-import SignUpModal from './SignUpModal';
 import axios from 'axios';
 
 const headerStyles = {
@@ -184,6 +183,24 @@ class Layout extends React.Component {
                         <Login />
                       )}
                     </Nav.Item>
+                    <div className="mt-4">
+                      {this.props.auth0.isAuthenticated ? (
+                        <>
+                          <UpdateModal
+                            setUserDataState={this.props.setUserDataState}
+                            userData={this.props.userData}
+                          />
+                        </>
+                      ) : (
+                        <SignUpModal
+                          setShowSignupModal={this.props.setShowSignupModal}
+                          showSignupModal={this.props.showSignupModal}
+                          setUserDataState={this.props.setUserDataState}
+                          getUser={this.props.getUser}
+                          userData={this.props.userData}
+                        />
+                      )}
+                    </div>
                   </Nav>
                 </Sidenav.Body>
               </Sidenav>
@@ -207,17 +224,6 @@ class Layout extends React.Component {
                       foodData={this.state.foodData}
                       weatherData={this.state.weatherData}
                     />
-                    <SignUpModal
-                      setShowSignupModal={this.props.setShowSignupModal}
-                      showSignupModal={this.props.showSignupModal}
-                      setUserDataState={this.props.setUserDataState}
-                      getUser={this.props.getUser}
-                      userData={this.props.userData}
-                    />
-                    {/* <UpdateModal
-                      setUserDataState={this.props.setUserDataState}
-                      userData={this.props.userData}
-                    /> */}
                   </div>
                 </div>
               </Header>
@@ -230,6 +236,14 @@ class Layout extends React.Component {
                   setShowSignupModal={this.props.setShowSignupModal}
                   showSignupModal={this.props.showSignupModal}
                 />
+                <SignUpModal
+                  setShowSignupModal={this.props.setShowSignupModal}
+                  showSignupModal={this.props.showSignupModal}
+                  setUserDataState={this.props.setUserDataState}
+                  getUser={this.props.getUser}
+                  userData={this.props.userData}
+                />
+
               </Content>
               <Footer id="footer" className="bg-slate-700"></Footer>
             </Container>

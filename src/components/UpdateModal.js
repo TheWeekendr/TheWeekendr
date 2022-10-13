@@ -2,6 +2,7 @@ import React from 'react';
 import { Modal, Button } from 'rsuite';
 import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 import { CheckPicker } from 'rsuite';
+import { Tooltip, Whisper } from 'rsuite';
 import axios from 'axios';
 
 class UpdateModal extends React.Component {
@@ -223,9 +224,12 @@ class UpdateModal extends React.Component {
             </Button>
           </Modal.Footer>
         </Modal>
-        <Button block appearance="default" size="lg" onClick={this.open}>
-          Update Profile
-        </Button>
+        <Whisper placement="right" trigger="hover" speaker={<Tooltip>This will allow you to update<br /> your profile search criteria.</Tooltip>}>
+          <Button block appearance="default" size="lg" onClick={this.open}>
+            Update Search
+          </Button>
+        </Whisper>
+
       </div>
     );
   }

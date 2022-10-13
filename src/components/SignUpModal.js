@@ -123,7 +123,8 @@ class SignUpModal extends React.Component {
       <div className="sticky mx-auto flex flex-col mx-16">
         <Modal show={this.props.showSignupModal} onHide={this.close} size="xs">
           <Modal.Header>
-            <Modal.Title>Sign Up</Modal.Title>
+            <Modal.Title><p className='text-slate-700 mb-2'>Create Weekendr Search Profile</p></Modal.Title>
+            <Modal.Title><small className='text-slate-500'>Use the following form to create a user profile<br />in order to retrieve your search results. </small></Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Form

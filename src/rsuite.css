@@ -1252,7 +1252,7 @@ p {
   margin: 0;
 }
 p + p {
-  margin-top: 8px;
+  /* margin-top: 8px; */
 }
 small {
   font-size: 85%;
@@ -4354,7 +4354,7 @@ a.rs-btn {
 }
 .rs-btn-lg {
   /* stylelint-disable */
-  padding: 10px 16px;
+  /* padding: 10px 16px; */
   font-size: 16px;
   line-height: 1.375;
   border-radius: 6px;
