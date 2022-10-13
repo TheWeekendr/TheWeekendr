@@ -4,7 +4,6 @@ import { Panel, Button } from 'rsuite';
 class EventCard extends React.Component {
   render() {
     const eventData = this.props.googleEventsData;
-    console.log(eventData);
     return (
       <>
         <div id="scrollContainer" className="flex flex-nowrap mx-auto">
@@ -14,7 +13,8 @@ class EventCard extends React.Component {
                 id="eventCard"
                 className="bg-white border border-slate-300"
                 key={i}
-                shaded bodyFill
+                shaded
+                bodyFill
                 style={{ display: 'inline-block', width: 320 }}
               >
                 <div className="py-3 px-6 border-b border-slate-300 mx-auto text-center">
@@ -31,15 +31,18 @@ class EventCard extends React.Component {
                   <h5 className="text-slate-700 text-center text-xl font-medium mb-2 border-t border-b border-slate-300 py-2">
                     {event.title}
                   </h5>
-                  <div id="cardHeader" className="px-5 text-center text-slate-700">
+                  <div
+                    id="cardHeader"
+                    className="px-5 text-center text-slate-700"
+                  >
                     <div>
-                      <p className='text-lg leading-5'>{event.address[0]}</p>
+                      <p className="text-lg leading-5">{event.address[0]}</p>
                       <p>{event.address[1]}</p>
-                    </div> 
+                    </div>
                   </div>
 
                   <div>
-                    <p className='px-5 mb-3 mt-2'>{event.description}</p>
+                    <p className="px-5 mb-3 mt-2">{event.description}</p>
                   </div>
                   <div className="sticky bottom py-3 px-6 border-t border-slate-300">
                     <Button

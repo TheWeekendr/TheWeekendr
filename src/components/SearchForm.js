@@ -25,46 +25,74 @@ class SearchForm extends React.Component {
   }
 
   handleSearch = async () => {
-    // Query Google Events API
     try {
-      const searchQuery = this.props.userData.favActivities.join() || 'events';
-      const location =
+      let searchQuery = this.props.userData.favActivities.join() || 'events';
+      let location =
         this.state.formValue.zipCode || this.props.userData.zipCode;
-      const apiUrl = `http://localhost:3001/google-events?location=${location}&searchQuery=${searchQuery}`;
+      let apiUrl = `http://localhost:3001/google-events?location=${location}&searchQuery=${searchQuery}`;
 
-      const apiResponse = await axios.get(apiUrl);
+      let apiResponse = await axios.get(apiUrl);
       this.props.setGoogleEventsData(apiResponse.data.events_results);
-    } catch (error) {
-      alert(`Error(Google Events API): ${error.code} - ${error.message}`);
-    }
 
-    // Query Yelp Restaurants API
-    try {
-      const searchQuery =
+      searchQuery =
         'restaurants ' + this.props.userData.favFoods.join(' ') ||
         'restaurants';
-      const location =
-        this.state.formValue.zipCode || this.props.userData.zipCode;
-      const apiUrl = `http://localhost:3001/yelp-restaurants?location=${location}&searchQuery=${searchQuery}`;
-      const apiResponse = await axios.get(apiUrl);
+      location = this.state.formValue.zipCode || this.props.userData.zipCode;
+      apiUrl = `http://localhost:3001/yelp-restaurants?location=${location}&searchQuery=${searchQuery}`;
+      apiResponse = await axios.get(apiUrl);
 
       this.props.setYelpRestaurantsData(apiResponse.data.organic_results);
-    } catch (error) {
-      alert(`Error(Yelp Restaurants API): ${error.code} - ${error.message}`);
-    }
 
-    // Query Weather API
-    try {
-      const location =
-        this.state.formValue.zipCode || this.props.userData.zipCode;
-      const apiUrl = `http://localhost:3001/weather?location=${location}`;
-      const apiResponse = await axios.get(apiUrl);
+      location = this.state.formValue.zipCode || this.props.userData.zipCode;
+      apiUrl = `http://localhost:3001/weather?location=${location}`;
+      apiResponse = await axios.get(apiUrl);
 
       this.props.setWeatherData(apiResponse.data.data);
     } catch (error) {
-      alert(`Error(Weather API): ${error.code} - ${error.message}`);
+      alert(`Error(APIs): ${error.code} - ${error.message}`);
     }
   };
+
+  //   // Query Google Events API
+  //   try {
+  //     const searchQuery = this.props.userData.favActivities.join() || 'events';
+  //     const location =
+  //       this.state.formValue.zipCode || this.props.userData.zipCode;
+  //     const apiUrl = `http://localhost:3001/google-events?location=${location}&searchQuery=${searchQuery}`;
+
+  //     const apiResponse = await axios.get(apiUrl);
+  //     this.props.setGoogleEventsData(apiResponse.data.events_results);
+  //   } catch (error) {
+  //     alert(`Error(Google Events API): ${error.code} - ${error.message}`);
+  //   }
+
+  //   // Query Yelp Restaurants API
+  //   try {
+  //     const searchQuery =
+  //       'restaurants ' + this.props.userData.favFoods.join(' ') ||
+  //       'restaurants';
+  //     const location =
+  //       this.state.formValue.zipCode || this.props.userData.zipCode;
+  //     const apiUrl = `http://localhost:3001/yelp-restaurants?location=${location}&searchQuery=${searchQuery}`;
+  //     const apiResponse = await axios.get(apiUrl);
+
+  //     this.props.setYelpRestaurantsData(apiResponse.data.organic_results);
+  //   } catch (error) {
+  //     alert(`Error(Yelp Restaurants API): ${error.code} - ${error.message}`);
+  //   }
+
+  //   // Query Weather API
+  //   try {
+  //     const location =
+  //       this.state.formValue.zipCode || this.props.userData.zipCode;
+  //     const apiUrl = `http://localhost:3001/weather?location=${location}`;
+  //     const apiResponse = await axios.get(apiUrl);
+
+  //     this.props.setWeatherData(apiResponse.data.data);
+  //   } catch (error) {
+  //     alert(`Error(Weather API): ${error.code} - ${error.message}`);
+  //   }
+  // };
 
   render() {
     return (
