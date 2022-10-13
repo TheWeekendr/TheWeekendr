@@ -16,6 +16,8 @@ import SearchForm from './SearchForm';
 import { withAuth0 } from '@auth0/auth0-react';
 import Login from './Login';
 import Logout from './Logout';
+import data from '../data/eventData.json';
+import axios from 'axios';
 
 const headerStyles = {
   padding: 18,
@@ -49,8 +51,12 @@ class Layout extends React.Component {
     super(props);
     this.state = {
       expand: true,
+      googleEventsData: data.events_results,
+      foodData: null,
+      weatherData: null,
     };
     this.handleToggle = this.handleToggle.bind(this);
+    this.setGoogleEventsData = this.setGoogleEventsData.bind(this);
   }
   handleToggle() {
     this.setState({
@@ -58,9 +64,13 @@ class Layout extends React.Component {
     });
   }
 
-  async componentDidMount () {
+  setGoogleEventsData(data) {
+    this.setState({ googleEventsData: data });
+  }
+
+  async componentDidMount() {
     // auth0 stuff goes here
-    if(this.props.auth0.isAuthenticated){
+    if (this.props.auth0.isAuthenticated) {
       const res = await this.props.auth0.getIdTokenClaims();
       const jwt = res.__raw;
 
@@ -80,8 +90,6 @@ class Layout extends React.Component {
       // this.props.setUserDataState({
       //   userData: userResponse.data
       // });
-
-
     }
   }
   
@@ -170,24 +178,6 @@ class Layout extends React.Component {
                         <Login />
                       }
                     </Nav.Item>
-
-                    {/* <Dropdown
-                      placement="rightStart"
-                      eventKey="4-5"
-                      title="Login"
-                      icon={<Icon icon="gear-circle" />}
-                    >
-                      <Dropdown.Item eventKey="4-5">
-                        {this.props.auth0.isAuthenticated ?
-                          <>
-                            <Logout />
-                          </>
-                          :
-                          <Login />
-
-                        }
-                      </Dropdown.Item>
-                    </Dropdown> */}
                   </Nav>
                 </Sidenav.Body>
               </Sidenav>
@@ -198,9 +188,14 @@ class Layout extends React.Component {
               <Header>
                 <div class="sticky top-0 h-14 border-b bg-slate-700 lg:py-2.5">
                   <div class="px-6 flex items-center justify-between space-x-4 2xl:container">
-                    <h5 class="text-3xl text-white font-medium lg:block">
-                    </h5>
-                    <SearchForm />
+                    <h5 class="text-3xl text-white font-medium lg:block"></h5>
+                    <SearchForm
+                      userData={this.props.userData}
+                      googleEventsData={this.state.googleEventsData}
+                      setGoogleEventsData={this.setGoogleEventsData}
+                      foodData={this.state.foodData}
+                      weatherData={this.state.weatherData}
+                    />
                     {/* <SignUpModal
                       setUserDataState={this.props.setUserDataState}
                       getUser={this.props.getUser}
@@ -217,6 +212,7 @@ class Layout extends React.Component {
                   setUserDataState={this.props.setUserDataState}
                   getUser={this.props.getUser}
                   userData={this.props.userData}
+                  googleEventsData={this.state.googleEventsData}
                 />
               </Content>
               <Footer id="footer" className="bg-slate-700"></Footer>
