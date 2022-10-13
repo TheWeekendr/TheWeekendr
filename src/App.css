@@ -19,27 +19,41 @@ body {
 #dashText {
   color: rgb(247, 29, 145);
   text-shadow: 1px 1px 1px rgb(70, 16, 28);
-  animation: fadeIn1 3500ms;
-  -webkit-animation: fadeIn1 3500ms;
-  -moz-animation: fadeIn1 3500ms;
-  -o-animation: fadeIn1 3500ms;
-  -ms-animation: fadeIn1 3500ms;
+  animation: fadeIn1 3000ms;
+  -webkit-animation: fadeIn1 3000ms;
+  -moz-animation: fadeIn1 3000ms;
+  -o-animation: fadeIn1 3000ms;
+  -ms-animation: fadeIn1 3000ms;
 }
 
 #dashLoginText {
-  animation: fadeIn3 3500ms;
-  -webkit-animation: fadeIn3 3500ms;
-  -moz-animation: fadeIn3 3500ms;
-  -o-animation: fadeIn3 3500ms;
-  -ms-animation: fadeIn3 3500ms;
+  animation: fadeIn3 3000ms;
+  -webkit-animation: fadeIn3 3000ms;
+  -moz-animation: fadeIn3 3000ms;
+  -o-animation: fadeIn3 3000ms;
+  -ms-animation: fadeIn3 3000ms;
 }
 
 #dashImgFade {
-  animation: fadeIn1 2000ms;
-  -webkit-animation: fadeIn1 2000ms;
-  -moz-animation: fadeIn1 2000ms;
-  -o-animation: fadeIn1 2000ms;
-  -ms-animation: fadeIn1 2000ms;
+  animation: fadeInImg 2000ms;
+  -webkit-animation: fadeInImg 2000ms;
+  -moz-animation: fadeInImg 2000ms;
+  -o-animation: fadeInImg 2000ms;
+  -ms-animation: fadeInImg 2000ms;
+}
+
+@keyframes fadeInImg {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 #teamText {

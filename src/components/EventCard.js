@@ -1,13 +1,10 @@
 import React from 'react';
 import { Panel, Button } from 'rsuite';
-import data from '../data/eventData.json';
-
-console.log(data);
-// const eventData = data.events_results;
 
 class EventCard extends React.Component {
   render() {
     const eventData = this.props.googleEventsData;
+    console.log(eventData);
     return (
       <>
         <div id="scrollContainer" className="flex flex-nowrap mx-auto">
