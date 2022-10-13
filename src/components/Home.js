@@ -1,6 +1,8 @@
 import React from 'react';
 import SignUpModal from './SignUpModal';
 import UpdateModal from './UpdateModal';
+import { withAuth0 } from '@auth0/auth0-react';
+
 
 class Home extends React.Component {
   render() {
@@ -21,14 +23,19 @@ class Home extends React.Component {
                       <span id="weekend">weekend.</span>
                     </h1>
                     <div className="w-3/5">
-                      <SignUpModal
-                        setUserDataState={this.props.setUserDataState}
-                        getUser={this.props.getUser}
-                      />
-                      <UpdateModal
-                        setUserDataState={this.props.setUserDataState}
-                        userData={this.props.userData}
-                      />
+                      {this.props.auth0.isAuthenticated ?
+                        <>
+                          <UpdateModal
+                            setUserDataState={this.props.setUserDataState}
+                            userData={this.props.userData}
+                          />
+                        </>
+                        :
+                        <SignUpModal
+                          setUserDataState={this.props.setUserDataState}
+                          getUser={this.props.getUser}
+                        />
+                      }
                     </div>
                   </div>
                 </div>
@@ -48,4 +55,4 @@ class Home extends React.Component {
   }
 }
 
-export default Home;
+export default withAuth0(Home);

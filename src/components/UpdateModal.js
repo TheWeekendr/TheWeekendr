@@ -200,7 +200,7 @@ class UpdateModal extends React.Component {
             </Button>
           </Modal.Footer>
         </Modal>
-        <Button appearance="ghost" onClick={this.open}>
+        <Button block appearance="default" size="lg" onClick={this.open}>
           Update Profile
         </Button>
       </div>

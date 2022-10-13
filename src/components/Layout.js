@@ -1,16 +1,13 @@
 import React from 'react';
 import '../App.css';
 import '../rsuite.css';
-import { Nav, Icon, Sidenav, Dropdown, Navbar, Footer } from 'rsuite';
+import { Nav, Icon, Sidenav, Navbar, Footer } from 'rsuite';
 import {
   Container,
   Header,
   Content,
   Sidebar,
-  Button,
-  ButtonToolbar,
 } from 'rsuite';
-import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 import { LinkContainer } from 'react-router-bootstrap';
 import NavRoutes from '../NavRoutes';
 import SearchForm from './SearchForm';
@@ -32,30 +29,10 @@ const headerStyles = {
   overflow: 'hidden',
 };
 
-const iconStyles = {
-  width: 56,
-  height: 56,
-  lineHeight: '56px',
-  textAlign: 'center',
-};
-
 const NavToggle = ({ expand, onChange }) => {
   return (
     <Navbar appearance="subtle" className="nav-toggle">
       <Navbar.Body>
-        <Nav>
-          <Dropdown
-            placement="topStart"
-            trigger="click"
-            renderTitle={children => {
-              return <Icon style={iconStyles} icon="cog" />;
-            }}
-          >
-            <Dropdown.Item>Update Profile</Dropdown.Item>
-            <Dropdown.Item>Sign Out</Dropdown.Item>
-          </Dropdown>
-        </Nav>
-
         <Nav pullRight>
           <Nav.Item
             onClick={onChange}
@@ -115,6 +92,7 @@ class Layout extends React.Component {
       // });
     }
   }
+  
   render() {
     const { expand } = this.state;
     return (
@@ -188,40 +166,18 @@ class Layout extends React.Component {
                         About
                       </Nav.Item>
                     </LinkContainer>
-                    <Dropdown
-                      placement="rightStart"
-                      eventKey="4-5"
-                      title="Login"
-                      icon={<Icon icon="gear-circle" />}
+                    <Nav.Item
+                      eventKey="5"
+                      icon={<Icon icon="gear-circle" className='py-2' />}
                     >
-                      <Dropdown.Item eventKey="4-5">
-                        {this.props.auth0.isAuthenticated ? (
-                          <>
-                            <Logout />
-                          </>
-                        ) : (
-                          <Login />
-                        )}
-                        <Form fluid>
-                          <FormGroup>
-                            <ControlLabel>Username</ControlLabel>
-                            <FormControl name="name" />
-                            <HelpBlock>Required</HelpBlock>
-                          </FormGroup>
-                          <FormGroup>
-                            <ControlLabel>Password</ControlLabel>
-                            <FormControl name="password" type="password" />
-                            <HelpBlock>Required</HelpBlock>
-                          </FormGroup>
-                          <FormGroup>
-                            <ButtonToolbar>
-                              <Button appearance="primary">Submit</Button>
-                              <Button appearance="default">Cancel</Button>
-                            </ButtonToolbar>
-                          </FormGroup>
-                        </Form>
-                      </Dropdown.Item>
-                    </Dropdown>
+                      {this.props.auth0.isAuthenticated ?
+                        <>
+                          <Logout />
+                        </>
+                        :
+                        <Login />
+                      }
+                    </Nav.Item>
                   </Nav>
                 </Sidenav.Body>
               </Sidenav>
