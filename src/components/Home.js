@@ -1,6 +1,4 @@
 import React from 'react';
-import SignUpModal from './SignUpModal';
-import UpdateModal from './UpdateModal';
 import { withAuth0 } from '@auth0/auth0-react';
 
 class Home extends React.Component {
