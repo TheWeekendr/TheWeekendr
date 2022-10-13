@@ -1,6 +1,8 @@
 import React from 'react';
 import { Input, InputGroup, Icon } from 'rsuite';
 import { Form, ControlLabel, FormGroup, FormControl, Button } from 'rsuite';
+import axios from 'axios';
+import { CLASS_TYPES } from '@babel/types';
 // import { DateRangePicker } from 'rsuite';
 
 class SearchForm extends React.Component {
@@ -8,8 +10,8 @@ class SearchForm extends React.Component {
     super(props);
     this.state = {
       formValue: {
-        search: '',
-        dates: '',
+        zipCode: '',
+        // dates: '',
       },
     };
     this.handleChange = this.handleChange.bind(this);
@@ -21,12 +23,30 @@ class SearchForm extends React.Component {
     });
   }
 
+  handleSearch = async () => {
+    try {
+      const searchQuery = ['wine'].join();
+      // const searchQuery = this.props.userData.favActivities.join();
+      // const location = (this.state.formValue.zipCode.length = 5
+      //   ? this.state.formValue.zipCode
+      //   : this.props.userData.zipCode);
+      const location = '94596';
+      const apiUrl = `http://localhost:3001/google-events?location=${location}&searchQuery=${searchQuery}`;
+
+      const apiResponse = await axios.get(apiUrl);
+      console.log(apiResponse);
+      this.props.setGoogleEventsData(apiResponse.data.events_results);
+    } catch (error) {
+      alert(`Error: ${error.code} - ${error.message}`);
+    }
+  };
+
   render() {
     return (
       <>
-        <Form 
-          layout="inline" 
-          onChange={this.handleChange} 
+        <Form
+          layout="inline"
+          onChange={this.handleChange}
           formValue={this.state.formValue}
         >
           {/* <FormGroup>
@@ -43,10 +63,10 @@ class SearchForm extends React.Component {
           <FormGroup>
             <ControlLabel srOnly>Search</ControlLabel>
             <InputGroup inside>
-              <FormControl 
-                accepter={Input} 
-                placeholder="Enter Zip Code" 
-                name="searchZip"
+              <FormControl
+                accepter={Input}
+                placeholder="Enter Zip Code"
+                name="zipCode"
                 style={{ width: 180 }}
                 onChange={this.handleChange}
                 maxLength={5}
@@ -57,11 +77,11 @@ class SearchForm extends React.Component {
             </InputGroup>
           </FormGroup>
 
-          <Button>Search</Button>
+          <Button onClick={this.handleSearch}>Search</Button>
         </Form>
       </>
     );
   }
-};
+}
 
 export default SearchForm;

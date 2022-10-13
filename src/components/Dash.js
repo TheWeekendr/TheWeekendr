@@ -18,7 +18,10 @@ const Dash = props => {
         <PanelGroup accordion bordered className="w-full bg-slate-100">
           <Panel header="Events" collapsible defaultExpanded>
             <div>
-              <EventCard userData={props.userData} />
+              <EventCard
+                userData={props.userData}
+                googleEventsData={props.googleEventsData}
+              />
             </div>
           </Panel>
           <Panel header="Food" collapsible>
