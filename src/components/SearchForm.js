@@ -25,7 +25,8 @@ class SearchForm extends React.Component {
 
   handleSearch = async () => {
     try {
-      let searchQuery = this.props.userData.favActivities.join() || 'events';
+      let searchQuery =
+        this.props.userData.favActivities.slice(1, 4).join() || 'events';
       let location =
         this.state.formValue.zipCode || this.props.userData.zipCode;
       let apiUrl = `${process.env.REACT_APP_SERVER}/google-events?location=${location}&searchQuery=${searchQuery}`;
@@ -34,7 +35,7 @@ class SearchForm extends React.Component {
       this.props.setGoogleEventsData(apiResponse.data.events_results);
 
       searchQuery =
-        'restaurants ' + this.props.userData.favFoods.join(' ') ||
+        'restaurants ' + this.props.userData.favFoods.slice(1, 4).join(' ') ||
         'restaurants';
       location = this.state.formValue.zipCode || this.props.userData.zipCode;
       apiUrl = `${process.env.REACT_APP_SERVER}/yelp-restaurants?location=${location}&searchQuery=${searchQuery}`;
@@ -79,7 +80,6 @@ class SearchForm extends React.Component {
                 placeholder="Enter Zip Code"
                 name="zipCode"
                 style={{ width: 180 }}
-                // onChange={this.handleChange}
                 maxLength={5}
               />
               <InputGroup.Addon>
