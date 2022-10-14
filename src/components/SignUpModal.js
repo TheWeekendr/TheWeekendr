@@ -206,7 +206,6 @@ class SignUpModal extends React.Component {
                   placeholder="Favorite Activities"
                   style={{ width: 400 }}
                   preventOverflow
-                  disabled={this.state.favActivities.length > 3 && true}
                 />
               </FormGroup>
             </Form>
