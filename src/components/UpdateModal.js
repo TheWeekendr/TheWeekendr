@@ -131,15 +131,43 @@ class UpdateModal extends React.Component {
         label: 'Mexican',
       },
       {
-        value: 'mongolian',
-        label: 'Mongolian',
+        value: 'indian',
+        label: 'Indian',
+      },
+      {
+        value: 'japanese',
+        label: 'Japanese',
+      },
+      {
+        value: 'korean',
+        label: 'Korean',
+      },
+      {
+        value: 'vietnamese',
+        label: 'Vietnamese',
+      },
+      {
+        value: 'american',
+        label: 'American',
+      },
+      {
+        value: 'mediterranean',
+        label: 'Mediterranean',
+      },
+      {
+        value: 'cajun',
+        label: 'Cajun',
+      },
+      {
+        value: 'seafood',
+        label: 'Seafood',
       },
     ];
 
     const activitiesData = [
       {
-        value: 'golf',
-        label: 'Golf',
+        value: 'sports',
+        label: 'Sports',
       },
       {
         value: 'comedy',
@@ -150,16 +178,28 @@ class UpdateModal extends React.Component {
         label: 'Wine',
       },
       {
-        value: 'beer',
-        label: 'Beer',
-      },
-      {
         value: 'art',
         label: 'Art',
       },
       {
         value: 'music',
         label: 'Music',
+      },
+      {
+        value: 'theater',
+        label: 'Theater',
+      },
+      {
+        value: 'dance',
+        label: 'Dance',
+      },
+      {
+        value: 'outdoors',
+        label: 'Outdoors',
+      },
+      {
+        value: 'food',
+        label: 'Food',
       },
     ];
 
