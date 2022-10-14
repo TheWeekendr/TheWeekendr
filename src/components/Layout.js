@@ -12,8 +12,6 @@ import { withAuth0 } from '@auth0/auth0-react';
 import { useAuth0 } from '@auth0/auth0-react';
 import Login from './Login';
 import Logout from './Logout';
-import data from '../data/eventData.json';
-import axios from 'axios';
 
 const headerStyles = {
   padding: 18,
@@ -230,15 +228,25 @@ class Layout extends React.Component {
                 <div className="sticky top-0 h-14 border-b bg-slate-700 lg:py-2.5">
                   <div className="px-6 flex items-center justify-between space-x-4 2xl:container">
                     <span className="text-3xl text-white font-medium lg:block"></span>
-                    <SearchForm
-                      userData={this.props.userData}
-                      googleEventsData={this.state.googleEventsData}
-                      setGoogleEventsData={this.setGoogleEventsData}
-                      setYelpRestaurantsData={this.setYelpRestaurantsData}
-                      setWeatherData={this.setWeatherData}
-                      foodData={this.state.foodData}
-                      weatherData={this.state.weatherData}
-                    />
+                    
+                    
+                    {this.props.auth0.isAuthenticated ? (
+                      <>
+                       <SearchForm
+                         userData={this.props.userData}
+                         googleEventsData={this.state.googleEventsData}
+                         setGoogleEventsData={this.setGoogleEventsData}
+                         setYelpRestaurantsData={this.setYelpRestaurantsData}
+                         setWeatherData={this.setWeatherData}
+                         foodData={this.state.foodData}
+                         weatherData={this.state.weatherData}
+                       />
+                       
+                      </>
+                    ) : (
+                      <></>
+                    )}
+                    
                   </div>
                 </div>
               </Header>

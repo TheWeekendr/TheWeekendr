@@ -3,7 +3,6 @@ import Layout from './components/Layout';
 import './App.css';
 import { BrowserRouter } from 'react-router-dom';
 import axios from 'axios';
-import { thisExpression } from '@babel/types';
 
 class App extends React.Component {
   constructor(props) {
