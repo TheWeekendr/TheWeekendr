@@ -2,7 +2,6 @@ import React from 'react';
 import { Input, InputGroup, Icon } from 'rsuite';
 import { Form, ControlLabel, FormGroup, FormControl, Button } from 'rsuite';
 import axios from 'axios';
-import { CLASS_TYPES } from '@babel/types';
 import { LinkContainer } from 'react-router-bootstrap';
 // import { DateRangePicker } from 'rsuite';
 

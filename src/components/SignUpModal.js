@@ -2,6 +2,7 @@ import React from 'react';
 import { Modal, Button } from 'rsuite';
 import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 import { CheckPicker } from 'rsuite';
+import LogoutButton from './LogoutButton';
 import axios from 'axios';
 
 class SignUpModal extends React.Component {
@@ -16,6 +17,7 @@ class SignUpModal extends React.Component {
       // favFoods: this.props.userData.favFoods || [],
       // favActivities: this.props.userData.favActivities || [],
       show: false,
+      favActivities: [],
     };
     this.close = this.close.bind(this);
     this.open = this.open.bind(this);
@@ -87,15 +89,43 @@ class SignUpModal extends React.Component {
         label: 'Mexican',
       },
       {
-        value: 'mongolian',
-        label: 'Mongolian',
+        value: 'indian',
+        label: 'Indian',
+      },
+      {
+        value: 'japanese',
+        label: 'Japanese',
+      },
+      {
+        value: 'korean',
+        label: 'Korean',
+      },
+      {
+        value: 'vietnamese',
+        label: 'Vietnamese',
+      },
+      {
+        value: 'american',
+        label: 'American',
+      },
+      {
+        value: 'mediterranean',
+        label: 'Mediterranean',
+      },
+      {
+        value: 'cajun',
+        label: 'Cajun',
+      },
+      {
+        value: 'seafood',
+        label: 'Seafood',
       },
     ];
 
     const activitiesData = [
       {
-        value: 'golf',
-        label: 'Golf',
+        value: 'sports',
+        label: 'Sports',
       },
       {
         value: 'comedy',
@@ -106,10 +136,6 @@ class SignUpModal extends React.Component {
         label: 'Wine',
       },
       {
-        value: 'beer',
-        label: 'Beer',
-      },
-      {
         value: 'art',
         label: 'Art',
       },
@@ -117,12 +143,28 @@ class SignUpModal extends React.Component {
         value: 'music',
         label: 'Music',
       },
+      {
+        value: 'theater',
+        label: 'Theater',
+      },
+      {
+        value: 'dance',
+        label: 'Dance',
+      },
+      {
+        value: 'outdoors',
+        label: 'Outdoors',
+      },
+      {
+        value: 'food',
+        label: 'Food',
+      },
     ];
 
     return (
       <div className="sticky mx-auto flex flex-col mx-16">
-        <Modal show={this.props.showSignupModal} onHide={this.close} size="xs">
-          <Modal.Header>
+        <Modal show={this.props.showSignupModal}  size="xs">
+          <Modal.Header closeButton={false}>
             <Modal.Title><p className='text-slate-700 mb-2'>Create Weekendr Search Profile</p></Modal.Title>
             <Modal.Title><small className='text-slate-500'>Use the following form to create a user profile<br />in order to retrieve your search results. </small></Modal.Title>
           </Modal.Header>
@@ -149,6 +191,7 @@ class SignUpModal extends React.Component {
                   placeholder="Favorite Foods"
                   style={{ width: 400 }}
                   preventOverflow
+                 
                 />
               </FormGroup>
               <FormGroup>
@@ -158,6 +201,7 @@ class SignUpModal extends React.Component {
                   placeholder="Favorite Activities"
                   style={{ width: 400 }}
                   preventOverflow
+                  disabled={this.state.favActivities.length > 3 && true}
                 />
               </FormGroup>
             </Form>
@@ -166,9 +210,10 @@ class SignUpModal extends React.Component {
             <Button onClick={this.handleCreateAccount} appearance="primary">
               Create Account
             </Button>
-            <Button onClick={this.close} appearance="subtle">
+            {/* <Button onClick={this.close} appearance="subtle">
               Cancel
-            </Button>
+            </Button> */}
+            <LogoutButton />
           </Modal.Footer>
         </Modal>
         {/* <Button block appearance="default" size="lg" onClick={this.open}>
