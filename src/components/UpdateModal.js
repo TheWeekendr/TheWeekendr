@@ -56,12 +56,8 @@ class UpdateModal extends React.Component {
     );
     if (verify) {
       try {
-        // await axios.put(
-        //   `${process.env.REACT_APP_SERVER}/user/${userUpdateData._id}`,
-        //   userUpdateData
-        // );
         await axios.delete(
-          `http://localhost:3001/user/${this.props.userData.userSub}`
+          `${process.env.REACT_APP_SERVER}/user/${this.props.userData.userSub}`
         );
         this.close();
       } catch (error) {
@@ -101,7 +97,7 @@ class UpdateModal extends React.Component {
       //   userUpdateData
       // );
       await axios.put(
-        `http://localhost:3001/user/${userUpdateData._id}`,
+        `${process.env.REACT_APP_SERVER}/user/${userUpdateData._id}`,
         userUpdateData
       );
 
@@ -224,12 +220,20 @@ class UpdateModal extends React.Component {
             </Button>
           </Modal.Footer>
         </Modal>
-        <Whisper placement="right" trigger="hover" speaker={<Tooltip>This will allow you to update<br /> your profile search criteria.</Tooltip>}>
+        <Whisper
+          placement="right"
+          trigger="hover"
+          speaker={
+            <Tooltip>
+              This will allow you to update
+              <br /> your profile search criteria.
+            </Tooltip>
+          }
+        >
           <Button block appearance="default" size="lg" onClick={this.open}>
             Update Search
           </Button>
         </Whisper>
-
       </div>
     );
   }

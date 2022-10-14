@@ -57,8 +57,7 @@ class SignUpModal extends React.Component {
     };
 
     try {
-      // await axios.post(`${process.env.REACT_APP_SERVER}/user`, userData);
-      await axios.post(`http://localhost:3001/user`, userData);
+      await axios.post(`${process.env.REACT_APP_SERVER}/user`, userData);
 
       this.props.setUserDataState(userData);
       // this.props.getUser(userData);
