@@ -130,7 +130,7 @@ class Layout extends React.Component {
                 appearance="subtle"
               >
                 <Sidenav.Header>
-                  <div style={headerStyles}>
+                  <div style={headerStyles} id="sideNavBack">
                     <span>
                       <div className="mt-8 text-center">
                         <img

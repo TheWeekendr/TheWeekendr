@@ -207,7 +207,7 @@ class UpdateModal extends React.Component {
       <div className="mx-auto flex flex-col mx-16">
         <Modal show={this.state.show} onHide={this.close} size="xs">
           <Modal.Header>
-            <Modal.Title>Update Profile</Modal.Title>
+            <Modal.Title>Update Search Profile</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Form
@@ -276,8 +276,8 @@ class UpdateModal extends React.Component {
             </Tooltip>
           }
         >
-          <Button block appearance="default" size="lg" onClick={this.open}>
-            Update Search
+          <Button block appearance="default" size="xl" onClick={this.open}>
+            Change Search
           </Button>
         </Whisper>
       </div>

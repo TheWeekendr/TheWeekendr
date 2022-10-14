@@ -227,6 +227,33 @@ body {
   max-height: 94vh;
 }
 
+/* #sideNavBack {
+  background:
+    linear-gradient(-45deg,
+      rgb(104, 200, 255),
+      rgb(246, 132, 193),
+      rgb(0, 255, 251),
+      rgb(219, 172, 212),
+      transparent);
+  background-blend-mode: screen;
+  animation: gradient 20s ease infinite;
+  background-size: 400% 400%;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+} */
+
 #cardHeight {
   height: 340px;
 }
