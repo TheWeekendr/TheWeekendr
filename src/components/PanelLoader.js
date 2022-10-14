@@ -3,7 +3,6 @@ import { PanelGroup, Panel } from 'rsuite';
 import EventCard from './EventCard';
 import FoodCard from './FoodCard';
 import WeatherCard from './WeatherCard';
-// import { Loader } from 'rsuite';
 import { Grid } from 'react-loader-spinner'
 
 class PanelLoader extends React.Component {
@@ -13,7 +12,6 @@ class PanelLoader extends React.Component {
         ( <section>
             <div className="mt-48 flex flex-col items-center justify-center z-10">
               <div id="heroBlock2" className="block w-96 rounded-lg shadow-lg px-6 py-14 md:px-12 mx-auto">
-                {/* <span><Loader size="md" center content="loading results..." /></span> */}
               <span className="mx-auto justify-center"><Grid
                 height="80"
                 width="80"
