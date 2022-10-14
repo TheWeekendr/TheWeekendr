@@ -174,6 +174,10 @@ class UpdateModal extends React.Component {
         label: 'Wine',
       },
       {
+        value: 'beer',
+        label: 'Beer',
+      },
+      {
         value: 'art',
         label: 'Art',
       },
@@ -229,6 +233,7 @@ class UpdateModal extends React.Component {
                 <HelpBlock>Required</HelpBlock>
               </FormGroup>
               <FormGroup>
+                <ControlLabel>Select Up to 3</ControlLabel>
                 <CheckPicker
                   onChange={this.handleFoods}
                   data={foodData}
@@ -238,6 +243,7 @@ class UpdateModal extends React.Component {
                 />
               </FormGroup>
               <FormGroup>
+                <ControlLabel>Select Up to 3</ControlLabel>
                 <CheckPicker
                   onChange={this.handleActivities}
                   data={activitiesData}

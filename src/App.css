@@ -88,11 +88,11 @@ body {
 }
 
 #to {
-  animation: fadeIn1 3s;
-  -webkit-animation: fadeIn1 3s;
-  -moz-animation: fadeIn1 3s;
-  -o-animation: fadeIn1 3s;
-  -ms-animation: fadeIn1 3s;
+  animation: fadeIn1 2s;
+  -webkit-animation: fadeIn1 2s;
+  -moz-animation: fadeIn1 2s;
+  -o-animation: fadeIn1 2s;
+  -ms-animation: fadeIn1 2s;
 }
 
 @keyframes fadeIn1 {
@@ -110,11 +110,11 @@ body {
 }
 
 #your {
-  animation: fadeIn2 5s;
-  -webkit-animation: fadeIn2 5s;
-  -moz-animation: fadeIn2 5s;
-  -o-animation: fadeIn2 5s;
-  -ms-animation: fadeIn2 5s;
+  animation: fadeIn2 4s;
+  -webkit-animation: fadeIn2 4s;
+  -moz-animation: fadeIn2 4s;
+  -o-animation: fadeIn2 4s;
+  -ms-animation: fadeIn2 4s;
 }
 
 @keyframes fadeIn2 {
@@ -136,11 +136,11 @@ body {
   text-shadow: 1px 1px 1px rgb(70, 16, 28);
   font-family: 'Aladin', cursive;
   font-size: 72px;
-  animation: fadeIn3 5s;
-  -webkit-animation: fadeIn3 5s;
-  -moz-animation: fadeIn3 5s;
-  -o-animation: fadeIn3 5s;
-  -ms-animation: fadeIn3 5s;
+  animation: fadeIn3 4s;
+  -webkit-animation: fadeIn3 4s;
+  -moz-animation: fadeIn3 4s;
+  -o-animation: fadeIn3 4s;
+  -ms-animation: fadeIn3 4s;
 }
 
 @keyframes fadeIn3 {
