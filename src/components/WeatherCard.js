@@ -19,21 +19,20 @@ class WeatherCard extends React.Component {
                 shaded
                 bordered
                 bodyFill
-                style={{ display: 'inline-block', width: 320 }}
+                style={{ display: 'inline-block', width: 320, }}
               >
-                {/* <img src={event.thumbnail} alt="thumbnail" height="240" className="mx-auto mt-5" /> */}
                 <Panel>
                   <div>
-
-                    <img src={`https://www.weatherbit.io/static/img/icons/${event.weather.icon}.png`} alt="weatherIcon"/>
-                    <p>
+                    <img src={`https://www.weatherbit.io/static/img/icons/${event.weather.icon}.png`} alt="weatherIcon" className='mx-auto' />
+                    <p className='mb-3 text-lg text-slate-700 text-center border-b border-t border-slate-300 py-3'>
                       The weather forecast on {event.datetime} calls for{' '}
                       {event.weather.description.toLowerCase()}.
                     </p>
-                    
-                    <b>High:</b> {event.high_temp} &#176;F
-                    <br />
-                    <b>Low:</b> {event.low_temp} &#176;F
+                    <div className='text-center py-2'>
+                      <b className='text-lg text-slate-800'>High:</b><span className='text-lg text-slate-600'> {event.high_temp} &#176;F</span>
+                      <br />
+                      <b className='text-lg text-slate-800'>Low:</b><span className='text-lg text-slate-600'> {event.low_temp} &#176;F</span>
+                    </div>
                   </div>
                 </Panel>
               </Panel>

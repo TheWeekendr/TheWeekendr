@@ -56,11 +56,13 @@ class Layout extends React.Component {
       googleEventsData: [],
       foodData: [],
       weatherData: [],
+      loading: true,
     };
     this.handleToggle = this.handleToggle.bind(this);
     this.setGoogleEventsData = this.setGoogleEventsData.bind(this);
     this.setYelpRestaurantsData = this.setYelpRestaurantsData.bind(this);
     this.setWeatherData = this.setWeatherData.bind(this);
+    this.setLoading = this.setLoading.bind(this);
   }
   handleToggle() {
     this.setState({
@@ -78,6 +80,10 @@ class Layout extends React.Component {
 
   setWeatherData(data) {
     this.setState({ weatherData: data });
+  }
+
+  setLoading(data) {
+    this.setState({ loading: data });
   }
 
   // async componentDidMount() {
@@ -240,6 +246,7 @@ class Layout extends React.Component {
                          setWeatherData={this.setWeatherData}
                          foodData={this.state.foodData}
                          weatherData={this.state.weatherData}
+                         setLoading={this.setLoading}
                        />
                        
                       </>
@@ -260,6 +267,7 @@ class Layout extends React.Component {
                   weatherData={this.state.weatherData}
                   setShowSignupModal={this.props.setShowSignupModal}
                   showSignupModal={this.props.showSignupModal}
+                  loading={this.state.loading}
                 />
                 <SignUpModal
                   setShowSignupModal={this.props.setShowSignupModal}

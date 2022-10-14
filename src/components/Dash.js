@@ -1,50 +1,26 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-import { PanelGroup, Panel } from 'rsuite';
-import EventCard from './EventCard';
-import FoodCard from './FoodCard';
-import WeatherCard from './WeatherCard';
 import SignUpModal from './SignUpModal';
+import PanelLoader from './PanelLoader';
 
 const Dash = props => {
   const { isAuthenticated, isLoading } = useAuth0();
 
   if (isLoading) {
-    return <div>Loading ...</div>;
+    return <></>;
   }
 
   return (
     <>
       {isAuthenticated ? (
         <>
-          <div>
-            <PanelGroup accordion bordered className="w-full bg-slate-100">
-              <Panel header="Events" collapsible>
-                <div>
-                  <EventCard
-                    userData={props.userData}
-                    googleEventsData={props.googleEventsData}
-                  />
-                </div>
-              </Panel>
-              <Panel header="Food" collapsible>
-                <div>
-                  <FoodCard
-                    userData={props.userData}
-                    foodData={props.foodData}
-                  />
-                </div>
-              </Panel>
-              <Panel header="Weather" collapsible>
-                <div>
-                  <WeatherCard
-                    userData={props.userData}
-                    weatherData={props.weatherData}
-                  />
-                </div>
-              </Panel>
-            </PanelGroup>
-          </div>
+          <PanelLoader
+            userData={props.userData}
+            googleEventsData={props.googleEventsData}
+            foodData={props.foodData}
+            weatherData={props.weatherData}
+            loading={props.loading}
+          />
         </>
       ) : (
         <>
@@ -92,3 +68,41 @@ const Dash = props => {
 };
 
 export default Dash;
+
+// userData = { props.userData }
+// googleEventsData = { props.googleEventsData }
+// userData = { props.userData }
+// foodData = { props.foodData }
+// userData = { props.userData }
+// weatherData = { props.weatherData }
+
+//   <>
+//   <div>
+//     <PanelGroup accordion bordered className="w-full bg-slate-100">
+//       <Panel header="Events" collapsible>
+//         <div>
+//           <EventCard
+//             userData={props.userData}
+//             googleEventsData={props.googleEventsData}
+//           />
+//         </div>
+//       </Panel>
+//       <Panel header="Food" collapsible>
+//         <div>
+//           <FoodCard
+//             userData={props.userData}
+//             foodData={props.foodData}
+//           />
+//         </div>
+//       </Panel>
+//       <Panel header="Weather" collapsible>
+//         <div>
+//           <WeatherCard
+//             userData={props.userData}
+//             weatherData={props.weatherData}
+//           />
+//         </div>
+//       </Panel>
+//     </PanelGroup>
+//   </div>
+//         </>
