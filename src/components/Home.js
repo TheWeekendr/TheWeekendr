@@ -21,22 +21,15 @@ class Home extends React.Component {
                       <span id="weekend">weekend.</span>
                     </h1>
                     <div className="w-3/5">
-                      {/* {this.props.auth0.isAuthenticated ? (
+                      {this.props.auth0.isAuthenticated ? (
                         <>
-                          <UpdateModal
-                            setUserDataState={this.props.setUserDataState}
-                            userData={this.props.userData}
-                          />
+                          <span className="text-slate-700 tracking-tight text-xl">Simply press search to view your Weekendr results!</span>
                         </>
                       ) : (
-                        <SignUpModal
-                          setShowSignupModal={this.props.setShowSignupModal}
-                          showSignupModal={this.props.showSignupModal}
-                          setUserDataState={this.props.setUserDataState}
-                          getUser={this.props.getUser}
-                          userData={this.props.userData}
-                        />
-                      )} */}
+                        <>
+                          <span className="text-slate-700 tracking-tight text-xl"> Login or Sign Up to Explore!</span>
+                        </>
+                      )}
                     </div>
                   </div>
                 </div>

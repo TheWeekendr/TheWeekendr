@@ -227,6 +227,10 @@ body {
   max-height: 94vh;
 }
 
+#cardHeight {
+  height: 340px;
+}
+
 #footer {
   position: fixed;
   bottom: 0;

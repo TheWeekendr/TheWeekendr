@@ -35,6 +35,7 @@ class NavRoutes extends React.Component {
                 weatherData={this.props.weatherData}
                 setUserDataState={this.props.setUserDataState}
                 getUser={this.props.getUser}
+                loading={this.props.loading}
               />
             }
           ></Route>

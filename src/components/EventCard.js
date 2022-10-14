@@ -22,10 +22,10 @@ class EventCard extends React.Component {
                 bodyFill
                 style={{ display: 'inline-block', width: 320 }}
               >
-                <div className="py-3 px-6 border-b border-slate-300 mx-auto text-center">
+                <div className="py-3 px-6 border-b border-slate-300 mx-auto text-center text-sm">
                   {event.date.when}
                 </div>
-                <div className="w-full p-2 bg-slate-200">
+                <div className="w-full p-2 bg-sky-50">
                   <img
                     className="d-block object-cover h-44 mx-auto rounded-lg mt-2 mb-2 shadow-md"
                     src={event.image}
@@ -33,8 +33,8 @@ class EventCard extends React.Component {
                     onError={this.addDefaultSrc}
                   />
                 </div>
-                <div className="flex flex-col justify-between content-between h-80">
-                  <h5 className="text-slate-700 text-center text-xl font-medium mb-2 border-t border-b border-slate-300 py-2">
+                <div id="cardHeight" className="flex flex-col justify-between content-between">
+                  <h5 className="text-slate-700 text-center text-xl font-medium mb-2 border-t border-b border-slate-300 py-2 px-4">
                     {event.title}
                   </h5>
                   <div

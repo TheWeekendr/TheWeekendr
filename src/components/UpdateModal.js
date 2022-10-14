@@ -243,7 +243,7 @@ class UpdateModal extends React.Component {
                 />
               </FormGroup>
               <FormGroup>
-                <ControlLabel>Select Up to 3</ControlLabel>
+                <ControlLabel>Select Up to 2</ControlLabel>
                 <CheckPicker
                   onChange={this.handleActivities}
                   data={activitiesData}
@@ -255,7 +255,7 @@ class UpdateModal extends React.Component {
             </Form>
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.handleUpdateAccount} appearance="primary">
+            <Button onClick={this.handleUpdateAccount} appearance="default">
               Save Changes
             </Button>
             <Button onClick={this.close} appearance="subtle">
