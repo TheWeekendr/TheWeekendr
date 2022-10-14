@@ -22,13 +22,15 @@ class WeatherCard extends React.Component {
                 style={{ display: 'inline-block', width: 320 }}
               >
                 {/* <img src={event.thumbnail} alt="thumbnail" height="240" className="mx-auto mt-5" /> */}
-                <Panel header={event.city_name}>
+                <Panel>
                   <div>
-                    {/* <img src="https://www.weatherbit.io/static/img/icons/{weatherData.weatherForecast[0].Weather.Icon}.png" alt="thumbnail"/> */}
+
+                    <img src={`https://www.weatherbit.io/static/img/icons/${event.weather.icon}.png`} alt="weatherIcon"/>
                     <p>
-                      The weather forecast on {event.datetime} is for{' '}
+                      The weather forecast on {event.datetime} calls for{' '}
                       {event.weather.description.toLowerCase()}.
                     </p>
+                    
                     <b>High:</b> {event.high_temp} &#176;F
                     <br />
                     <b>Low:</b> {event.low_temp} &#176;F

@@ -2,6 +2,11 @@ import React from 'react';
 import { Panel, Button } from 'rsuite';
 
 class EventCard extends React.Component {
+
+  addDefaultSrc = (e) => {
+    e.target.src = 'https://www.nirah.com/images/item-placeholder.svg?id=498f4e96baf0bbbc9351';
+  }
+
   render() {
     const eventData = this.props.googleEventsData;
     return (
@@ -25,6 +30,7 @@ class EventCard extends React.Component {
                     className="d-block object-cover h-44 mx-auto rounded-lg mt-2 mb-2 shadow-md"
                     src={event.image}
                     alt="eventImg"
+                    onError={this.addDefaultSrc}
                   />
                 </div>
                 <div className="flex flex-col justify-between content-between h-80">
