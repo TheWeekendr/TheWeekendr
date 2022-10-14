@@ -56,7 +56,7 @@ class Layout extends React.Component {
       googleEventsData: [],
       foodData: [],
       weatherData: [],
-      loading: true,
+      loading: false,
     };
     this.handleToggle = this.handleToggle.bind(this);
     this.setGoogleEventsData = this.setGoogleEventsData.bind(this);

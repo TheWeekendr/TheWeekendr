@@ -28,7 +28,7 @@ class SearchForm extends React.Component {
     this.props.setLoading(true);
     try {
       let searchQuery =
-        this.props.userData.favActivities.slice(1, 4).join() || 'events';
+        this.props.userData.favActivities.slice(1, 3).join() || 'events';
       let location =
         this.state.formValue.zipCode || this.props.userData.zipCode;
       let apiUrl = `${process.env.REACT_APP_SERVER}/google-events?location=${location}&searchQuery=${searchQuery}`;
