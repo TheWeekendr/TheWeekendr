@@ -1,6 +1,5 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
-import SignUpModal from './SignUpModal';
 import PanelLoader from './PanelLoader';
 
 const Dash = props => {
@@ -36,14 +35,11 @@ const Dash = props => {
                       <h2 className="font-bold tracking-tight text-center text-slate-700">
                         <span id="dashText">Why, hello there!</span>
                       </h2>
-                      <h3 id="dashLoginText" className="text-slate-700 mb-6">
+                      <h3 id="dashLoginText" className="text-slate-700 mb-5">
                         Please log in or sign up to view your dashboard.
                       </h3>
-                      <div className="mx-44">
-                        <SignUpModal
-                          setUserDataState={props.setUserDataState}
-                          getUser={props.getUser}
-                        />
+                      <div id="dashLoginText" className="flex justify-center mx-auto mb-1">
+                        <span id="teamDash" className="inline-block w-28 h-1 mx-2 bg-pink-300 rounded-full"></span>
                       </div>
                     </div>
                   </div>

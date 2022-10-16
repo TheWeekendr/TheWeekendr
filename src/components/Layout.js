@@ -12,16 +12,7 @@ import { withAuth0 } from '@auth0/auth0-react';
 import { useAuth0 } from '@auth0/auth0-react';
 import Login from './Login';
 import Logout from './Logout';
-
-const headerStyles = {
-  padding: 18,
-  fontSize: 16,
-  height: 300,
-  background: '#475569',
-  color: ' #fff',
-  whiteSpace: 'nowrap',
-  overflow: 'hidden',
-};
+import Profile from './Profile';
 
 const NavToggle = (props, { expand, onChange }) => {
   // If logged in, check to see if user is in DB. If so, get profile. If not, launch signup
@@ -33,16 +24,11 @@ const NavToggle = (props, { expand, onChange }) => {
   }
 
   return (
-    <Navbar appearance="subtle" className="nav-toggle">
+    <Navbar appearance="subtle">
       <Navbar.Body>
-        <Nav pullRight>
-          <Nav.Item
-            onClick={onChange}
-            style={{ width: 56, textAlign: 'center' }}
-          >
-            <Icon icon={expand ? 'angle-left' : 'angle-right'} />
-          </Nav.Item>
-        </Nav>
+        <div className='h-14 w-full flex flex-col justify-center'>
+          <p className='mx-auto text-sm' style={{ color: '#e2e8f0' }}>&copy; 2022 The Weekendr</p>
+        </div>
       </Navbar.Body>
     </Navbar>
   );
@@ -130,17 +116,19 @@ class Layout extends React.Component {
                 appearance="subtle"
               >
                 <Sidenav.Header>
-                  <div style={headerStyles} id="sideNavBack">
+                  <div id="sideNavBody" className='border-b border-slate-400'>
                     <span>
-                      <div className="mt-8 text-center">
-                        <img
-                          src="https://wallpapercave.com/uwp/uwp2022668.png"
-                          alt="logo"
-                          className="w-10 h-10 m-auto rounded-full object-cover drop-shadow-lg lg:w-32 lg:h-32"
-                        />
+                      <div className="mt-4 text-center z-0 flex flex-col justify-between align-center items-center">
+                        <div id="card">
+                          <img
+                            src="https://wallpapercave.com/uwp/uwp2022668.png"
+                            alt="logo"
+                            className="w-full h-full m-auto rounded-full object-cover drop-shadow-lg z-10"
+                          />
+                        </div>
                         <h1
                           id="headerText"
-                          className="mt-3 pr-8 lg:block mx-auto"
+                          className="mt-3 lg:block mx-auto z-50 relative flex"
                         >
                           <span className="">The</span> <br />
                           Weekendr
@@ -222,8 +210,6 @@ class Layout extends React.Component {
                 </Sidenav.Body>
               </Sidenav>
               <NavToggle
-                expand={expand}
-                onChange={this.handleToggle}
                 getUser={this.props.getUser}
                 userData={this.props.userData}
               />
@@ -231,11 +217,11 @@ class Layout extends React.Component {
 
             <Container>
               <Header>
-                <div className="sticky top-0 h-14 border-b bg-slate-700 lg:py-2.5">
-                  <div className="px-6 flex items-center justify-between space-x-4 2xl:container">
-                    <span className="text-3xl text-white font-medium lg:block"></span>
-                    
-                    
+                <div className="sticky flex flex-row justify-between top-0 h-14 border-b bg-slate-700">
+                  <div className="px-6 flex items-center justify-between space-x-4 container">
+                    <div>
+                      <Profile />
+                    </div>
                     {this.props.auth0.isAuthenticated ? (
                       <>
                        <SearchForm
@@ -248,12 +234,10 @@ class Layout extends React.Component {
                          weatherData={this.state.weatherData}
                          setLoading={this.setLoading}
                        />
-                       
                       </>
                     ) : (
                       <></>
                     )}
-                    
                   </div>
                 </div>
               </Header>
@@ -276,7 +260,6 @@ class Layout extends React.Component {
                   getUser={this.props.getUser}
                   userData={this.props.userData}
                 />
-
               </Content>
               <Footer id="footer" className="bg-slate-700"></Footer>
             </Container>

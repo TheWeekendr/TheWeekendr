@@ -9225,7 +9225,7 @@ a.rs-btn {
 .rs-form-inline > *,
 .rs-form-inline > .rs-btn {
   margin-right: 20px;
-  margin-bottom: 24px;
+  /* margin-bottom: 24px; */
   vertical-align: top;
 }
 .rs-form-inline .rs-control-label {
@@ -15454,7 +15454,7 @@ textarea.rs-picker-search-input {
   line-height: 1.42857143;
   display: block;
   cursor: pointer;
-  color: #8e8e93;
+  color: #cbd5e1;
   -webkit-transition: color 0.3s linear, background-color 0.3s linear;
   transition: color 0.3s linear, background-color 0.3s linear;
   overflow: hidden;

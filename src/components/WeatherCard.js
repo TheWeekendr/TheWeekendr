@@ -28,7 +28,7 @@ class WeatherCard extends React.Component {
               <Panel>
                 <div className='flex flex-col justify-center items-center'>
                   <p className='mb-3 mt-6 text-lg text-slate-800 text-center border-b border-t border-slate-800 py-3 px-6 mx-auto'>
-                    Simply press Search to view your Weekendr results!
+                    Simply press <span className='font-semibold text-slate-700'>Search</span> to view your Weekendr results!
                   </p>
                 </div>
               </Panel>

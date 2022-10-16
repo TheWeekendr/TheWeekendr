@@ -3,6 +3,8 @@ import { Modal, Button } from 'rsuite';
 import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 import { CheckPicker } from 'rsuite';
 import LogoutButton from './LogoutButton';
+import foodData from '../data/foodData.json';
+import activitiesData from '../data/activitiesData.json';
 import axios from 'axios';
 
 class SignUpModal extends React.Component {
@@ -25,12 +27,15 @@ class SignUpModal extends React.Component {
     this.handleFoods = this.handleFoods.bind(this);
     this.handleActivities = this.handleActivities.bind(this);
   }
+
   close() {
     this.props.setShowSignupModal(false);
   }
+
   open() {
     this.props.setShowSignupModal(true);
   }
+
   handleChange(value) {
     this.setState({
       formValue: value,
@@ -70,100 +75,6 @@ class SignUpModal extends React.Component {
   };
 
   render() {
-    const foodData = [
-      {
-        value: 'chinese',
-        label: 'Chinese',
-      },
-      {
-        value: 'thai',
-        label: 'Thai',
-      },
-      {
-        value: 'italian',
-        label: 'Italian',
-      },
-      {
-        value: 'mexican',
-        label: 'Mexican',
-      },
-      {
-        value: 'indian',
-        label: 'Indian',
-      },
-      {
-        value: 'japanese',
-        label: 'Japanese',
-      },
-      {
-        value: 'korean',
-        label: 'Korean',
-      },
-      {
-        value: 'vietnamese',
-        label: 'Vietnamese',
-      },
-      {
-        value: 'american',
-        label: 'American',
-      },
-      {
-        value: 'mediterranean',
-        label: 'Mediterranean',
-      },
-      {
-        value: 'cajun',
-        label: 'Cajun',
-      },
-      {
-        value: 'seafood',
-        label: 'Seafood',
-      },
-    ];
-
-    const activitiesData = [
-      {
-        value: 'sports',
-        label: 'Sports',
-      },
-      {
-        value: 'comedy',
-        label: 'Comedy',
-      },
-      {
-        value: 'wine',
-        label: 'Wine',
-      },
-      {
-        value: 'beer',
-        label: 'Beer',
-      },
-      {
-        value: 'art',
-        label: 'Art',
-      },
-      {
-        value: 'music',
-        label: 'Music',
-      },
-      {
-        value: 'theater',
-        label: 'Theater',
-      },
-      {
-        value: 'dance',
-        label: 'Dance',
-      },
-      {
-        value: 'outdoors',
-        label: 'Outdoors',
-      },
-      {
-        value: 'food',
-        label: 'Food',
-      },
-    ];
-
     return (
       <div className="sticky mx-auto flex flex-col mx-16">
         <Modal show={this.props.showSignupModal}  size="xs">
@@ -195,7 +106,6 @@ class SignUpModal extends React.Component {
                   placeholder="Favorite Foods"
                   style={{ width: 400 }}
                   preventOverflow
-                 
                 />
               </FormGroup>
               <FormGroup>
@@ -214,15 +124,9 @@ class SignUpModal extends React.Component {
             <Button onClick={this.handleCreateAccount} appearance="default">
               Create Account
             </Button>
-            {/* <Button onClick={this.close} appearance="subtle">
-              Cancel
-            </Button> */}
             <LogoutButton />
           </Modal.Footer>
         </Modal>
-        {/* <Button block appearance="default" size="lg" onClick={this.open}>
-          Sign Up
-        </Button> */}
       </div>
     );
   }

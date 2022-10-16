@@ -23,7 +23,7 @@ class Home extends React.Component {
                     <div className="w-3/5">
                       {this.props.auth0.isAuthenticated ? (
                         <>
-                          <span className="text-slate-700 tracking-tight text-xl">Simply press search to view your Weekendr results!</span>
+                          <span className="text-slate-700 tracking-tight text-xl">Simply press <span className='font-semibold'>Search</span> to view your Weekendr results!</span>
                         </>
                       ) : (
                         <>
