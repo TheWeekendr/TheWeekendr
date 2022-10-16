@@ -12,6 +12,7 @@ import { withAuth0 } from '@auth0/auth0-react';
 import { useAuth0 } from '@auth0/auth0-react';
 import Login from './Login';
 import Logout from './Logout';
+import Profile from './Profile';
 
 const NavToggle = (props, { expand, onChange }) => {
   // If logged in, check to see if user is in DB. If so, get profile. If not, launch signup
@@ -26,7 +27,7 @@ const NavToggle = (props, { expand, onChange }) => {
     <Navbar appearance="subtle">
       <Navbar.Body>
         <div className='h-14 w-full flex flex-col justify-center'>
-          <p className='mx-auto text-sm' style={{ color: '#a7a7aa' }}>&copy; 2022 The Weekendr</p>
+          <p className='mx-auto text-sm' style={{ color: '#e2e8f0' }}>&copy; 2022 The Weekendr</p>
         </div>
       </Navbar.Body>
     </Navbar>
@@ -216,9 +217,11 @@ class Layout extends React.Component {
 
             <Container>
               <Header>
-                <div className="sticky top-0 h-14 border-b bg-slate-700 lg:py-2.5">
-                  <div className="px-6 flex items-center justify-between space-x-4 2xl:container">
-                    <span className="text-3xl text-white font-medium lg:block"></span>
+                <div className="sticky flex flex-row justify-between top-0 h-14 border-b bg-slate-700">
+                  <div className="px-6 flex items-center justify-between space-x-4 container">
+                    <div>
+                      <Profile />
+                    </div>
                     {this.props.auth0.isAuthenticated ? (
                       <>
                        <SearchForm
