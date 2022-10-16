@@ -25,11 +25,9 @@ const NavToggle = (props, { expand, onChange }) => {
   return (
     <Navbar appearance="subtle">
       <Navbar.Body>
-
-          <div className='h-12 w-full flex flex-col justify-center'>
+        <div className='h-12 w-full flex flex-col justify-center'>
           <p className='mx-auto text-sm' style={{ color: '#8e8e93' }}>&copy; 2022 The Weekendr</p>
-          </div>
-
+        </div>
       </Navbar.Body>
     </Navbar>
   );
@@ -221,8 +219,6 @@ class Layout extends React.Component {
                 <div className="sticky top-0 h-14 border-b bg-slate-700 lg:py-2.5">
                   <div className="px-6 flex items-center justify-between space-x-4 2xl:container">
                     <span className="text-3xl text-white font-medium lg:block"></span>
-                    
-                    
                     {this.props.auth0.isAuthenticated ? (
                       <>
                        <SearchForm
@@ -235,12 +231,10 @@ class Layout extends React.Component {
                          weatherData={this.state.weatherData}
                          setLoading={this.setLoading}
                        />
-                       
                       </>
                     ) : (
                       <></>
                     )}
-                    
                   </div>
                 </div>
               </Header>
@@ -263,7 +257,6 @@ class Layout extends React.Component {
                   getUser={this.props.getUser}
                   userData={this.props.userData}
                 />
-
               </Content>
               <Footer id="footer" className="bg-slate-700"></Footer>
             </Container>
