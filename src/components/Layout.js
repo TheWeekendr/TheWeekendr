@@ -25,8 +25,8 @@ const NavToggle = (props, { expand, onChange }) => {
   return (
     <Navbar appearance="subtle">
       <Navbar.Body>
-        <div className='h-12 w-full flex flex-col justify-center'>
-          <p className='mx-auto text-sm' style={{ color: '#8e8e93' }}>&copy; 2022 The Weekendr</p>
+        <div className='h-14 w-full flex flex-col justify-center'>
+          <p className='mx-auto text-sm' style={{ color: '#a7a7aa' }}>&copy; 2022 The Weekendr</p>
         </div>
       </Navbar.Body>
     </Navbar>

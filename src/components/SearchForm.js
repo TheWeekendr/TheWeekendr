@@ -27,7 +27,7 @@ class SearchForm extends React.Component {
     this.props.setLoading(true);
     try {
       let searchQuery =
-        this.props.userData.favActivities.slice(1, 3).join() || 'events';
+        this.props.userData.favActivities.slice(0, 2).join() || 'events';
       let location =
         this.state.formValue.zipCode || this.props.userData.zipCode;
       let apiUrl = `${process.env.REACT_APP_SERVER}/google-events?location=${location}&searchQuery=${searchQuery}`;
@@ -36,7 +36,7 @@ class SearchForm extends React.Component {
       this.props.setGoogleEventsData(apiResponse.data.events_results);
 
       searchQuery =
-        'restaurants ' + this.props.userData.favFoods.slice(1, 4).join(' ') ||
+        'restaurants ' + this.props.userData.favFoods.slice(0, 3).join(' ') ||
         'restaurants';
       location = this.state.formValue.zipCode || this.props.userData.zipCode;
       apiUrl = `${process.env.REACT_APP_SERVER}/yelp-restaurants?location=${location}&searchQuery=${searchQuery}`;
