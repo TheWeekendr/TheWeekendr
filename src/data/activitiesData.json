@@ -1,0 +1,42 @@
+[
+  {
+        "value": "sports",
+        "label": "Sports"
+  },
+  {
+        "value": "comedy",
+        "label": "Comedy"
+  },
+  {
+        "value": "wine",
+        "label": "Wine"
+  },
+  {
+        "value": "beer",
+        "label": "Beer"
+  },
+  {
+        "value": "art",
+        "label": "Art"
+  },
+  {
+        "value": "music",
+        "label": "Music"
+  },
+  {
+        "value": "theater",
+        "label": "Theater"
+  },
+  {
+        "value": "dance",
+        "label": "Dance"
+  },
+  {
+        "value": "outdoors",
+        "label": "Outdoors"
+  },
+  {
+        "value": "food",
+        "label": "Food"
+  }
+]

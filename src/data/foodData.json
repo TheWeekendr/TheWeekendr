@@ -1,0 +1,50 @@
+[
+  {
+        "value": "chinese",
+        "label": "Chinese"
+  },
+  {
+        "value": "thai",
+        "label": "Thai"
+  },
+  {
+        "value": "italian",
+        "label": "Italian"
+  },
+  {
+        "value": "mexican",
+        "label": "Mexican"
+  },
+  {
+        "value": "indian",
+        "label": "Indian"
+  },
+  {
+        "value": "japanese",
+        "label": "Japanese"
+  },
+  {
+        "value": "korean",
+        "label": "Korean"
+  },
+  {
+        "value": "vietnamese",
+        "label": "Vietnamese"
+  },
+  {
+        "value": "american",
+        "label": "American"
+  },
+  {
+        "value": "mediterranean",
+        "label": "Mediterranean"
+  },
+  {
+        "value": "cajun",
+        "label": "Cajun"
+  },
+  {
+        "value": "seafood",
+        "label": "Seafood"
+  }
+]

@@ -4,7 +4,6 @@ import { Form, ControlLabel, FormGroup, FormControl, Button } from 'rsuite';
 import axios from 'axios';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Whisper, Tooltip } from 'rsuite';
-// import { DateRangePicker } from 'rsuite';
 
 class SearchForm extends React.Component {
   constructor(props) {
