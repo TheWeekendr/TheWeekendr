@@ -22,7 +22,7 @@ class EventCard extends React.Component {
                 bodyFill
                 style={{ display: 'inline-block', width: 320 }}
               >
-                <div className="py-3 px-6 border-b border-slate-300 mx-auto text-center text-sm">
+                <div className="py-3 px-1 border-b border-slate-300 mx-auto text-center text-sm">
                   {event.date.when}
                 </div>
                 <div className="w-full p-2 bg-sky-50">
