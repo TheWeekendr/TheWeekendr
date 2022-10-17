@@ -3,6 +3,7 @@ import { Modal, Button } from 'rsuite';
 import { Form, FormGroup, FormControl, ControlLabel, HelpBlock } from 'rsuite';
 import { CheckPicker } from 'rsuite';
 import { Tooltip, Whisper } from 'rsuite';
+import { withAuth0 } from '@auth0/auth0-react';
 import foodData from '../data/foodData.json';
 import activitiesData from '../data/activitiesData.json';
 import axios from 'axios';
@@ -30,9 +31,10 @@ class UpdateModal extends React.Component {
   }
 
   close() {
+    this.props.closeProfile();
     this.setState({ show: false });
   }
-  
+
   open() {
     this.setState({ show: true });
 
@@ -56,19 +58,21 @@ class UpdateModal extends React.Component {
 
   handleDelete = async () => {
     let verify = window.confirm(
-      'Are you sure you want to delete this account?'
+      'Are you sure you want to delete this account? You will be logged out and will need to create a new profile to use this app.'
     );
     if (verify) {
       try {
         await axios.delete(
           `${process.env.REACT_APP_SERVER}/user/${this.props.userData.userSub}`
         );
+        const { logout } = this.props.auth0;
+        logout({ returnTo: window.location.origin });
         this.close();
       } catch (error) {
         alert(`Error: ${error.code} - ${error.message}`);
       }
     }
-  };
+  }; 
 
   handleFoods(value) {
     this.setState({
@@ -182,8 +186,8 @@ class UpdateModal extends React.Component {
             </Tooltip>
           }
         >
-          <Button block appearance="default" size="xl" onClick={this.open}>
-            Change Search
+          <Button block appearance="default" size="md" onClick={this.open}>
+            Update Search Criteria
           </Button>
         </Whisper>
       </div>
@@ -191,4 +195,4 @@ class UpdateModal extends React.Component {
   }
 }
 
-export default UpdateModal;
+export default withAuth0(UpdateModal);

@@ -6,7 +6,7 @@ class Home extends React.Component {
     return (
       <>
         <section>
-          <div className="px-6 py-12 md:px-12 text-slate-700 text-center lg:text-left">
+          <div className="px-6 py-12 pt-24 md:px-12 text-slate-700 text-center lg:text-left">
             <div className="container mx-auto xl:px-32">
               <div className="grid lg:grid-cols-2 flex items-center">
                 <div className="md:mt-12 lg:mt-0 mb-12 lg:mb-0">

@@ -2,9 +2,9 @@ import React from 'react';
 import { Panel, Button } from 'rsuite';
 
 class EventCard extends React.Component {
-
+  
   addDefaultSrc = (e) => {
-    e.target.src = 'https://www.nirah.com/images/item-placeholder.svg?id=498f4e96baf0bbbc9351';
+    e.target.src = 'https://iaia.edu/wp-content/plugins/events-calendar-pro/src/resources/images/tribe-event-placeholder-image.svg';
   }
 
   render() {
@@ -75,12 +75,3 @@ class EventCard extends React.Component {
 
 export default EventCard;
 
-/* <img src={event.image} alt="thumbnail" height="240" className="mx-auto mt-5 rounded-lg shadow-md text-slate-100" />
-                <Panel id="cardHeader" header={event.title} className="text-slate-100">
-                  <div>
-                    <p>{event.date.when}</p>
-                    <p>{event.address[0]}</p>
-                    <p>{event.address[1]}</p>
-                    <small>{event.description}</small>
-                    <p><a href={event.ticket_info[0].link}>Click Here for Ticket</a></p>
-                  </div> */
