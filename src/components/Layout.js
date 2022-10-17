@@ -7,7 +7,6 @@ import { LinkContainer } from 'react-router-bootstrap';
 import NavRoutes from '../NavRoutes';
 import SearchForm from './SearchForm';
 import SignUpModal from './SignUpModal';
-import UpdateModal from './UpdateModal';
 import { withAuth0 } from '@auth0/auth0-react';
 import { useAuth0 } from '@auth0/auth0-react';
 import Login from './Login';
@@ -188,7 +187,7 @@ class Layout extends React.Component {
                         <Login />
                       )}
                     </Nav.Item>
-                    <div className="mt-4">
+                    {/* <div className="mt-4">
                       {this.props.auth0.isAuthenticated ? (
                         <>
                           <UpdateModal
@@ -205,7 +204,7 @@ class Layout extends React.Component {
                           userData={this.props.userData}
                         />
                       )}
-                    </div>
+                    </div> */}
                   </Nav>
                 </Sidenav.Body>
               </Sidenav>
@@ -220,7 +219,10 @@ class Layout extends React.Component {
                 <div className="sticky flex flex-row justify-between top-0 h-14 border-b bg-slate-700">
                   <div className="px-6 flex items-center justify-between space-x-4 container">
                     <div>
-                      <Profile />
+                      <Profile
+                        userData={this.props.userData}
+                        setUserDataState={this.props.setUserDataState} 
+                      />
                     </div>
                     {this.props.auth0.isAuthenticated ? (
                       <>
