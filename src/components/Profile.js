@@ -11,7 +11,7 @@ const Profile = () => {
         <Icon icon="user-circle-o" size="lg" className="mr-3 text-pink-400"/>
         <p>
           <span className="text-slate-100 italic">Welcome,</span>
-          <span className="text-indigo-200 font-semibold font-sans"> {user.name}</span>
+          <span className="text-indigo-100 font-semibold font-sans"> {user.name}</span>
         </p>
       </div>
     )
