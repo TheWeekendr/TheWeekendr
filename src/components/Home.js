@@ -23,11 +23,11 @@ class Home extends React.Component {
                     <div className="w-3/5">
                       {this.props.auth0.isAuthenticated ? (
                         <>
-                          <span className="text-slate-700 tracking-tight text-xl">Simply press <span className='font-semibold'>Search</span> to view your Weekendr results!</span>
+                          <p className="text-slate-700 tracking-tight text-xl">Simply press <span className='font-semibold'>Search</span> to view your Weekendr results!</p>
                         </>
                       ) : (
                         <>
-                          <span className="text-slate-700 tracking-tight text-xl"> Login or Sign Up to Explore!</span>
+                          <p className="text-slate-700 tracking-tight text-xl"> Login or Sign Up to Explore!</p>
                         </>
                       )}
                     </div>

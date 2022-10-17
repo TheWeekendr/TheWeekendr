@@ -26,6 +26,16 @@ body {
   -ms-animation: fadeIn1 3000ms;
 }
 
+#searchText {
+  color: rgb(247, 29, 145);
+  text-shadow: 0.5px 0.7px 0.6px rgb(70, 16, 28);
+  animation: fadeInImg 2000ms;
+  -webkit-animation: fadeInImg 2000ms;
+  -moz-animation: fadeInImg 2000ms;
+  -o-animation: fadeInImg 2000ms;
+  -ms-animation: fadeInImg 2000ms;
+}
+
 #dashLoginText {
   animation: fadeIn3 3000ms;
   -webkit-animation: fadeIn3 3000ms;
