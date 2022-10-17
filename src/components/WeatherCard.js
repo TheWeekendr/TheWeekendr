@@ -18,7 +18,7 @@ class WeatherCard extends React.Component {
               style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: 600, flexDirection: 'row', backgroundColor: '#fbcfe8' }}
             >
               <span>
-                <div className="mt-8 text-center">
+                <div className="mt-9 text-center">
                   <img
                     src="https://i.pinimg.com/originals/ee/ff/bb/eeffbbe09c8fc37c6a7a6b28faf03b1f.jpg"
                     alt="logo"
@@ -29,7 +29,7 @@ class WeatherCard extends React.Component {
               <Panel>
                 <div className='flex flex-col justify-center items-center'>
                   <p className='mb-3 mt-6 text-lg text-slate-800 text-center border-b border-t border-slate-800 py-3 px-6 mx-auto'>
-                    Simply press <span className='font-semibold text-slate-700'>Search</span> to view your Weekendr results!
+                    Simply press <span id="searchText" className='font-semibold text-slate-700'>Search</span> to view your Weekendr results!
                   </p>
                 </div>
               </Panel>
