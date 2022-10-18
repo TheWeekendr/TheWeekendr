@@ -6,9 +6,8 @@ import { Tooltip, Whisper } from 'rsuite';
 import { withAuth0 } from '@auth0/auth0-react';
 import foodData from '../data/foodData.json';
 import activitiesData from '../data/activitiesData.json';
-import { Grid } from 'react-loader-spinner'
+// import { Grid } from 'react-loader-spinner'
 import axios from 'axios';
-import ModalTitle from 'rsuite/lib/Modal/ModalTitle';
 
 class UpdateModal extends React.Component {
   constructor(props) {
