@@ -6,6 +6,7 @@ import { Tooltip, Whisper } from 'rsuite';
 import { withAuth0 } from '@auth0/auth0-react';
 import foodData from '../data/foodData.json';
 import activitiesData from '../data/activitiesData.json';
+// import { Grid } from 'react-loader-spinner'
 import axios from 'axios';
 
 class UpdateModal extends React.Component {
@@ -99,6 +100,7 @@ class UpdateModal extends React.Component {
       __v: this.props.userData.__v,
     };
 
+    this.props.setLoading(true);
     try {
       await axios.put(
         `${process.env.REACT_APP_SERVER}/user/${userUpdateData._id}`,
@@ -106,6 +108,7 @@ class UpdateModal extends React.Component {
       );
 
       this.props.setUserDataState(userUpdateData);
+      this.props.setLoading(false);
     } catch (error) {
       alert(`Error: ${error.code} - ${error.message}`);
     }
@@ -113,11 +116,32 @@ class UpdateModal extends React.Component {
   };
 
   render() {
+    // if (this.props.loading) {
+    //   return (
+    //   (<section>
+    //     <div className="mt-48 flex flex-col items-center justify-center z-10">
+    //       <div id="heroBlock2" className="block w-80 rounded-lg shadow-lg px-6 py-14 md:px-12 mx-auto">
+    //         <span className="mx-auto justify-center"><Grid
+    //           height="80"
+    //           width="80"
+    //           color="#f71d91"
+    //           ariaLabel="grid-loading"
+    //           radius="12.5"
+    //           wrapperStyle={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+    //           wrapperClass=""
+    //           visible={true} />
+    //         </span>
+    //       </div>
+    //     </div>
+    //   </section>)
+    //   );
+    // } else {
     return (
       <div className="mx-auto flex flex-col mx-16">
         <Modal show={this.state.show} onHide={this.close} size="xs">
           <Modal.Header>
-            <Modal.Title>Update Search Profile</Modal.Title>
+            <Modal.Title><p className='text-slate-700 mb-2'>Update Weekendr Search Profile</p></Modal.Title>
+            <Modal.Title><small className='text-slate-500'>Use the following form to update your user profile<br />in order to retrieve updated search results. </small></Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <Form

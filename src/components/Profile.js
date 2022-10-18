@@ -26,6 +26,8 @@ const Profile = props => {
                 setUserDataState={props.setUserDataState}
                 userData={props.userData}
                 closeProfile={closeProfile}
+                loading={props.loading}
+                setLoading={props.setLoading}
               />
             </div>
           </section>

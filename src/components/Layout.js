@@ -13,7 +13,7 @@ import Login from './Login';
 import Logout from './Logout';
 import Profile from './Profile';
 
-const NavToggle = (props, { expand, onChange }) => {
+const Auth0Footer = (props) => {
   // If logged in, check to see if user is in DB. If so, get profile. If not, launch signup
   const { user, isAuthenticated } = useAuth0();
   if (isAuthenticated) {
@@ -187,28 +187,10 @@ class Layout extends React.Component {
                         <Login />
                       )}
                     </Nav.Item>
-                    {/* <div className="mt-4">
-                      {this.props.auth0.isAuthenticated ? (
-                        <>
-                          <UpdateModal
-                            setUserDataState={this.props.setUserDataState}
-                            userData={this.props.userData}
-                          />
-                        </>
-                      ) : (
-                        <SignUpModal
-                          setShowSignupModal={this.props.setShowSignupModal}
-                          showSignupModal={this.props.showSignupModal}
-                          setUserDataState={this.props.setUserDataState}
-                          getUser={this.props.getUser}
-                          userData={this.props.userData}
-                        />
-                      )}
-                    </div> */}
                   </Nav>
                 </Sidenav.Body>
               </Sidenav>
-              <NavToggle
+              <Auth0Footer
                 getUser={this.props.getUser}
                 userData={this.props.userData}
               />
@@ -221,7 +203,9 @@ class Layout extends React.Component {
                     <div>
                       <Profile
                         userData={this.props.userData}
-                        setUserDataState={this.props.setUserDataState} 
+                        setUserDataState={this.props.setUserDataState}
+                        loading={this.state.loading}
+                        setLoading={this.setLoading} 
                       />
                     </div>
                     {this.props.auth0.isAuthenticated ? (
