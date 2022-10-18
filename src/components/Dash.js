@@ -24,7 +24,7 @@ const Dash = props => {
       ) : (
         <>
           <section id="dashFade" className='mt-10'>
-            <div className="px-6 py-12 md:px-12 text-slate-700 text-center lg:text-left">
+            <div className="px-6 py-12 pt-16 md:px-12 text-slate-700 text-center lg:text-left">
               <div className="container mx-auto xl:px-32">
                 <div className="mt-48 flex flex-col items-center justify-center z-10">
                   <div className="md:mt-12 lg:mt-0 mb-12 lg:mb-0 z-10">
@@ -64,41 +64,3 @@ const Dash = props => {
 };
 
 export default Dash;
-
-// userData = { props.userData }
-// googleEventsData = { props.googleEventsData }
-// userData = { props.userData }
-// foodData = { props.foodData }
-// userData = { props.userData }
-// weatherData = { props.weatherData }
-
-//   <>
-//   <div>
-//     <PanelGroup accordion bordered className="w-full bg-slate-100">
-//       <Panel header="Events" collapsible>
-//         <div>
-//           <EventCard
-//             userData={props.userData}
-//             googleEventsData={props.googleEventsData}
-//           />
-//         </div>
-//       </Panel>
-//       <Panel header="Food" collapsible>
-//         <div>
-//           <FoodCard
-//             userData={props.userData}
-//             foodData={props.foodData}
-//           />
-//         </div>
-//       </Panel>
-//       <Panel header="Weather" collapsible>
-//         <div>
-//           <WeatherCard
-//             userData={props.userData}
-//             weatherData={props.weatherData}
-//           />
-//         </div>
-//       </Panel>
-//     </PanelGroup>
-//   </div>
-//         </>
